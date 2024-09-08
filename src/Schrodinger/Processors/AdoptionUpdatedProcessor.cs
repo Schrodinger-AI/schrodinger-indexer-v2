@@ -3,14 +3,12 @@ using AeFinder.Sdk.Logging;
 using AeFinder.Sdk.Processor;
 using Newtonsoft.Json;
 using Schrodinger.Entities;
-using Schrodinger.Processors.Provider;
 using Schrodinger.Processors.Provider.dto;
 using Schrodinger.Utils;
 
 namespace Schrodinger.Processors;
 
-
-public class SchrodingerAdoptProcessor : SchrodingerProcessorBase<Adopted>
+public class AdoptionUpdatedProcessor: SchrodingerProcessorBase<AdoptionUpdated>
 {
     private readonly Dictionary<string, Dictionary<string, double>> _traitValueProbability;
     private readonly Dictionary<string, Dictionary<string, int>> _traitTypeProbability;
@@ -18,7 +16,7 @@ public class SchrodingerAdoptProcessor : SchrodingerProcessorBase<Adopted>
     private readonly IAppAttachmentValueProvider<ProbabilityRankMap> _probabilityRankMapAppAttachmentValueProvider;
     private readonly IAppAttachmentValueProvider<ProbabilityMap> _probabilityMapAppAttachmentValueProvider;
     
-    public  SchrodingerAdoptProcessor(
+    public  AdoptionUpdatedProcessor(
         IAppAttachmentValueProvider<ProbabilityRankMap> probabilityRankMapAppAttachmentValueProvider, 
         IAppAttachmentValueProvider<ProbabilityMap> probabilityMapAppAttachmentValueProvider)
     {
@@ -29,22 +27,31 @@ public class SchrodingerAdoptProcessor : SchrodingerProcessorBase<Adopted>
         _traitTypeProbability = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, int>>>(TraitProbabilityConstants.TraitTypeProbability);
     }
     
-    public override async Task ProcessAsync(Adopted adopted, LogEventContext context)
+    public override async Task ProcessAsync(AdoptionUpdated adopted, LogEventContext context)
     {
         var chainId = context.ChainId;
         var symbol = adopted.Symbol;
         var adoptId = adopted.AdoptId?.ToHex();
         var parent = adopted.Parent;
-        Logger.LogDebug("[Adopted] start chainId:{chainId} symbol:{symbol}, adoptId:{adoptId}, parent:{parent}", chainId,
+        Logger.LogDebug("[AdoptionUpdated] start chainId:{chainId} symbol:{symbol}, adoptId:{adoptId}, parent:{parent}", chainId,
             symbol, adoptId, parent);
         try
         {
-            var adopt = Mapper.Map<Adopted, SchrodingerAdoptIndex>(adopted);
+            var adopt = Mapper.Map<AdoptionUpdated, SchrodingerAdoptIndex>(adopted);
 
             adopt.Id = IdGenerateHelper.GetId(chainId, symbol);
             adopt.AdoptTime = context.Block.BlockTime;
-            adopt.ParentInfo = await getSchrodingerInfo(chainId, parent);
+            // adopt.ParentInfo = await getSchrodingerInfo(chainId, parent);
             adopt.TransactionId = context.Transaction.TransactionId;
+
+            adopt.ParentInfo = new SchrodingerInfo
+            {
+                Symbol = parent,
+                Tick = "SGR",
+                Decimals = 8,
+                TokenName = parent + "GEN" + (adopted.Gen-1).ToString(),
+                Gen = adopted.Gen - 1
+            };
             
             if (adopt.Gen == 9)
             {
@@ -54,16 +61,16 @@ public class SchrodingerAdoptProcessor : SchrodingerProcessorBase<Adopted>
                 var rank = GetRank(traitsGenOne, traitsGenTwoToNine);
                 // var rank = _rankProvider.GetRank(Mapper.Map<List<Entities.Attribute>, List<TraitInfo>>(adopt.Attributes));
                 adopt = SetRankRarity(adopt, rank);
-                Logger.LogDebug("[Adopted] get rank:{rank}, symbol:{symbol}", rank, symbol);
+                Logger.LogDebug("[AdoptionUpdated] get rank:{rank}, symbol:{symbol}", rank, symbol);
             }
             
             await SaveEntityAsync(adopt);
-            Logger.LogDebug("[Adopted] end chainId:{chainId} symbol:{symbol}, adoptId:{adoptId}, parent:{parent}, transactionId:{TransactionId}", chainId, symbol,
+            Logger.LogDebug("[AdoptionUpdated] end chainId:{chainId} symbol:{symbol}, adoptId:{adoptId}, parent:{parent}, transactionId:{TransactionId}", chainId, symbol,
                 adoptId, parent, adopt.TransactionId);
         }
         catch (Exception e)
         {
-            Logger.LogError(e, "[Adopted] Exception chainId:{chainId} symbol:{symbol}, adoptId:{adoptId}, parent:{parent}", chainId,
+            Logger.LogError(e, "[AdoptionUpdated] Exception chainId:{chainId} symbol:{symbol}, adoptId:{adoptId}, parent:{parent}", chainId,
                 symbol,
                 adoptId, parent);
             throw;
@@ -199,7 +206,6 @@ public class SchrodingerAdoptProcessor : SchrodingerProcessorBase<Adopted>
         var traitProbability = _traitValueProbability[type][trait];
         return _traitTypeProbability[type][traitProbability.ToString()];
     }
-    
     
     private List<string> getRankOfGenOne(List<List<string>> traits)
     {

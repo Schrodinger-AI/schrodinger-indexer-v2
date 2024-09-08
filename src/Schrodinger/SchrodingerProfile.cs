@@ -147,6 +147,7 @@ public class SchrodingerProfile : Profile
             .ForMember(t => t.Attributes, m => m.Ignore())
             ;
         CreateMap<Schrodinger.Entities.Attribute, Trait>();
+        CreateMap<Schrodinger.Entities.Attribute, TraitInfo>();
         CreateMap<CollectionDeployed, SchrodingerIndex>()
             .ForMember(des => des.Tick, opt
                 => opt.MapFrom(source => TokenSymbolHelper.GetTickBySymbol(source.Symbol)))
@@ -223,6 +224,38 @@ public class SchrodingerProfile : Profile
             ;
         
         CreateMap<SchrodingerTraitValueIndex, TraitDto>();
+        
+        CreateMap<AdoptionUpdated, SchrodingerAdoptIndex>()
+            .ForMember(des => des.Tick, opt
+                => opt.MapFrom(source => TokenSymbolHelper.GetTickBySymbol(source.Symbol)))
+            .ForMember(des => des.Attributes, opt
+                => opt.MapFrom(source => AdoptUpdateMapAttributes(source)))
+            .ForMember(des => des.AdoptId, opt
+                => opt.MapFrom(source => MapHash(source.AdoptId)))
+            .ForMember(des => des.Adopter, opt
+                => opt.MapFrom(source => MapAddress(source.Adopter)))
+            ;
+        
+        CreateMap<SchrodingerAdoptIndex, BlindBoxDto>()
+            .ForMember(des => des.Amount, opt
+                => opt.MapFrom(source => source.OutputAmount))
+            .ForMember(des => des.ConsumeAmount, opt
+                => opt.MapFrom(source => source.InputAmount))
+            .ForMember(des => des.Decimals, opt
+                => opt.MapFrom(source => source.ParentInfo.Decimals))
+            .ForMember(t => t.AdoptTime, m => m.Ignore())
+            ;
+        
+        CreateMap<AdoptionUpdated, SchrodingerAdoptIndex>()
+            .ForMember(des => des.Tick, opt
+                => opt.MapFrom(source => TokenSymbolHelper.GetTickBySymbol(source.Symbol)))
+            .ForMember(des => des.Attributes, opt
+                => opt.MapFrom(source => AdoptUpdateMapAttributes(source)))
+            .ForMember(des => des.AdoptId, opt
+                => opt.MapFrom(source => MapHash(source.AdoptId)))
+            .ForMember(des => des.Adopter, opt
+                => opt.MapFrom(source => MapAddress(source.Adopter)))
+            ;
     }
     
     private static string MapHash(Hash hash)
@@ -284,5 +317,10 @@ public class SchrodingerProfile : Profile
             : map.TryGetValue(SchrodingerConstants.InscriptionAdopt, out var inscriptionAdopt)
                 ? inscriptionAdopt
                 : string.Empty;
+    }
+    
+    protected static List<Entities.Attribute> AdoptUpdateMapAttributes(AdoptionUpdated eventValue)
+    {
+        return MapAttributes(eventValue.Attributes);
     }
 }

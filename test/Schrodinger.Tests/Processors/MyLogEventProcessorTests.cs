@@ -17,7 +17,6 @@ namespace Schrodinger.Processors;
 
 public class MyLogEventProcessorTests: SchrodingerTestBase
 {
-
     private readonly SoldLogEventProcessor _soldLogEventProcessor;
     private readonly IReadOnlyRepository<NFTActivityIndex> _nftActivityIndexRepository;
     private readonly IObjectMapper _objectMapper;
@@ -28,24 +27,6 @@ public class MyLogEventProcessorTests: SchrodingerTestBase
         _soldLogEventProcessor = GetRequiredService<SoldLogEventProcessor>();
         _nftActivityIndexRepository = GetRequiredService<IReadOnlyRepository<NFTActivityIndex>>();
         _objectMapper = GetRequiredService<IObjectMapper>();
-    }
-    
-    [Fact]
-    public async Task Test()
-    {
-        // var logEvent = new MyLogEvent
-        // {
-        // };
-        // var logEventContext = GenerateLogEventContext(logEvent);
-        // await _myLogEventProcessor.ProcessAsync(logEvent, logEventContext);
-        //
-        // var entities = await Query.MyEntity(_repository, _objectMapper, new GetMyEntityInput
-        // {
-        //     ChainId = ChainId
-        // });
-        // entities.Count.ShouldBe(1);
-        // _rankProvider = GetRequiredService<IRankProvider>();
-        // _rankProvider.GetRank()
     }
     
     [Fact]
@@ -89,27 +70,5 @@ public class MyLogEventProcessorTests: SchrodingerTestBase
         //     ChainId = ChainId
         // });
         // entities.Count.ShouldBe(1);
-    }
-    
-    private List<string> sortProbability(List<string> probabilityTypes)
-    {
-        var list1 = new  List<string>();
-        var list2 = new  List<string>();
-        foreach (var item in probabilityTypes)
-        {
-            if (item.StartsWith("D"))
-            {
-                list1.Add(item);
-            }
-            else
-            {
-                list2.Add(item);
-            }
-        }
-        
-        var sortedList1 = list1.OrderBy(x => x[0]).ThenBy(x => x[1]).ToList();
-        var sortedList2 = list2.OrderBy(x => x[0]).ThenBy(x => x[1]).ToList();
-        sortedList2.AddRange(sortedList1);
-        return sortedList2;
     }
 }

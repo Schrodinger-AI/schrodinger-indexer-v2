@@ -12,11 +12,11 @@ public class AllSchrodingerDto
     public string Adopter { get; set; }
     public long AdoptTime { get; set; }
     public int Rank { get; set; }
-    public string Level { get; set; }
-    public string Grade { get; set; }
-    public string Star { get; set; }
+    public string? Level { get; set; }
+    public string? Grade { get; set; }
+    public string? Star { get; set; }
     public List<TraitInfo> Traits { get; set; }
-    public string Rarity { get; set; }
+    public string? Rarity { get; set; }
 
     public class TraitInfo
     {

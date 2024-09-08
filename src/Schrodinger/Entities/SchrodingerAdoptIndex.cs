@@ -35,4 +35,9 @@ public class  SchrodingerAdoptIndex : AeFinderEntity, IAeFinderEntity
     public bool IsConfirmed { get; set; }
     [Text(Index = false)] public string InscriptionImageUri { get; set; }
     [Keyword] public string TransactionId { get; set; }
+    public int Rank { get; set; }
+    [Keyword] public string Level { get; set; }
+    [Keyword] public string Grade { get; set; }
+    [Keyword] public string Star{ get; set; }
+    [Keyword] public string Rarity { get; set; }
 }

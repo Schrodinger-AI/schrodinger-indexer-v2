@@ -32,6 +32,7 @@ public class ConfirmedProcessor : SchrodingerProcessorBase<Confirmed>
             }
 
             adoptIndex.IsConfirmed = true;
+            adoptIndex.TransactionId = context.Transaction.TransactionId;
             await SaveEntityAsync(adoptIndex);
             // Logger.LogDebug("[Confirmed] end chainId:{chainId} symbol:{symbol}, owner:{owner}, adoptId: {adoptId}", chainId, symbol, owner, adoptId);
         }

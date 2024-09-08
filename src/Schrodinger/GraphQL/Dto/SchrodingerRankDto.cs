@@ -9,8 +9,8 @@ public class SchrodingerRankDto
     public int Generation { get; set; }
     public int Decimals { get; set; }
     public int Rank { get; set; }
-    public string Level { get; set; }
-    public string Grade { get; set; }
-    public string Star { get; set; }
-    public string Rarity { get; set; }
+    public string? Level { get; set; }
+    public string? Grade { get; set; }
+    public string? Star { get; set; }
+    public string? Rarity { get; set; }
 }

@@ -9,7 +9,7 @@ public class SchrodingerDto
     public int Generation { get; set; }
     public int Decimals { get; set; }
     public string InscriptionDeploy { get; set; }
-    public string Adopter { get; set; }
+    public string? Adopter { get; set; }
     public long AdoptTime { get; set; }
     public string Address { get; set; }
 

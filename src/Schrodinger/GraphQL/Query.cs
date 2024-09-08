@@ -1,10 +1,10 @@
+using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
 using AeFinder.Sdk;
 using AeFinder.Sdk.Entities;
 using AeFinder.Sdk.Logging;
 using Schrodinger.Entities;
 using GraphQL;
-using Nest;
 using Newtonsoft.Json;
 using Schrodinger.GraphQL.Dto;
 using Schrodinger.Utils;
@@ -14,7 +14,7 @@ namespace Schrodinger.GraphQL;
 
 public class Query
 {
-    [Name("getSchrodingerList")]   // used
+    [Name("getSchrodingerList")]  
     public static async Task<SchrodingerListDto> GetSchrodingerListAsync(
         [FromServices] IReadOnlyRepository<SchrodingerHolderIndex> holderRepository,
         [FromServices] IReadOnlyRepository<SchrodingerAdoptIndex> adoptRepository,
@@ -123,14 +123,13 @@ public class Query
         }
         catch (Exception e)
         {
-            // Console.WriteLine(e);
             logger.LogDebug("getSchrodingerList failed:{err}", e.Message);
             return new SchrodingerListDto();
         }
     }
     
     
-    [Name("getSchrodingerDetail")]    /// used
+    [Name("getSchrodingerDetail")]   
     public static async Task<SchrodingerDetailDto> GetSchrodingerDetailAsync(
         [FromServices] IReadOnlyRepository<SchrodingerHolderIndex> holderRepository,
         [FromServices] IReadOnlyRepository<SchrodingerTraitValueIndex> traitValueRepository,
@@ -143,8 +142,10 @@ public class Query
         var tick = TokenSymbolHelper.GetTickBySymbol(symbol);
         var holderId = IdGenerateHelper.GetId(chainId, symbol, input.Address);
         var holderQueryable = await holderRepository.GetQueryableAsync();
-        var holderIndex = holderQueryable.Where(a => a.Id == holderId || a.Metadata.ChainId == input.ChainId).ToList().FirstOrDefault();
-        
+        holderQueryable = holderQueryable.Where(a => a.Metadata.ChainId == input.ChainId);
+        holderQueryable = holderQueryable.Where(a => a.SchrodingerInfo.Symbol == input.Symbol);
+        holderQueryable = holderQueryable.Where(a => a.Address == input.Address);
+        var holderIndex = holderQueryable.ToList().FirstOrDefault();
         
         List<TraitInfo> traitList;
         SchrodingerDetailDto schrodingerDetailDto;
@@ -169,6 +170,11 @@ public class Query
         }
         
         var traitTypeList = traitList.Select(x => x.TraitType).Where(x => !string.IsNullOrEmpty(x)).Distinct().ToList();
+
+        if (traitTypeList.IsNullOrEmpty())
+        {
+            return schrodingerDetailDto;
+        }
         
         var traitQueryable = await traitValueRepository.GetQueryableAsync();
         traitQueryable = traitQueryable.Where(a => a.Tick == tick);
@@ -319,7 +325,7 @@ public class Query
     
     
     [Name("getAdoptInfo")]
-    public static async Task<AdoptInfoDto> GetAdoptInfoAsync(
+    public static async Task<AdoptInfoDto?> GetAdoptInfoAsync(
         [FromServices] IReadOnlyRepository<SchrodingerAdoptIndex> repository,
         [FromServices] IObjectMapper objectMapper,
         [FromServices] IAeFinderLogger logger,
@@ -329,6 +335,7 @@ public class Query
         if (input == null || string.IsNullOrEmpty(input.AdoptId))
         {
             logger.LogError("invalid input");
+            return null;
         }
             
         var queryable = await repository.GetQueryableAsync();
@@ -339,6 +346,7 @@ public class Query
         if (result.Count == 0)
         {
             logger.LogError("Adoption not found");
+            return null;
         }
 
         var adopt = result.FirstOrDefault();
@@ -565,7 +573,9 @@ public class Query
         var result = GetAllIndex(queryable);
         return new AdoptInfoListDto
         {
-            TransactionIds = result.Select(t => t.TransactionId).ToList()
+            TransactionIds = result.Select(t => t.TransactionId).ToList(),
+            AdoptionIds = result.Select(t => t.AdoptId).ToList(),
+            SymbolIds = result.Select(t => t.Symbol).ToList()
         };
     }
     
@@ -646,8 +656,7 @@ public class Query
             var data = symbolQueryable.OrderByDescending(o => o.Metadata.Block.BlockTime).Skip(input.SkipCount)
                 .Take(input.MaxResultCount)
                 .ToList();
-
-
+            
             //query adopt
             var symbolList = data.Select(x => x.SchrodingerInfo.Symbol).Where(x => !string.IsNullOrEmpty(x)).Distinct()
                 .ToList();
@@ -987,7 +996,8 @@ public class Query
         
         var activityQueryable = await nftActivityIndexRepository.GetQueryableAsync();
         activityQueryable = activityQueryable.Where(a => a.Type == NFTActivityType.Sale);
-        activityQueryable = activityQueryable.Where(a => a.NftInfoId == input.ChainId + "-SGR-.*");
+        
+        activityQueryable = activityQueryable.Where(a => a.NftInfoId.StartsWith(input.ChainId+"-"+pattern));
 
         var totalTradeList = GetAllIndex(activityQueryable);
         
@@ -1118,5 +1128,156 @@ public class Query
         var nftSoldList =  GetAllIndex(queryable).ToList();
         var sortedList = nftSoldList.OrderBy(item => item.Timestamp).ToList();
         return objectMapper.Map<List<NFTActivityIndex>, List<NFTActivityDto>>(sortedList);
+    }
+    
+    [Name("getBlindBoxList")]
+    public static async Task<BlindBoxListDto> GetBlindBoxListAsync(
+        [FromServices] IReadOnlyRepository<SchrodingerAdoptIndex> repository,
+        [FromServices] IReadOnlyRepository<SchrodingerCancelIndex> cancelRepository,
+        [FromServices] IObjectMapper objectMapper,
+        BlindBoxListInput input)
+    {
+        if (input == null || string.IsNullOrEmpty(input.Adopter))
+        {
+            return  new BlindBoxListDto();
+        }
+        
+        // var cancelMustQuery = new List<Func<QueryContainerDescriptor<SchrodingerCancelIndex>, QueryContainer>>
+        // {
+        //     q => q.Term(f => f.Field(f => f.From).Value(input.Adopter)),
+        // };
+        // QueryContainer CancelFilter(QueryContainerDescriptor<SchrodingerCancelIndex> f) => f.Bool(b => b.Must(cancelMustQuery));
+        // var cancelledAdoptionList = await GetAllIndex(CancelFilter, cancelRepository);
+        // var cancelledAdoptIdList = cancelledAdoptionList.Select(c => c.AdoptId).ToList();
+        
+        var cancelQueryable = await cancelRepository.GetQueryableAsync();
+        cancelQueryable = cancelQueryable.Where(a => a.From == input.Adopter);
+
+        var cancelledAdoptionList = cancelQueryable.ToList();
+        var cancelledAdoptIdList = cancelledAdoptionList.Select(c => c.AdoptId).ToList();
+        
+        var adoptQueryable = await repository.GetQueryableAsync();
+        adoptQueryable = adoptQueryable.Where(a => a.Adopter == input.Adopter);
+        if (input.AdoptTime != null)
+        {
+            adoptQueryable = adoptQueryable.Where(a => a.AdoptTime >= DateTime.UnixEpoch.AddMilliseconds((double)input.AdoptTime));
+        }
+        
+        if (!cancelledAdoptIdList.IsNullOrEmpty())
+        {
+            adoptQueryable = adoptQueryable.Where(
+                cancelledAdoptIdList.Select(adoptId => (Expression<Func<SchrodingerAdoptIndex, bool>>)(o => o.AdoptId != adoptId))
+                    .Aggregate((prev, next) => prev.And(next)));
+        }
+
+        var result =  GetAllIndex(adoptQueryable).ToList();
+        
+        var list = new List<BlindBoxDto>();
+        var unconfirmedList = result.Where(x => !x.IsConfirmed).ToList();
+        var parentSymbolList = result.Select(i => i.ParentInfo.Symbol).Distinct().ToList();
+        
+        foreach (var schrodingerAdoptIndex in unconfirmedList)
+        {
+            if (parentSymbolList.Contains(schrodingerAdoptIndex.Symbol))
+            {
+                continue;
+            }
+            
+            var blindBoxDto = objectMapper.Map<SchrodingerAdoptIndex, BlindBoxDto>(schrodingerAdoptIndex);
+            
+            blindBoxDto.AdoptTime =  DateTimeHelper.ToUnixTimeMilliseconds(schrodingerAdoptIndex.AdoptTime);
+
+            if (!schrodingerAdoptIndex.Attributes.IsNullOrEmpty())
+            {
+                var traitsList = schrodingerAdoptIndex.Attributes.Select(item => new TraitDto
+                    { TraitType = item.TraitType, Value = item.Value }).ToList();
+                blindBoxDto.Traits = traitsList;
+            }
+            
+            list.Add(blindBoxDto);
+        }
+        
+        return new BlindBoxListDto()
+        {
+            TotalCount = list.Count,
+            Data = list
+        };
+    }
+    
+    [Name("getBlindBoxDetail")]
+    public static async Task<BlindBoxDto> GetBlindBoxDetailAsync(
+        [FromServices] IReadOnlyRepository<SchrodingerAdoptIndex> repository,
+        [FromServices] IReadOnlyRepository<SchrodingerTraitValueIndex> traitValueRepository,
+        [FromServices] IObjectMapper objectMapper,
+        BlindBoxDetailInput input)
+    {
+        if (input == null || string.IsNullOrEmpty(input.Symbol))
+        {
+            return new BlindBoxDto();
+        }
+        
+        var queryable = await repository.GetQueryableAsync();
+        queryable = queryable.Where(a => a.Symbol == input.Symbol);
+        var result = queryable.ToList().FirstOrDefault(); 
+
+        if (result == null)
+        {
+            return new BlindBoxDto();;
+        }
+        
+        var resp = objectMapper.Map<SchrodingerAdoptIndex, BlindBoxDto>(result);
+      
+        resp.AdoptTime =  DateTimeHelper.ToUnixTimeMilliseconds(result.AdoptTime);
+        resp.DirectAdoption = (result.Gen - result.ParentGen) > 1;
+        
+        if (!result.Attributes.IsNullOrEmpty())
+        {
+            var traitList = result.Attributes.Select(item => new SchrodingerDto.TraitsInfo
+                { TraitType = item.TraitType, Value = item.Value }).ToList();
+            
+            var traitTypeList = traitList.Select(x => x.TraitType).Where(x => !string.IsNullOrEmpty(x)).Distinct().ToList();
+            
+            var traitQueryable = await traitValueRepository.GetQueryableAsync();
+            traitQueryable = traitQueryable.Where(a => a.Tick == result.Tick);
+            traitQueryable = traitQueryable.Where(
+                traitTypeList.Select(traitType => (Expression<Func<SchrodingerTraitValueIndex, bool>>)(o => o.TraitType == traitType))
+                    .Aggregate((prev, next) => prev.Or(next)));
+            var traitTypeValueList = GetAllIndex(traitQueryable);
+
+            var traitTypeValueDic = traitTypeValueList.GroupBy(x => x.TraitType)
+                .ToDictionary(x => x.Key, x => 
+                    x.GroupBy(x => x.Value)
+                        .ToDictionary(y => y.Key, y =>
+                            y.Select(i => i.SchrodingerCount).Sum()));
+            var traitListWithPercent = new List<TraitDto>();
+            foreach (var trait in traitList)
+            {
+                var traitValue = trait.Value;
+                var traitType = trait.TraitType;
+                decimal percent = 1;
+        
+                if (traitTypeValueDic.TryGetValue(traitType, out var traitValueDic)
+                    && traitValueDic.TryGetValue(traitValue, out var numerator))
+                {
+                    var denominator = traitValueDic.Values.Sum();
+                    if (denominator > 0 && numerator > 0)
+                    {
+                        percent = (Convert.ToDecimal(numerator) / Convert.ToDecimal(denominator)) * 100;
+                    }
+                }
+        
+                traitListWithPercent.Add(new TraitDto
+                {
+                    TraitType = traitType,
+                    Value = traitValue,
+                    Percent = percent,
+                    IsRare = IsRare(traitType, traitValue)
+                });
+            }
+        
+            resp.Traits = traitListWithPercent;
+        }
+
+        return resp;
     }
 }
