@@ -179,6 +179,14 @@ public class TokenCreatedProcessor() : TokenProcessorBase<TokenCreated>
     {
         try
         {
+            var traitTypes = traitsGenTwoToNine[0];
+            var traitValue = traitsGenTwoToNine[1];
+            if (traitTypes.Contains("Face") && traitValue.Contains("WUKONG Face Paint"))
+            {
+                var index = traitValue.IndexOf("WUKONG Face Paint");
+                traitsGenTwoToNine[1][index] = "Monkey King Face Paint";
+            }
+            
             var rankOfGenOneProbabilityTypes = getRankOfGenOne(traitsGenOne);
             var rankTwoToNineProbabilityTypes = getRankTwoToNine(traitsGenTwoToNine);
             var rank = getRankOneToNine(rankOfGenOneProbabilityTypes, rankTwoToNineProbabilityTypes);

@@ -12,7 +12,7 @@ public class StrayCatDto
     public string InscriptionImageUri { get; set; }
     public string TokenName { get; set; }
     public int Gen { get; set; }
-    public string Symbol { get; set; }
+    public string? Symbol { get; set; }
     public long ConsumeAmount { get; set; }
     public long ReceivedAmount { get; set; }
     public int Decimals { get; set; }
@@ -21,6 +21,7 @@ public class StrayCatDto
     public string NextSymbol { get; set; }
     public long NextAmount{ get; set; }
     public bool DirectAdoption { get; set; }
+    public DateTime AdoptTime { get; set; }
     
 }
 
