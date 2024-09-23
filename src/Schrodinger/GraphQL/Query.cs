@@ -425,6 +425,12 @@ public class Query
                 cancelledAdoptIdList.Select(adoptId => (Expression<Func<SchrodingerAdoptIndex, bool>>)(o => o.AdoptId != adoptId))
                     .Aggregate((prev, next) => prev.And(next)));
         }
+        
+        if (input.AdoptTime != null)
+        {
+            adoptQueryable = adoptQueryable.Where(a =>
+                a.AdoptTime < DateTime.UnixEpoch.AddMilliseconds((double)input.AdoptTime));
+        }
   
         var count = adoptQueryable.Count();
         var data = adoptQueryable.OrderByDescending(o => o.Metadata.Block.BlockTime).Skip(input.SkipCount).Take(input.MaxResultCount).ToList();

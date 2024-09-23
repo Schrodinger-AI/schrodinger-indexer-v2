@@ -9,7 +9,7 @@ public class StrayCatListDto
 public class StrayCatDto
 {
     public string AdoptId { get; set; }
-    public string InscriptionImageUri { get; set; }
+    public string? InscriptionImageUri { get; set; }
     public string TokenName { get; set; }
     public int Gen { get; set; }
     public string? Symbol { get; set; }

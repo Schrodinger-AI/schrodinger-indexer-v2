@@ -50,7 +50,8 @@ public class AdoptionUpdatedProcessor: SchrodingerProcessorBase<AdoptionUpdated>
                 Tick = "SGR",
                 Decimals = 8,
                 TokenName = parent + "GEN" + (adopted.Gen-1).ToString(),
-                Gen = adopted.Gen - 1
+                Gen = adopted.Gen - 1,
+                InscriptionImageUri = ""
             };
             
             if (adopt.Gen == 9)
