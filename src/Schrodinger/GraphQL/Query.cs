@@ -140,7 +140,6 @@ public class Query
         [FromServices] IReadOnlyRepository<SchrodingerHolderIndex> holderRepository,
         [FromServices] IReadOnlyRepository<SchrodingerTraitValueIndex> traitValueRepository,
         [FromServices] IReadOnlyRepository<SchrodingerSymbolIndex> symbolRepository,
-        [FromServices] IAeFinderLogger logger,
         [FromServices] IObjectMapper objectMapper, GetSchrodingerDetailInput input)
     {
         var chainId = input.ChainId;
@@ -334,13 +333,11 @@ public class Query
     public static async Task<AdoptInfoDto?> GetAdoptInfoAsync(
         [FromServices] IReadOnlyRepository<SchrodingerAdoptIndex> repository,
         [FromServices] IObjectMapper objectMapper,
-        [FromServices] IAeFinderLogger logger,
         [FromServices] IReadOnlyRepository<SchrodingerTraitValueIndex> traitValueRepository,
         GetAdoptInfoInput input)
     {
         if (input == null || string.IsNullOrEmpty(input.AdoptId))
         {
-            logger.LogError("invalid input");
             return null;
         }
             
@@ -351,7 +348,6 @@ public class Query
         var result = queryable.ToList();
         if (result.Count == 0)
         {
-            logger.LogError("Adoption not found");
             return null;
         }
 
@@ -404,12 +400,10 @@ public class Query
         [FromServices] IReadOnlyRepository<SchrodingerSymbolIndex> symbolRepository,
         [FromServices] IReadOnlyRepository<SchrodingerCancelIndex> cancelRepository,
         [FromServices] IObjectMapper objectMapper,
-        [FromServices] IAeFinderLogger logger,
         StrayCatInput input)
     {
         if (input == null || string.IsNullOrEmpty(input.Adopter))
         {
-            logger.LogError("invalid input");
             return new StrayCatListDto();
         }
         
@@ -420,11 +414,12 @@ public class Query
         var cancelledAdoptionList = cancelQueryable.ToList();
         
         var cancelledAdoptIdList = cancelledAdoptionList.Select(c => c.AdoptId).ToList();
+        // cancelledAdoptIdList = cancelledAdoptIdList.Take(15).ToList();
 
         var adoptQueryable = await adoptRepository.GetQueryableAsync();
         adoptQueryable = adoptQueryable.Where(a => a.Adopter == input.Adopter);
         adoptQueryable = adoptQueryable.Where(a => !a.IsConfirmed);
-        logger.LogDebug("cancelId list: {list}", cancelledAdoptIdList);
+
         if (!cancelledAdoptIdList.IsNullOrEmpty())
         {
             adoptQueryable = adoptQueryable.Where(
@@ -442,6 +437,7 @@ public class Query
         var data = adoptQueryable.OrderByDescending(o => o.Metadata.Block.BlockTime).Skip(input.SkipCount).Take(input.MaxResultCount).ToList();
         
         var parentSymbolList = data.Select(i => i.ParentInfo?.Symbol ?? string.Empty).Where(s => !string.IsNullOrEmpty(s)).Distinct().ToList();
+        // parentSymbolList = parentSymbolList.Take(15).ToList();
         
         var symbolQueryable = await symbolRepository.GetQueryableAsync();
         symbolQueryable = symbolQueryable.Where(
@@ -508,7 +504,6 @@ public class Query
     [Name("getTrait")]
     public static async Task<List<TraitDto>> GetTraitInfoAsync(
         [FromServices] IObjectMapper objectMapper,
-        [FromServices] IAeFinderLogger logger,
         [FromServices] IReadOnlyRepository<SchrodingerTraitValueIndex> traitValueRepository,
         GetTraitInput input)
     {
