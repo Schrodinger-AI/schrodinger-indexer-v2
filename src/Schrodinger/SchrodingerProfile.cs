@@ -256,6 +256,15 @@ public class SchrodingerProfile : Profile
             .ForMember(des => des.Adopter, opt
                 => opt.MapFrom(source => MapAddress(source.Adopter)))
             ;
+        
+        CreateMap<AdoptionUpdated, AdoptionUpdatedIndex>()
+            .ForMember(des => des.Tick, opt
+                => opt.MapFrom(source => TokenSymbolHelper.GetTickBySymbol(source.Symbol)))
+            .ForMember(des => des.AdoptId, opt
+                => opt.MapFrom(source => MapHash(source.AdoptId)))
+            .ForMember(des => des.Adopter, opt
+                => opt.MapFrom(source => MapAddress(source.Adopter)))
+            ;
     }
     
     private static string MapHash(Hash hash)

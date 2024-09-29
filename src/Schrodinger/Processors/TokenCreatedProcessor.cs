@@ -179,13 +179,18 @@ public class TokenCreatedProcessor() : TokenProcessorBase<TokenCreated>
     {
         try
         {
-            var traitTypes = traitsGenTwoToNine[0];
-            var traitValue = traitsGenTwoToNine[1];
-            if (traitTypes.Contains("Face") && traitValue.Contains("WUKONG Face Paint"))
-            {
-                var index = traitValue.IndexOf("WUKONG Face Paint");
-                traitsGenTwoToNine[1][index] = "Monkey King Face Paint";
-            }
+            // var traitTypes = traitsGenTwoToNine[0];
+            // var traitValue = traitsGenTwoToNine[1];
+            // if (traitTypes.Contains("Face") && traitValue.Contains("WUKONG Face Paint"))
+            // {
+            //     var index = traitValue.IndexOf("WUKONG Face Paint");
+            //     traitsGenTwoToNine[1][index] = "Monkey King Face Paint";
+            // }
+            
+            var newTraitOneType = TraitHelper.ReplaceTraitValues(traitsGenOne[0], traitsGenOne[1]);
+            var newTraitTwoToNineType = TraitHelper.ReplaceTraitValues(traitsGenTwoToNine[0], traitsGenTwoToNine[1]);
+            traitsGenOne[1] = newTraitOneType;
+            traitsGenTwoToNine[1] = newTraitTwoToNineType;
             
             var rankOfGenOneProbabilityTypes = getRankOfGenOne(traitsGenOne);
             var rankTwoToNineProbabilityTypes = getRankTwoToNine(traitsGenTwoToNine);

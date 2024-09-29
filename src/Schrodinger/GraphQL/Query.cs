@@ -52,6 +52,11 @@ public class Query
                 var traitValueList = new List<string>();
                 foreach (var traitValue in input.Traits)
                 {
+                    if (traitValue.Values.IsNullOrEmpty())
+                    {
+                        continue;
+                    }
+                    
                     traitValueList.AddRange(traitValue.Values.Select(value =>
                     {
                         var traitType = traitValue.TraitType.Replace(" ", "");
@@ -59,12 +64,13 @@ public class Query
                     }));
                 }
 
-                logger.LogDebug("input trait value:{value}", traitValueList);
-
-                holderQueryable = holderQueryable.Where(
-                    traitValueList.Select(traitValue =>
-                            (Expression<Func<SchrodingerHolderIndex, bool>>)(o => o.TraitValues.Contains(traitValue)))
-                        .Aggregate((prev, next) => prev.Or(next)));
+                if (!traitValueList.IsNullOrEmpty())
+                {
+                    holderQueryable = holderQueryable.Where(
+                        traitValueList.Select(traitValue =>
+                                (Expression<Func<SchrodingerHolderIndex, bool>>)(o => o.TraitValues.Contains(traitValue)))
+                            .Aggregate((prev, next) => prev.Or(next)));
+                }
             }
 
             if (!input.Generations.IsNullOrEmpty())
@@ -628,6 +634,11 @@ public class Query
                 var traitValueList = new List<string>();
                 foreach (var traitValue in input.Traits)
                 {
+                    if (traitValue.Values.IsNullOrEmpty())
+                    {
+                        continue;
+                    }
+                    
                     traitValueList.AddRange(traitValue.Values.Select(value =>
                     {
                         var traitType = traitValue.TraitType.Replace(" ", "");
@@ -635,11 +646,13 @@ public class Query
                     }));
                 }
 
-                symbolQueryable = symbolQueryable.Where(
-                    traitValueList.Select(traitValue =>
-                            (Expression<Func<SchrodingerSymbolIndex, bool>>)(o => o.TraitValues.Contains(traitValue)))
-                        .Aggregate((prev, next) => prev.Or(next)));
-
+                if (!traitValueList.IsNullOrEmpty())
+                {
+                    symbolQueryable = symbolQueryable.Where(
+                        traitValueList.Select(traitValue =>
+                                (Expression<Func<SchrodingerSymbolIndex, bool>>)(o => o.TraitValues.Contains(traitValue)))
+                            .Aggregate((prev, next) => prev.Or(next)));
+                }
             }
 
             if (!input.Generations.IsNullOrEmpty())
@@ -1169,12 +1182,12 @@ public class Query
             adoptQueryable = adoptQueryable.Where(a => a.AdoptTime >= DateTime.UnixEpoch.AddMilliseconds((double)input.AdoptTime));
         }
         
-        if (!cancelledAdoptIdList.IsNullOrEmpty())
-        {
-            adoptQueryable = adoptQueryable.Where(
-                cancelledAdoptIdList.Select(adoptId => (Expression<Func<SchrodingerAdoptIndex, bool>>)(o => o.AdoptId != adoptId))
-                    .Aggregate((prev, next) => prev.And(next)));
-        }
+        // if (!cancelledAdoptIdList.IsNullOrEmpty())
+        // {
+        //     adoptQueryable = adoptQueryable.Where(
+        //         cancelledAdoptIdList.Select(adoptId => (Expression<Func<SchrodingerAdoptIndex, bool>>)(o => o.AdoptId != adoptId))
+        //             .Aggregate((prev, next) => prev.And(next)));
+        // }
 
         var result =  GetAllIndex(adoptQueryable).ToList();
         
@@ -1185,6 +1198,11 @@ public class Query
         foreach (var schrodingerAdoptIndex in unconfirmedList)
         {
             if (parentSymbolList.Contains(schrodingerAdoptIndex.Symbol))
+            {
+                continue;
+            }
+
+            if (!cancelledAdoptIdList.IsNullOrEmpty() && cancelledAdoptIdList.Contains(schrodingerAdoptIndex.AdoptId))
             {
                 continue;
             }

@@ -66,6 +66,13 @@ public class AdoptionUpdatedProcessor: SchrodingerProcessorBase<AdoptionUpdated>
             }
             
             await SaveEntityAsync(adopt);
+            
+            var adoptionUpdateIndex = Mapper.Map<AdoptionUpdated, AdoptionUpdatedIndex>(adopted);
+            adoptionUpdateIndex.Id = IdGenerateHelper.GetId(chainId, symbol);
+            adoptionUpdateIndex.AdoptTime = context.Block.BlockTime;
+            adoptionUpdateIndex.TransactionId = context.Transaction.TransactionId;
+            await SaveEntityAsync(adoptionUpdateIndex);
+            
             Logger.LogDebug("[AdoptionUpdated] end chainId:{chainId} symbol:{symbol}, adoptId:{adoptId}, parent:{parent}, transactionId:{TransactionId}", chainId, symbol,
                 adoptId, parent, adopt.TransactionId);
         }
@@ -138,13 +145,18 @@ public class AdoptionUpdatedProcessor: SchrodingerProcessorBase<AdoptionUpdated>
     {
         try
         {
-            var traitTypes = traitsGenTwoToNine[0];
-            var traitValue = traitsGenTwoToNine[1];
-            if (traitTypes.Contains("Face") && traitValue.Contains("WUKONG Face Paint"))
-            {
-                var index = traitValue.IndexOf("WUKONG Face Paint");
-                traitsGenTwoToNine[1][index] = "Monkey King Face Paint";
-            }
+            // var traitTypes = traitsGenTwoToNine[0];
+            // var traitValue = traitsGenTwoToNine[1];
+            // if (traitTypes.Contains("Face") && traitValue.Contains("WUKONG Face Paint"))
+            // {
+            //     var index = traitValue.IndexOf("WUKONG Face Paint");
+            //     traitsGenTwoToNine[1][index] = "Monkey King Face Paint";
+            // }
+
+            var newTraitOneType = TraitHelper.ReplaceTraitValues(traitsGenOne[0], traitsGenOne[1]);
+            var newTraitTwoToNineType = TraitHelper.ReplaceTraitValues(traitsGenTwoToNine[0], traitsGenTwoToNine[1]);
+            traitsGenOne[1] = newTraitOneType;
+            traitsGenTwoToNine[1] = newTraitTwoToNineType;
             
             var rankOfGenOneProbabilityTypes = getRankOfGenOne(traitsGenOne);
             var rankTwoToNineProbabilityTypes = getRankTwoToNine(traitsGenTwoToNine);
