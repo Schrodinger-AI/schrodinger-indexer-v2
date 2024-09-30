@@ -414,30 +414,34 @@ public class Query
         var cancelledAdoptionList = cancelQueryable.ToList();
         
         var cancelledAdoptIdList = cancelledAdoptionList.Select(c => c.AdoptId).ToList();
-        // cancelledAdoptIdList = cancelledAdoptIdList.Take(15).ToList();
 
         var adoptQueryable = await adoptRepository.GetQueryableAsync();
         adoptQueryable = adoptQueryable.Where(a => a.Adopter == input.Adopter);
         adoptQueryable = adoptQueryable.Where(a => !a.IsConfirmed);
 
-        if (!cancelledAdoptIdList.IsNullOrEmpty())
-        {
-            adoptQueryable = adoptQueryable.Where(
-                cancelledAdoptIdList.Select(adoptId => (Expression<Func<SchrodingerAdoptIndex, bool>>)(o => o.AdoptId != adoptId))
-                    .Aggregate((prev, next) => prev.And(next)));
-        }
+        // if (!cancelledAdoptIdList.IsNullOrEmpty())
+        // {
+        //     adoptQueryable = adoptQueryable.Where(
+        //         cancelledAdoptIdList.Select(adoptId => (Expression<Func<SchrodingerAdoptIndex, bool>>)(o => o.AdoptId != adoptId))
+        //             .Aggregate((prev, next) => prev.And(next)));
+        // }
         
         if (input.AdoptTime != null)
         {
             adoptQueryable = adoptQueryable.Where(a =>
                 a.AdoptTime < DateTime.UnixEpoch.AddMilliseconds((double)input.AdoptTime));
         }
-  
-        var count = adoptQueryable.Count();
-        var data = adoptQueryable.OrderByDescending(o => o.Metadata.Block.BlockTime).Skip(input.SkipCount).Take(input.MaxResultCount).ToList();
+        
+        var allAdoption = GetAllIndex(adoptQueryable);
+        var strayCats = allAdoption.Where(a => !cancelledAdoptIdList.Contains(a.AdoptId)).ToList();
+        
+        // var count = adoptQueryable.Count();
+        // var data = adoptQueryable.OrderByDescending(o => o.Metadata.Block.BlockTime).Skip(input.SkipCount).Take(input.MaxResultCount).ToList();
+
+        var count = strayCats.Count;
+        var data = strayCats.OrderByDescending(o => o.Metadata.Block.BlockTime).Skip(input.SkipCount).Take(input.MaxResultCount).ToList();
         
         var parentSymbolList = data.Select(i => i.ParentInfo?.Symbol ?? string.Empty).Where(s => !string.IsNullOrEmpty(s)).Distinct().ToList();
-        // parentSymbolList = parentSymbolList.Take(15).ToList();
         
         var symbolQueryable = await symbolRepository.GetQueryableAsync();
         symbolQueryable = symbolQueryable.Where(
