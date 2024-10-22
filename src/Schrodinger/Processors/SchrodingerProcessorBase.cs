@@ -25,7 +25,7 @@ public abstract class SchrodingerProcessorBase<TEvent> : LogEventProcessorBase<T
     {
         return chainId switch
         {
-            "AELF" => "Ccc5pNs71BMbgDr2ZwpNqtegfkHkBsTJ57HBZ6gw3HNH6pb9S",
+            "AELF" => "Qx3QMZPstem3UHU6qjc1PsufaJoJcKj2kC2sCEnzsqCjAJ3At",
             "tDVV" => "24o1XG3ryAB7wnchtPGzar7GWw68mhD1UEW7KGKxyE3tQUb7TT",
             "tDVW" => "Ccc5pNs71BMbgDr2ZwpNqtegfkHkBsTJ57HBZ6gw3HNH6pb9S",
             _ => string.Empty

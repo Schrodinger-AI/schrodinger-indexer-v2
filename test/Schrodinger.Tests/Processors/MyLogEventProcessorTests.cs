@@ -32,7 +32,7 @@ public class MyLogEventProcessorTests: SchrodingerTestBase
     [Fact]
     public async Task TestSoldEvent()
     {
-        
+        var newValues = TraitHelper.ReplaceTraitValues(new List<string>() {"Pet", "Face"}, new List<string>() {"Flokis", "Weed"});
         const string symbol = "SGR-1";
         const string tokenSymbol = "ELF";
         const long amount = 10000000000;

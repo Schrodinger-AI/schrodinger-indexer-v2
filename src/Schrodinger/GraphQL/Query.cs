@@ -129,7 +129,7 @@ public class Query
         }
         catch (Exception e)
         {
-            logger.LogDebug("getSchrodingerList failed:{err}", e.Message);
+            // logger.LogDebug("getSchrodingerList failed:{err}", e.Message);
             return new SchrodingerListDto();
         }
     }
@@ -719,7 +719,7 @@ public class Query
         }
         catch (Exception e)
         {
-            logger.LogError("getAllSchrodingerList failed:{err}", e.Message);
+            // logger.LogError("getAllSchrodingerList failed:{err}", e.Message);
             return new AllSchrodingerListDto();
         }
     }
@@ -751,6 +751,11 @@ public class Query
         if (!input.Address.IsNullOrEmpty())
         {
             queryable = queryable.Where(a => a.From == input.Address);
+        }
+        
+        if (!input.Buyer.IsNullOrEmpty())
+        {
+            queryable = queryable.Where(a => a.To == input.Buyer);
         }
 
         var response = new NFTActivityPageResultDto

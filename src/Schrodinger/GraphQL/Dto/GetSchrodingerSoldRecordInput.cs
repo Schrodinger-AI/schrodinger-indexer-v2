@@ -13,6 +13,8 @@ public class GetSchrodingerSoldRecordInput
     
     public string? ChainId { get; set; }
     
+    public string? Buyer { get; set; }
+    
     public int SkipCount { get; set; }
     
     public int MaxResultCount { get; set; } = 10;

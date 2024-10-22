@@ -36,7 +36,29 @@ public static class TraitHelper
                                            "Eyes": {"Aviator Sunglass": "Sunglass" },
                                            "Weapon": {"Flamethrower X": "Flamethrower" }
                                          }
-                                       }
+                                       },
+                                       {
+                                       "Id": "Trump",
+                                       "Tag": "Trump",
+                                       "ReplaceTraits": {
+                                         "Clothes": {"Red Tie": "Black Suit" },
+                                         "Mouth": {"Shouting Fight": "Shouting" },
+                                         "Accessory": {"Coke": "Pep Drink" },
+                                         "Theme": {"Billionaire": "Russian Maslenitsa snowscape" },
+                                         "Ride": {"Red Elephant": "Elephant" }
+                                         }
+                                      },
+                                      {
+                                       "Id": "Harris",
+                                       "Tag": "Harris",
+                                       "ReplaceTraits": {
+                                         "Clothes": {"Purple Dress": "Dress" },
+                                         "Mouth": {"HAHAHA": "Laughing" },
+                                         "Accessory": {"Earrings": "Ring" },
+                                         "Theme": {"Prosecutor": "Ukrainian sunflower vinok" },
+                                         "Ride": {"Blue Donkey": "Horse-drawn" }
+                                        }
+                                      }
                                      ]
                                      """;
   private static List<SpecialTrait> traitConfig = JsonConvert.DeserializeObject<List<SpecialTrait>>(TraitOption);
