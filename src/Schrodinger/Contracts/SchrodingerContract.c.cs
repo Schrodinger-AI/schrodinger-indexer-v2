@@ -569,6 +569,121 @@ namespace Schrodinger {
     }
   }
 
+  public partial class RewardConfigSet : aelf::IEvent<RewardConfigSet>
+  {
+    public global::System.Collections.Generic.IEnumerable<RewardConfigSet> GetIndexed()
+    {
+      return new List<RewardConfigSet>
+      {
+      };
+    }
+
+    public RewardConfigSet GetNonIndexed()
+    {
+      return new RewardConfigSet
+      {
+        Tick = Tick,
+        List = List,
+        Pool = Pool,
+      };
+    }
+  }
+
+  public partial class Spun : aelf::IEvent<Spun>
+  {
+    public global::System.Collections.Generic.IEnumerable<Spun> GetIndexed()
+    {
+      return new List<Spun>
+      {
+      };
+    }
+
+    public Spun GetNonIndexed()
+    {
+      return new Spun
+      {
+        Tick = Tick,
+        SpinInfo = SpinInfo,
+        Seed = Seed,
+      };
+    }
+  }
+
+  public partial class AdoptedWithVoucher : aelf::IEvent<AdoptedWithVoucher>
+  {
+    public global::System.Collections.Generic.IEnumerable<AdoptedWithVoucher> GetIndexed()
+    {
+      return new List<AdoptedWithVoucher>
+      {
+      };
+    }
+
+    public AdoptedWithVoucher GetNonIndexed()
+    {
+      return new AdoptedWithVoucher
+      {
+        VoucherInfo = VoucherInfo,
+      };
+    }
+  }
+
+  public partial class VoucherConfirmed : aelf::IEvent<VoucherConfirmed>
+  {
+    public global::System.Collections.Generic.IEnumerable<VoucherConfirmed> GetIndexed()
+    {
+      return new List<VoucherConfirmed>
+      {
+      };
+    }
+
+    public VoucherConfirmed GetNonIndexed()
+    {
+      return new VoucherConfirmed
+      {
+        VoucherInfo = VoucherInfo,
+      };
+    }
+  }
+
+  public partial class VoucherAirdropped : aelf::IEvent<VoucherAirdropped>
+  {
+    public global::System.Collections.Generic.IEnumerable<VoucherAirdropped> GetIndexed()
+    {
+      return new List<VoucherAirdropped>
+      {
+      };
+    }
+
+    public VoucherAirdropped GetNonIndexed()
+    {
+      return new VoucherAirdropped
+      {
+        Tick = Tick,
+        List = List,
+        Amount = Amount,
+      };
+    }
+  }
+
+  public partial class AirdropAdminSet : aelf::IEvent<AirdropAdminSet>
+  {
+    public global::System.Collections.Generic.IEnumerable<AirdropAdminSet> GetIndexed()
+    {
+      return new List<AirdropAdminSet>
+      {
+      };
+    }
+
+    public AirdropAdminSet GetNonIndexed()
+    {
+      return new AirdropAdminSet
+      {
+        Tick = Tick,
+        Admin = Admin,
+      };
+    }
+  }
+
   #endregion
   public static partial class SchrodingerContractContainer
   {
@@ -610,6 +725,16 @@ namespace Schrodinger {
     static readonly aelf::Marshaller<global::Google.Protobuf.WellKnownTypes.BoolValue> __Marshaller_google_protobuf_BoolValue = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.BoolValue.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::Schrodinger.TransferFromReceivingAddressInput> __Marshaller_TransferFromReceivingAddressInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.TransferFromReceivingAddressInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::Schrodinger.SetOfficialDomainAliasInput> __Marshaller_SetOfficialDomainAliasInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.SetOfficialDomainAliasInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.SetRewardConfigInput> __Marshaller_SetRewardConfigInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.SetRewardConfigInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.GetRewardConfigOutput> __Marshaller_GetRewardConfigOutput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.GetRewardConfigOutput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.SpinInput> __Marshaller_SpinInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.SpinInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.SpinInfo> __Marshaller_SpinInfo = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.SpinInfo.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.AdoptWithVoucherInput> __Marshaller_AdoptWithVoucherInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.AdoptWithVoucherInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.VoucherInfo> __Marshaller_VoucherInfo = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.VoucherInfo.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.ConfirmVoucherInput> __Marshaller_ConfirmVoucherInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.ConfirmVoucherInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.GetAdoptionVoucherAmountInput> __Marshaller_GetAdoptionVoucherAmountInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.GetAdoptionVoucherAmountInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.AirdropVoucherInput> __Marshaller_AirdropVoucherInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.AirdropVoucherInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.SetAirdropAdminInput> __Marshaller_SetAirdropAdminInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.SetAirdropAdminInput.Parser.ParseFrom);
     #endregion
 
     #region Methods
@@ -977,6 +1102,83 @@ namespace Schrodinger {
         __Marshaller_google_protobuf_Empty,
         __Marshaller_google_protobuf_StringValue);
 
+    static readonly aelf::Method<global::Schrodinger.SetRewardConfigInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_SetRewardConfig = new aelf::Method<global::Schrodinger.SetRewardConfigInput, global::Google.Protobuf.WellKnownTypes.Empty>(
+        aelf::MethodType.Action,
+        __ServiceName,
+        "SetRewardConfig",
+        __Marshaller_SetRewardConfigInput,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly aelf::Method<global::Google.Protobuf.WellKnownTypes.StringValue, global::Schrodinger.GetRewardConfigOutput> __Method_GetRewardConfig = new aelf::Method<global::Google.Protobuf.WellKnownTypes.StringValue, global::Schrodinger.GetRewardConfigOutput>(
+        aelf::MethodType.View,
+        __ServiceName,
+        "GetRewardConfig",
+        __Marshaller_google_protobuf_StringValue,
+        __Marshaller_GetRewardConfigOutput);
+
+    static readonly aelf::Method<global::Schrodinger.SpinInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Spin = new aelf::Method<global::Schrodinger.SpinInput, global::Google.Protobuf.WellKnownTypes.Empty>(
+        aelf::MethodType.Action,
+        __ServiceName,
+        "Spin",
+        __Marshaller_SpinInput,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly aelf::Method<global::AElf.Types.Hash, global::Schrodinger.SpinInfo> __Method_GetSpinInfo = new aelf::Method<global::AElf.Types.Hash, global::Schrodinger.SpinInfo>(
+        aelf::MethodType.View,
+        __ServiceName,
+        "GetSpinInfo",
+        __Marshaller_aelf_Hash,
+        __Marshaller_SpinInfo);
+
+    static readonly aelf::Method<global::Schrodinger.AdoptWithVoucherInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_AdoptWithVoucher = new aelf::Method<global::Schrodinger.AdoptWithVoucherInput, global::Google.Protobuf.WellKnownTypes.Empty>(
+        aelf::MethodType.Action,
+        __ServiceName,
+        "AdoptWithVoucher",
+        __Marshaller_AdoptWithVoucherInput,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly aelf::Method<global::AElf.Types.Hash, global::Schrodinger.VoucherInfo> __Method_GetVoucherInfo = new aelf::Method<global::AElf.Types.Hash, global::Schrodinger.VoucherInfo>(
+        aelf::MethodType.View,
+        __ServiceName,
+        "GetVoucherInfo",
+        __Marshaller_aelf_Hash,
+        __Marshaller_VoucherInfo);
+
+    static readonly aelf::Method<global::Schrodinger.ConfirmVoucherInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ConfirmVoucher = new aelf::Method<global::Schrodinger.ConfirmVoucherInput, global::Google.Protobuf.WellKnownTypes.Empty>(
+        aelf::MethodType.Action,
+        __ServiceName,
+        "ConfirmVoucher",
+        __Marshaller_ConfirmVoucherInput,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly aelf::Method<global::Schrodinger.GetAdoptionVoucherAmountInput, global::Google.Protobuf.WellKnownTypes.Int64Value> __Method_GetAdoptionVoucherAmount = new aelf::Method<global::Schrodinger.GetAdoptionVoucherAmountInput, global::Google.Protobuf.WellKnownTypes.Int64Value>(
+        aelf::MethodType.View,
+        __ServiceName,
+        "GetAdoptionVoucherAmount",
+        __Marshaller_GetAdoptionVoucherAmountInput,
+        __Marshaller_google_protobuf_Int64Value);
+
+    static readonly aelf::Method<global::Schrodinger.AirdropVoucherInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_AirdropVoucher = new aelf::Method<global::Schrodinger.AirdropVoucherInput, global::Google.Protobuf.WellKnownTypes.Empty>(
+        aelf::MethodType.Action,
+        __ServiceName,
+        "AirdropVoucher",
+        __Marshaller_AirdropVoucherInput,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly aelf::Method<global::Schrodinger.SetAirdropAdminInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_SetAirdropAdmin = new aelf::Method<global::Schrodinger.SetAirdropAdminInput, global::Google.Protobuf.WellKnownTypes.Empty>(
+        aelf::MethodType.Action,
+        __ServiceName,
+        "SetAirdropAdmin",
+        __Marshaller_SetAirdropAdminInput,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly aelf::Method<global::Google.Protobuf.WellKnownTypes.StringValue, global::AElf.Types.Address> __Method_GetAirdropAdmin = new aelf::Method<global::Google.Protobuf.WellKnownTypes.StringValue, global::AElf.Types.Address>(
+        aelf::MethodType.View,
+        __ServiceName,
+        "GetAirdropAdmin",
+        __Marshaller_google_protobuf_StringValue,
+        __Marshaller_aelf_Address);
+
     #endregion
 
     #region Descriptors
@@ -997,6 +1199,7 @@ namespace Schrodinger {
       }
     }
     #endregion
+
   }
 }
 #endregion
