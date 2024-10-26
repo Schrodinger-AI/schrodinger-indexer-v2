@@ -1308,4 +1308,96 @@ public class Query
 
         return resp;
     }
+    
+    [Name("getLatestSpinRewardConfig")]
+    public static async Task<SpinRewardConfigDto> GetLatestSpinRewardConfigAsync(
+        [FromServices] IReadOnlyRepository<SpinRewardConfigIndex> rewardConfigRepository)
+    {
+        var queryable = await rewardConfigRepository.GetQueryableAsync();
+        var data = queryable.OrderByDescending(o => o.Metadata.Block.BlockTime).ToList().FirstOrDefault();
+        // var result = queryable.ToList().FirstOrDefault();
+        if (data == null)
+        {
+            return new SpinRewardConfigDto();
+        }
+        
+        var rewardList = new List<RewardDto>();
+        foreach (var item in data.Config.RewardList.Data)
+        {
+            rewardList.Add(new RewardDto { Amount = item.Amount, Name = item.Name });
+        }
+        
+        return new SpinRewardConfigDto
+        {
+            RewardList = rewardList
+        };
+    }
+    
+    [Name("getSpinResult")]
+    public static async Task<SpinResultDto> GetSpinResultAsync(
+        [FromServices] IReadOnlyRepository<SpinResultIndex> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetSpinResultInput input)
+    {
+        var queryable = await repository.GetQueryableAsync();
+        queryable = queryable.Where(a => a.Seed == input.Seed);
+        var result = queryable.ToList().FirstOrDefault();
+        if (result == null)
+        {
+            return new SpinResultDto();
+        }
+        
+        return objectMapper.Map<SpinResultIndex, SpinResultDto>(result);
+    }
+    
+    [Name("getScoreFromSpinReward")]
+    public static async Task<ScoreFromSpinRewardDto> GetScoreFromSpinRewardAsync(
+        [FromServices] IReadOnlyRepository<SpinResultIndex> repository,
+        GetScoreFromSpinRewardInput input)
+    {
+        var queryable = await repository.GetQueryableAsync();
+        queryable = queryable.Where(a => a.Address == input.Address);
+        queryable = queryable.Where(a => a.RewardType == RewardType.Point);
+        var rewardList = GetAllIndex(queryable);
+        
+        var totalScore = rewardList.Sum(x => x.Amount);
+        
+        return new ScoreFromSpinRewardDto
+        {
+            Score = totalScore
+        };
+    }
+    
+    [Name("getVoucherAdoption")]
+    public static async Task<VoucherAdoptionDto> GetVoucherAdoptionAsync(
+        [FromServices] IReadOnlyRepository<AdoptWithVoucherIndex> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetVoucherAdoptionInput input)
+    {
+        var queryable = await repository.GetQueryableAsync();
+        queryable = queryable.Where(a => a.VoucherId == input.VoucherId);
+        var result = queryable.ToList().FirstOrDefault();
+        if (result == null)
+        {
+            return new VoucherAdoptionDto();
+        }
+        
+        return objectMapper.Map<AdoptWithVoucherIndex, VoucherAdoptionDto>(result);
+    }
+    
+    
+    [Name("getConsumeScoreFromSpin")]
+    public static async Task<ConsumeScoreFromSpinDto> GetScoreFromSpinAsync(
+        [FromServices] IReadOnlyRepository<SpinResultIndex> repository,
+        GetConsumeScoreFromSpinInput input)
+    {
+        var queryable = await repository.GetQueryableAsync();
+        queryable = queryable.Where(a => a.Address == input.Address);
+        var count = queryable.Count();
+        
+        return new ConsumeScoreFromSpinDto
+        {
+            Score = count * 100
+        };
+    }
 }

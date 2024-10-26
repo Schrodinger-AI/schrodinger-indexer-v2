@@ -265,6 +265,28 @@ public class SchrodingerProfile : Profile
             .ForMember(des => des.Adopter, opt
                 => opt.MapFrom(source => MapAddress(source.Adopter)))
             ;
+        
+        CreateMap<Spun, SpinResultIndex>()
+            .ForMember(des => des.Address, opt
+                => opt.MapFrom(source => MapAddress(source.SpinInfo.Account)))
+            ;
+
+        CreateMap<AdoptedWithVoucher, AdoptWithVoucherIndex>()
+            .ForMember(des => des.Attributes, opt
+                => opt.MapFrom(source => MapAttributes(source.VoucherInfo.Attributes)))
+            .ForMember(des => des.Adopter, opt
+                => opt.MapFrom(source => MapAddress(source.VoucherInfo.Account)))
+            ;
+
+        CreateMap<SpinResultIndex, SpinResultDto>();
+        CreateMap<AdoptWithVoucherIndex, VoucherAdoptionDto>();
+
+        CreateMap<VoucherConfirmed, AdoptWithVoucherIndex>()
+            .ForMember(des => des.Attributes, opt
+                => opt.MapFrom(source => MapAttributes(source.VoucherInfo.Attributes)))
+            .ForMember(des => des.Adopter, opt
+                => opt.MapFrom(source => MapAddress(source.VoucherInfo.Account)))
+            ;
     }
     
     private static string MapHash(Hash hash)

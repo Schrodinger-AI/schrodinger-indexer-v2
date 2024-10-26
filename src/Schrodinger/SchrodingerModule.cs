@@ -34,5 +34,9 @@ public class SchrodingerModule: AbpModule
         context.Services.AddTransient<ILogEventProcessor, TransferredProcessor>();
         context.Services.AddTransient<ILogEventProcessor, SoldLogEventProcessor>();
         context.Services.AddTransient<ILogEventProcessor, AdoptionUpdatedProcessor>();
+        context.Services.AddTransient<ILogEventProcessor, SpinProcessor>();
+        context.Services.AddTransient<ILogEventProcessor, SpinRewardConfigProcessor>();
+        context.Services.AddTransient<ILogEventProcessor, AdoptedWithVoucherProcessor>();
+        context.Services.AddTransient<ILogEventProcessor, ConfirmVoucherProcessor>();
     }
 }
