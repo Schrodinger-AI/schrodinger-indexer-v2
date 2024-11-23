@@ -312,6 +312,12 @@ public class SchrodingerProfile : Profile
             .ForMember(des => des.AdoptIdB, opt
                 => opt.MapFrom(source => MapHash(source.AdoptIdB)))
             ;
+        CreateMap<Redeemed, RedeemedRecordIndex>()
+            .ForMember(des => des.Address, opt
+                => opt.MapFrom(source => MapAddress(source.Account)))
+            .ForMember(des => des.AdoptId, opt
+                => opt.MapFrom(source => MapHash(source.AdoptId)))
+            ;
     }
     
     private static string MapHash(Hash hash)

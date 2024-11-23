@@ -105,10 +105,21 @@ public class TokenCreatedProcessor() : TokenProcessorBase<TokenCreated>
             var isGen9 = TokenSymbolHelper.GetIsGen9FromSchrodingerSymbolIndex(symbolIndex);
             if (isGen9)
             {
-                var traitsGenOne = new List<List<string>>();
-                var traitsGenTwoToNine = new List<List<string>>();
-                GetTraitsInput(symbolIndex.Traits, traitsGenOne, traitsGenTwoToNine);
-                var rank = GetRank(traitsGenOne, traitsGenTwoToNine);
+                var id = IdGenerateHelper.GetId(chainId, symbol);
+                var adoptIndex = await GetEntityAsync<SchrodingerAdoptIndex>(id);
+                var rank = 0;
+                if (adoptIndex != null && adoptIndex.Rank > 0)
+                {
+                    rank = adoptIndex.Rank;
+                }
+                else
+                {
+                    var traitsGenOne = new List<List<string>>();
+                    var traitsGenTwoToNine = new List<List<string>>();
+                    GetTraitsInput(symbolIndex.Traits, traitsGenOne, traitsGenTwoToNine);
+                    rank = GetRank(traitsGenOne, traitsGenTwoToNine);
+                }
+                
                 symbolIndex = SetRankRarity(symbolIndex, rank);
                 Logger.LogDebug("[TokenCreated] get rank:{rank}, symbol:{symbol}", rank, symbol);
             }

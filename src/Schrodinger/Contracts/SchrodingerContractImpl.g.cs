@@ -71,68 +71,75 @@ namespace Schrodinger {
             "cxgDIAEoCzILLk1lcmdlUmF0ZXMSFQoNbWF4aW11bV9sZXZlbBgEIAEoAyJ9",
             "CgpNZXJnZUlucHV0EgwKBHRpY2sYASABKAkSHgoKYWRvcHRfaWRfYRgCIAEo",
             "CzIKLmFlbGYuSGFzaBIeCgphZG9wdF9pZF9iGAMgASgLMgouYWVsZi5IYXNo",
-            "Eg0KBWxldmVsGAQgASgDEhIKCXNpZ25hdHVyZRiQTiABKAwiXQoPUmV3YXJk",
-            "Q29uZmlnU2V0EgwKBHRpY2sYASABKAkSGQoEbGlzdBgCIAEoCzILLlJld2Fy",
-            "ZExpc3QSGwoEcG9vbBgDIAEoCzINLmFlbGYuQWRkcmVzczoEoLsYASJSCgRT",
-            "cHVuEgwKBHRpY2sYASABKAkSHAoJc3Bpbl9pbmZvGAIgASgLMgkuU3Bpbklu",
-            "Zm8SGAoEc2VlZBgDIAEoCzIKLmFlbGYuSGFzaDoEoLsYASI+ChJBZG9wdGVk",
-            "V2l0aFZvdWNoZXISIgoMdm91Y2hlcl9pbmZvGAEgASgLMgwuVm91Y2hlcklu",
-            "Zm86BKC7GAEiPAoQVm91Y2hlckNvbmZpcm1lZBIiCgx2b3VjaGVyX2luZm8Y",
-            "ASABKAsyDC5Wb3VjaGVySW5mbzoEoLsYASJTChFWb3VjaGVyQWlyZHJvcHBl",
-            "ZBIMCgR0aWNrGAEgASgJEhoKBGxpc3QYAiABKAsyDC5BZGRyZXNzTGlzdBIO",
-            "CgZhbW91bnQYAyABKAM6BKC7GAEiTQoWQWlyZHJvcENvbnRyb2xsZXJBZGRl",
-            "ZBIMCgR0aWNrGAEgASgJEh8KCWFkZHJlc3NlcxgCIAEoCzIMLkFkZHJlc3NM",
-            "aXN0OgSguxgBIk8KGEFpcmRyb3BDb250cm9sbGVyUmVtb3ZlZBIMCgR0aWNr",
-            "GAEgASgJEh8KCWFkZHJlc3NlcxgCIAEoCzIMLkFkZHJlc3NMaXN0OgSguxgB",
-            "IkQKD1Jlcm9sbENvbmZpZ1NldBIMCgR0aWNrGAEgASgJEh0KBmNvbmZpZxgC",
-            "IAEoCzINLlJlcm9sbENvbmZpZzoEoLsYASJiChNNZXJnZVJhdGVzQ29uZmln",
-            "U2V0EgwKBHRpY2sYASABKAkSIAoLbWVyZ2VfcmF0ZXMYAiABKAsyCy5NZXJn",
-            "ZVJhdGVzEhUKDW1heGltdW1fbGV2ZWwYAyABKAM6BKC7GAEiQgoOTWVyZ2VD",
-            "b25maWdTZXQSDAoEdGljaxgBIAEoCRIcCgZjb25maWcYAiABKAsyDC5NZXJn",
-            "ZUNvbmZpZzoEoLsYASL0AQoGTWVyZ2VkEgwKBHRpY2sYASABKAkSHgoKYWRv",
-            "cHRfaWRfYRgCIAEoCzIKLmFlbGYuSGFzaBIeCgphZG9wdF9pZF9iGAMgASgL",
-            "MgouYWVsZi5IYXNoEhAKCHN5bWJvbF9hGAQgASgJEhAKCHN5bWJvbF9iGAUg",
-            "ASgJEhAKCGFtb3VudF9hGAYgASgDEhAKCGFtb3VudF9iGAcgASgDEh4KCmFk",
-            "b3B0X2luZm8YCCABKAsyCi5BZG9wdEluZm8SEwoLbG9zc19hbW91bnQYCSAB",
-            "KAMSGQoRY29tbWlzc2lvbl9hbW91bnQYCiABKAM6BKC7GAEiVgoYVm91Y2hl",
-            "ckFkb3B0aW9uQ29uZmlnU2V0EgwKBHRpY2sYASABKAkSJgoGY29uZmlnGAIg",
-            "ASgLMhYuVm91Y2hlckFkb3B0aW9uQ29uZmlnOgSguxgBKkIKClJld2FyZFR5",
-            "cGUSCQoFT3RoZXIQABIJCgVQb2ludBABEhMKD0Fkb3B0aW9uVm91Y2hlchAC",
-            "EgkKBVRva2VuEAMy8gsKF1NjaHJvZGluZ2VyQ29udHJhY3RJbXBsEkIKD1Nl",
-            "dFJld2FyZENvbmZpZxIVLlNldFJld2FyZENvbmZpZ0lucHV0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IgASTgoPR2V0UmV3YXJkQ29uZmlnEhwuZ29vZ2xl",
-            "LnByb3RvYnVmLlN0cmluZ1ZhbHVlGhYuR2V0UmV3YXJkQ29uZmlnT3V0cHV0",
-            "IgWIifcBARIsCgRTcGluEgouU3BpbklucHV0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5IgASKwoLR2V0U3BpbkluZm8SCi5hZWxmLkhhc2gaCS5TcGluSW5m",
-            "byIFiIn3AQESRAoQQWRvcHRXaXRoVm91Y2hlchIWLkFkb3B0V2l0aFZvdWNo",
-            "ZXJJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjEKDkdldFZvdWNo",
-            "ZXJJbmZvEgouYWVsZi5IYXNoGgwuVm91Y2hlckluZm8iBYiJ9wEBEkAKDkNv",
-            "bmZpcm1Wb3VjaGVyEhQuQ29uZmlybVZvdWNoZXJJbnB1dBoWLmdvb2dsZS5w",
-            "cm90b2J1Zi5FbXB0eSIAEl4KGEdldEFkb3B0aW9uVm91Y2hlckFtb3VudBIe",
-            "LkdldEFkb3B0aW9uVm91Y2hlckFtb3VudElucHV0GhsuZ29vZ2xlLnByb3Rv",
-            "YnVmLkludDY0VmFsdWUiBYiJ9wEBElQKGFNldFZvdWNoZXJBZG9wdGlvbkNv",
-            "bmZpZxIeLlNldFZvdWNoZXJBZG9wdGlvbkNvbmZpZ0lucHV0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IgASVwoYR2V0Vm91Y2hlckFkb3B0aW9uQ29uZmln",
-            "EhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlGhYuVm91Y2hlckFkb3B0",
-            "aW9uQ29uZmlnIgWIifcBARJACg5BaXJkcm9wVm91Y2hlchIULkFpcmRyb3BW",
-            "b3VjaGVySW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJJChRHZXRB",
-            "aXJkcm9wQ29udHJvbGxlchIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1",
-            "ZRoMLkFkZHJlc3NMaXN0IgWIifcBARJMChRBZGRBaXJkcm9wQ29udHJvbGxl",
-            "chIaLkFkZEFpcmRyb3BDb250cm9sbGVySW5wdXQaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiABJSChdSZW1vdmVBaXJkcm9wQ29udHJvbGxlchIdLlJlbW92",
-            "ZUFpcmRyb3BDb250cm9sbGVySW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiABJCCg9TZXRSZXJvbGxDb25maWcSFS5TZXRSZXJvbGxDb25maWdJbnB1",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkUKD0dldFJlcm9sbENvbmZp",
-            "ZxIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRoNLlJlcm9sbENvbmZp",
-            "ZyIFiIn3AQESQAoOU2V0TWVyZ2VDb25maWcSFC5TZXRNZXJnZUNvbmZpZ0lu",
-            "cHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASTAoOR2V0TWVyZ2VDb25m",
-            "aWcSHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUaFS5HZXRNZXJnZUNv",
-            "bmZpZ091dHB1dCIFiIn3AQESSgoTU2V0TWVyZ2VSYXRlc0NvbmZpZxIZLlNl",
-            "dE1lcmdlUmF0ZXNDb25maWdJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSIAEi4KBU1lcmdlEgsuTWVyZ2VJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIAGljKyvYBC2FjczEyLnByb3Rvysr2ARpzY2hyb2Rpbmdlcl9jb250",
-            "cmFjdC5wcm90b7LM9gEkU2Nocm9kaW5nZXIuU2Nocm9kaW5nZXJDb250cmFj",
-            "dFN0YXRlQg6qAgtTY2hyb2RpbmdlcmIGcHJvdG8z"));
+            "Eg0KBWxldmVsGAQgASgDEhIKCXNpZ25hdHVyZRiQTiABKAwiXAoLUmVkZWVt",
+            "SW5wdXQSDAoEdGljaxgBIAEoCRIcCghhZG9wdF9pZBgCIAEoCzIKLmFlbGYu",
+            "SGFzaBINCgVsZXZlbBgDIAEoAxISCglzaWduYXR1cmUYkE4gASgMIl0KD1Jl",
+            "d2FyZENvbmZpZ1NldBIMCgR0aWNrGAEgASgJEhkKBGxpc3QYAiABKAsyCy5S",
+            "ZXdhcmRMaXN0EhsKBHBvb2wYAyABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEi",
+            "UgoEU3B1bhIMCgR0aWNrGAEgASgJEhwKCXNwaW5faW5mbxgCIAEoCzIJLlNw",
+            "aW5JbmZvEhgKBHNlZWQYAyABKAsyCi5hZWxmLkhhc2g6BKC7GAEiPgoSQWRv",
+            "cHRlZFdpdGhWb3VjaGVyEiIKDHZvdWNoZXJfaW5mbxgBIAEoCzIMLlZvdWNo",
+            "ZXJJbmZvOgSguxgBIjwKEFZvdWNoZXJDb25maXJtZWQSIgoMdm91Y2hlcl9p",
+            "bmZvGAEgASgLMgwuVm91Y2hlckluZm86BKC7GAEiUwoRVm91Y2hlckFpcmRy",
+            "b3BwZWQSDAoEdGljaxgBIAEoCRIaCgRsaXN0GAIgASgLMgwuQWRkcmVzc0xp",
+            "c3QSDgoGYW1vdW50GAMgASgDOgSguxgBIk0KFkFpcmRyb3BDb250cm9sbGVy",
+            "QWRkZWQSDAoEdGljaxgBIAEoCRIfCglhZGRyZXNzZXMYAiABKAsyDC5BZGRy",
+            "ZXNzTGlzdDoEoLsYASJPChhBaXJkcm9wQ29udHJvbGxlclJlbW92ZWQSDAoE",
+            "dGljaxgBIAEoCRIfCglhZGRyZXNzZXMYAiABKAsyDC5BZGRyZXNzTGlzdDoE",
+            "oLsYASJECg9SZXJvbGxDb25maWdTZXQSDAoEdGljaxgBIAEoCRIdCgZjb25m",
+            "aWcYAiABKAsyDS5SZXJvbGxDb25maWc6BKC7GAEiYgoTTWVyZ2VSYXRlc0Nv",
+            "bmZpZ1NldBIMCgR0aWNrGAEgASgJEiAKC21lcmdlX3JhdGVzGAIgASgLMgsu",
+            "TWVyZ2VSYXRlcxIVCg1tYXhpbXVtX2xldmVsGAMgASgDOgSguxgBIkIKDk1l",
+            "cmdlQ29uZmlnU2V0EgwKBHRpY2sYASABKAkSHAoGY29uZmlnGAIgASgLMgwu",
+            "TWVyZ2VDb25maWc6BKC7GAEi9AEKBk1lcmdlZBIMCgR0aWNrGAEgASgJEh4K",
+            "CmFkb3B0X2lkX2EYAiABKAsyCi5hZWxmLkhhc2gSHgoKYWRvcHRfaWRfYhgD",
+            "IAEoCzIKLmFlbGYuSGFzaBIQCghzeW1ib2xfYRgEIAEoCRIQCghzeW1ib2xf",
+            "YhgFIAEoCRIQCghhbW91bnRfYRgGIAEoAxIQCghhbW91bnRfYhgHIAEoAxIe",
+            "CgphZG9wdF9pbmZvGAggASgLMgouQWRvcHRJbmZvEhMKC2xvc3NfYW1vdW50",
+            "GAkgASgDEhkKEWNvbW1pc3Npb25fYW1vdW50GAogASgDOgSguxgBIlYKGFZv",
+            "dWNoZXJBZG9wdGlvbkNvbmZpZ1NldBIMCgR0aWNrGAEgASgJEiYKBmNvbmZp",
+            "ZxgCIAEoCzIWLlZvdWNoZXJBZG9wdGlvbkNvbmZpZzoEoLsYASKLAQoIUmVk",
+            "ZWVtZWQSDAoEdGljaxgBIAEoCRIcCghhZG9wdF9pZBgCIAEoCzIKLmFlbGYu",
+            "SGFzaBINCgVsZXZlbBgDIAEoAxIeCgdhY2NvdW50GAQgASgLMg0uYWVsZi5B",
+            "ZGRyZXNzEg4KBnN5bWJvbBgFIAEoCRIOCgZhbW91bnQYBiABKAM6BKC7GAEq",
+            "QgoKUmV3YXJkVHlwZRIJCgVPdGhlchAAEgkKBVBvaW50EAESEwoPQWRvcHRp",
+            "b25Wb3VjaGVyEAISCQoFVG9rZW4QAzKkDAoXU2Nocm9kaW5nZXJDb250cmFj",
+            "dEltcGwSQgoPU2V0UmV3YXJkQ29uZmlnEhUuU2V0UmV3YXJkQ29uZmlnSW5w",
+            "dXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJOCg9HZXRSZXdhcmRDb25m",
+            "aWcSHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUaFi5HZXRSZXdhcmRD",
+            "b25maWdPdXRwdXQiBYiJ9wEBEiwKBFNwaW4SCi5TcGluSW5wdXQaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkiABIrCgtHZXRTcGluSW5mbxIKLmFlbGYuSGFz",
+            "aBoJLlNwaW5JbmZvIgWIifcBARJEChBBZG9wdFdpdGhWb3VjaGVyEhYuQWRv",
+            "cHRXaXRoVm91Y2hlcklucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgAS",
+            "MQoOR2V0Vm91Y2hlckluZm8SCi5hZWxmLkhhc2gaDC5Wb3VjaGVySW5mbyIF",
+            "iIn3AQESQAoOQ29uZmlybVZvdWNoZXISFC5Db25maXJtVm91Y2hlcklucHV0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASXgoYR2V0QWRvcHRpb25Wb3Vj",
+            "aGVyQW1vdW50Eh4uR2V0QWRvcHRpb25Wb3VjaGVyQW1vdW50SW5wdXQaGy5n",
+            "b29nbGUucHJvdG9idWYuSW50NjRWYWx1ZSIFiIn3AQESVAoYU2V0Vm91Y2hl",
+            "ckFkb3B0aW9uQ29uZmlnEh4uU2V0Vm91Y2hlckFkb3B0aW9uQ29uZmlnSW5w",
+            "dXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJXChhHZXRWb3VjaGVyQWRv",
+            "cHRpb25Db25maWcSHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUaFi5W",
+            "b3VjaGVyQWRvcHRpb25Db25maWciBYiJ9wEBEkAKDkFpcmRyb3BWb3VjaGVy",
+            "EhQuQWlyZHJvcFZvdWNoZXJJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eSIAEkkKFEdldEFpcmRyb3BDb250cm9sbGVyEhwuZ29vZ2xlLnByb3RvYnVm",
+            "LlN0cmluZ1ZhbHVlGgwuQWRkcmVzc0xpc3QiBYiJ9wEBEkwKFEFkZEFpcmRy",
+            "b3BDb250cm9sbGVyEhouQWRkQWlyZHJvcENvbnRyb2xsZXJJbnB1dBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSIAElIKF1JlbW92ZUFpcmRyb3BDb250cm9s",
+            "bGVyEh0uUmVtb3ZlQWlyZHJvcENvbnRyb2xsZXJJbnB1dBoWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eSIAEkIKD1NldFJlcm9sbENvbmZpZxIVLlNldFJlcm9s",
+            "bENvbmZpZ0lucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASRQoPR2V0",
+            "UmVyb2xsQ29uZmlnEhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlGg0u",
+            "UmVyb2xsQ29uZmlnIgWIifcBARJACg5TZXRNZXJnZUNvbmZpZxIULlNldE1l",
+            "cmdlQ29uZmlnSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJMCg5H",
+            "ZXRNZXJnZUNvbmZpZxIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRoV",
+            "LkdldE1lcmdlQ29uZmlnT3V0cHV0IgWIifcBARJKChNTZXRNZXJnZVJhdGVz",
+            "Q29uZmlnEhkuU2V0TWVyZ2VSYXRlc0NvbmZpZ0lucHV0GhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5IgASLgoFTWVyZ2USCy5NZXJnZUlucHV0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5IgASMAoGUmVkZWVtEgwuUmVkZWVtSW5wdXQaFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiABpYysr2AQthY3MxMi5wcm90b8rK9gEa",
+            "c2Nocm9kaW5nZXJfY29udHJhY3QucHJvdG+yzPYBJFNjaHJvZGluZ2VyLlNj",
+            "aHJvZGluZ2VyQ29udHJhY3RTdGF0ZUIOqgILU2Nocm9kaW5nZXJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::AElf.Types.CoreReflection.Descriptor, global::AElf.OptionsReflection.Descriptor, global::AElf.Standards.ACS12.Acs12Reflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Schrodinger.SchrodingerContractReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Schrodinger.RewardType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -161,6 +168,7 @@ namespace Schrodinger {
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.MergeConfig), global::Schrodinger.MergeConfig.Parser, new[]{ "CommissionAmount", "PoolAmount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.GetMergeConfigOutput), global::Schrodinger.GetMergeConfigOutput.Parser, new[]{ "Tick", "Config", "MergeRates", "MaximumLevel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.MergeInput), global::Schrodinger.MergeInput.Parser, new[]{ "Tick", "AdoptIdA", "AdoptIdB", "Level", "Signature" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.RedeemInput), global::Schrodinger.RedeemInput.Parser, new[]{ "Tick", "AdoptId", "Level", "Signature" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.RewardConfigSet), global::Schrodinger.RewardConfigSet.Parser, new[]{ "Tick", "List", "Pool" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Spun), global::Schrodinger.Spun.Parser, new[]{ "Tick", "SpinInfo", "Seed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AdoptedWithVoucher), global::Schrodinger.AdoptedWithVoucher.Parser, new[]{ "VoucherInfo" }, null, null, null, null),
@@ -172,7 +180,8 @@ namespace Schrodinger {
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.MergeRatesConfigSet), global::Schrodinger.MergeRatesConfigSet.Parser, new[]{ "Tick", "MergeRates", "MaximumLevel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.MergeConfigSet), global::Schrodinger.MergeConfigSet.Parser, new[]{ "Tick", "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Merged), global::Schrodinger.Merged.Parser, new[]{ "Tick", "AdoptIdA", "AdoptIdB", "SymbolA", "SymbolB", "AmountA", "AmountB", "AdoptInfo", "LossAmount", "CommissionAmount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.VoucherAdoptionConfigSet), global::Schrodinger.VoucherAdoptionConfigSet.Parser, new[]{ "Tick", "Config" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.VoucherAdoptionConfigSet), global::Schrodinger.VoucherAdoptionConfigSet.Parser, new[]{ "Tick", "Config" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Redeemed), global::Schrodinger.Redeemed.Parser, new[]{ "Tick", "AdoptId", "Level", "Account", "Symbol", "Amount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4588,6 +4597,225 @@ namespace Schrodinger {
 
   }
 
+  public sealed partial class RedeemInput : pb::IMessage<RedeemInput> {
+    private static readonly pb::MessageParser<RedeemInput> _parser = new pb::MessageParser<RedeemInput>(() => new RedeemInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RedeemInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RedeemInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RedeemInput(RedeemInput other) : this() {
+      tick_ = other.tick_;
+      adoptId_ = other.adoptId_ != null ? other.adoptId_.Clone() : null;
+      level_ = other.level_;
+      signature_ = other.signature_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RedeemInput Clone() {
+      return new RedeemInput(this);
+    }
+
+    /// <summary>Field number for the "tick" field.</summary>
+    public const int TickFieldNumber = 1;
+    private string tick_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Tick {
+      get { return tick_; }
+      set {
+        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "adopt_id" field.</summary>
+    public const int AdoptIdFieldNumber = 2;
+    private global::AElf.Types.Hash adoptId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::AElf.Types.Hash AdoptId {
+      get { return adoptId_; }
+      set {
+        adoptId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 3;
+    private long level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "signature" field.</summary>
+    public const int SignatureFieldNumber = 10000;
+    private pb::ByteString signature_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Signature {
+      get { return signature_; }
+      set {
+        signature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RedeemInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RedeemInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Tick != other.Tick) return false;
+      if (!object.Equals(AdoptId, other.AdoptId)) return false;
+      if (Level != other.Level) return false;
+      if (Signature != other.Signature) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
+      if (adoptId_ != null) hash ^= AdoptId.GetHashCode();
+      if (Level != 0L) hash ^= Level.GetHashCode();
+      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Tick.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Tick);
+      }
+      if (adoptId_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AdoptId);
+      }
+      if (Level != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Level);
+      }
+      if (Signature.Length != 0) {
+        output.WriteRawTag(130, 241, 4);
+        output.WriteBytes(Signature);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Tick.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
+      }
+      if (adoptId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdoptId);
+      }
+      if (Level != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Level);
+      }
+      if (Signature.Length != 0) {
+        size += 3 + pb::CodedOutputStream.ComputeBytesSize(Signature);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RedeemInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Tick.Length != 0) {
+        Tick = other.Tick;
+      }
+      if (other.adoptId_ != null) {
+        if (adoptId_ == null) {
+          AdoptId = new global::AElf.Types.Hash();
+        }
+        AdoptId.MergeFrom(other.AdoptId);
+      }
+      if (other.Level != 0L) {
+        Level = other.Level;
+      }
+      if (other.Signature.Length != 0) {
+        Signature = other.Signature;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Tick = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (adoptId_ == null) {
+              AdoptId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(AdoptId);
+            break;
+          }
+          case 24: {
+            Level = input.ReadInt64();
+            break;
+          }
+          case 80002: {
+            Signature = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   /// <summary>
   /// log event
   /// </summary>
@@ -4599,7 +4827,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4796,7 +5024,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4993,7 +5221,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5128,7 +5356,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5263,7 +5491,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5454,7 +5682,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5617,7 +5845,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5780,7 +6008,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5943,7 +6171,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6134,7 +6362,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6297,7 +6525,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6696,7 +6924,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6843,6 +7071,287 @@ namespace Schrodinger {
               Config = new global::Schrodinger.VoucherAdoptionConfig();
             }
             input.ReadMessage(Config);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Redeemed : pb::IMessage<Redeemed> {
+    private static readonly pb::MessageParser<Redeemed> _parser = new pb::MessageParser<Redeemed>(() => new Redeemed());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Redeemed> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Schrodinger.SchrodingerContractImplReflection.Descriptor.MessageTypes[38]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Redeemed() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Redeemed(Redeemed other) : this() {
+      tick_ = other.tick_;
+      adoptId_ = other.adoptId_ != null ? other.adoptId_.Clone() : null;
+      level_ = other.level_;
+      account_ = other.account_ != null ? other.account_.Clone() : null;
+      symbol_ = other.symbol_;
+      amount_ = other.amount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Redeemed Clone() {
+      return new Redeemed(this);
+    }
+
+    /// <summary>Field number for the "tick" field.</summary>
+    public const int TickFieldNumber = 1;
+    private string tick_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Tick {
+      get { return tick_; }
+      set {
+        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "adopt_id" field.</summary>
+    public const int AdoptIdFieldNumber = 2;
+    private global::AElf.Types.Hash adoptId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::AElf.Types.Hash AdoptId {
+      get { return adoptId_; }
+      set {
+        adoptId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 3;
+    private long level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 4;
+    private global::AElf.Types.Address account_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::AElf.Types.Address Account {
+      get { return account_; }
+      set {
+        account_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "symbol" field.</summary>
+    public const int SymbolFieldNumber = 5;
+    private string symbol_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Symbol {
+      get { return symbol_; }
+      set {
+        symbol_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 6;
+    private long amount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Amount {
+      get { return amount_; }
+      set {
+        amount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Redeemed);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Redeemed other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Tick != other.Tick) return false;
+      if (!object.Equals(AdoptId, other.AdoptId)) return false;
+      if (Level != other.Level) return false;
+      if (!object.Equals(Account, other.Account)) return false;
+      if (Symbol != other.Symbol) return false;
+      if (Amount != other.Amount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
+      if (adoptId_ != null) hash ^= AdoptId.GetHashCode();
+      if (Level != 0L) hash ^= Level.GetHashCode();
+      if (account_ != null) hash ^= Account.GetHashCode();
+      if (Symbol.Length != 0) hash ^= Symbol.GetHashCode();
+      if (Amount != 0L) hash ^= Amount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Tick.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Tick);
+      }
+      if (adoptId_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AdoptId);
+      }
+      if (Level != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Level);
+      }
+      if (account_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Account);
+      }
+      if (Symbol.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Symbol);
+      }
+      if (Amount != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(Amount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Tick.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
+      }
+      if (adoptId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdoptId);
+      }
+      if (Level != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Level);
+      }
+      if (account_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
+      }
+      if (Symbol.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Symbol);
+      }
+      if (Amount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Amount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Redeemed other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Tick.Length != 0) {
+        Tick = other.Tick;
+      }
+      if (other.adoptId_ != null) {
+        if (adoptId_ == null) {
+          AdoptId = new global::AElf.Types.Hash();
+        }
+        AdoptId.MergeFrom(other.AdoptId);
+      }
+      if (other.Level != 0L) {
+        Level = other.Level;
+      }
+      if (other.account_ != null) {
+        if (account_ == null) {
+          Account = new global::AElf.Types.Address();
+        }
+        Account.MergeFrom(other.Account);
+      }
+      if (other.Symbol.Length != 0) {
+        Symbol = other.Symbol;
+      }
+      if (other.Amount != 0L) {
+        Amount = other.Amount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Tick = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (adoptId_ == null) {
+              AdoptId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(AdoptId);
+            break;
+          }
+          case 24: {
+            Level = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            if (account_ == null) {
+              Account = new global::AElf.Types.Address();
+            }
+            input.ReadMessage(Account);
+            break;
+          }
+          case 42: {
+            Symbol = input.ReadString();
+            break;
+          }
+          case 48: {
+            Amount = input.ReadInt64();
             break;
           }
         }

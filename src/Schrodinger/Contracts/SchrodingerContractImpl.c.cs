@@ -251,6 +251,29 @@ namespace Schrodinger {
     }
   }
 
+  public partial class Redeemed : aelf::IEvent<Redeemed>
+  {
+    public global::System.Collections.Generic.IEnumerable<Redeemed> GetIndexed()
+    {
+      return new List<Redeemed>
+      {
+      };
+    }
+
+    public Redeemed GetNonIndexed()
+    {
+      return new Redeemed
+      {
+        Tick = Tick,
+        AdoptId = AdoptId,
+        Level = Level,
+        Account = Account,
+        Symbol = Symbol,
+        Amount = Amount,
+      };
+    }
+  }
+
   #endregion
   public static partial class SchrodingerContractImplContainer
   {
@@ -311,6 +334,7 @@ namespace Schrodinger {
     static readonly aelf::Marshaller<global::Schrodinger.GetMergeConfigOutput> __Marshaller_GetMergeConfigOutput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.GetMergeConfigOutput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::Schrodinger.SetMergeRatesConfigInput> __Marshaller_SetMergeRatesConfigInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.SetMergeRatesConfigInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::Schrodinger.MergeInput> __Marshaller_MergeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.MergeInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Schrodinger.RedeemInput> __Marshaller_RedeemInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Schrodinger.RedeemInput.Parser.ParseFrom);
     #endregion
 
     #region Methods
@@ -811,6 +835,13 @@ namespace Schrodinger {
         __Marshaller_MergeInput,
         __Marshaller_google_protobuf_Empty);
 
+    static readonly aelf::Method<global::Schrodinger.RedeemInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Redeem = new aelf::Method<global::Schrodinger.RedeemInput, global::Google.Protobuf.WellKnownTypes.Empty>(
+        aelf::MethodType.Action,
+        __ServiceName,
+        "Redeem",
+        __Marshaller_RedeemInput,
+        __Marshaller_google_protobuf_Empty);
+
     #endregion
 
     #region Descriptors
@@ -834,6 +865,7 @@ namespace Schrodinger {
     #endregion
 
     /// <summary>Base class for the contract of SchrodingerContractImpl</summary>
+
   }
 }
 #endregion

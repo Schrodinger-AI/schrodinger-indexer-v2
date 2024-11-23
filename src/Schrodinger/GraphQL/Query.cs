@@ -723,6 +723,20 @@ public class Query
                 {
                     schrodingerDto.Adopter = adopter ?? string.Empty;
                 }
+                
+                var queryable = await adoptRepository.GetQueryableAsync();
+                queryable = queryable.Where(a => a.Metadata.ChainId == input.ChainId);
+                queryable = queryable.Where(a => a.Symbol == schrodingerDto.Symbol);
+                var adoptInfo = queryable.ToList().FirstOrDefault();
+
+                if (adoptInfo != null && adoptInfo.Rank > 0)
+                {
+                    schrodingerDto.Rarity = adoptInfo?.Rarity ?? string.Empty;
+                    schrodingerDto.Level = adoptInfo?.Level ?? string.Empty;
+                    schrodingerDto.Star = adoptInfo?.Star ?? string.Empty;
+                    schrodingerDto.Grade = adoptInfo?.Grade ?? string.Empty;
+                    schrodingerDto.Rank = adoptInfo?.Rank ?? 0;
+                }
             }
 
             return response;
