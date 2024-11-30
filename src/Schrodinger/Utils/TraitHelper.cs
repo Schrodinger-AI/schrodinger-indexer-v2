@@ -58,6 +58,36 @@ public static class TraitHelper
                                          "Theme": {"Prosecutor": "Ukrainian sunflower vinok" },
                                          "Ride": {"Blue Donkey": "Horse-drawn" }
                                         }
+                                      },
+                                      {
+                                       "Id": "Safety1",
+                                       "ReplaceTraits": {
+                                         "Breed": {"Levkoy": "Ukrainian Levkoy" },
+                                         "Tail": {"Levkoy Tail": "Ukrainian Levkoy Tail" },
+                                         "Theme": {"Vinok crown": "Ukrainian sunflower vinok" }
+                                        }
+                                      },
+                                      {
+                                       "Id": "Safety2",
+                                       "ReplaceTraits": {
+                                         "Breed": {"Blue": "Russian Blue" },
+                                         "Tail": {"Blue Tail": "Russian Blue Tail" },
+                                         "Theme": {"Cathedral": "Russian winter Saint Basil's" }
+                                        }
+                                      },
+                                      {
+                                       "Id": "Safety3",
+                                       "ReplaceTraits": {
+                                         "Breed": {"White": "Russian White" },
+                                         "Theme": {"Butter Week snowscape": "Russian Maslenitsa snowscape" },
+                                         "Mustache": {"Blue whiskers": "Russian Blue whiskers" }
+                                        }
+                                      },
+                                      {
+                                       "Id": "Safety4",
+                                       "ReplaceTraits": {
+                                         "Theme": {"Diwali celebration": "Vibrant Indian Diwali celebration" }
+                                        }
                                       }
                                      ]
                                      """;
