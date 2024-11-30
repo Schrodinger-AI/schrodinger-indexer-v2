@@ -66,7 +66,7 @@ namespace Schrodinger {
             "bEluZm9zEigKBXZhbHVlGAEgAygLMhkuRXh0ZXJuYWxJbmZvcy5WYWx1ZUVu",
             "dHJ5GiwKClZhbHVlRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
             "OgI4ASI8CgpBZG9wdElucHV0Eg4KBnBhcmVudBgBIAEoCRIOCgZhbW91bnQY",
-            "AiABKAMSDgoGZG9tYWluGAMgASgJIv4CCglBZG9wdEluZm8SHAoIYWRvcHRf",
+            "AiABKAMSDgoGZG9tYWluGAMgASgJIo0DCglBZG9wdEluZm8SHAoIYWRvcHRf",
             "aWQYASABKAsyCi5hZWxmLkhhc2gSDgoGcGFyZW50GAIgASgJEhIKCnBhcmVu",
             "dF9nZW4YAyABKAUSFAoMaW5wdXRfYW1vdW50GAQgASgDEhUKDW91dHB1dF9h",
             "bW91bnQYBSABKAMSJgoRcGFyZW50X2F0dHJpYnV0ZXMYBiABKAsyCy5BdHRy",
@@ -75,277 +75,225 @@ namespace Schrodinger {
             "dHRyaWJ1dGVzGAsgASgLMgsuQXR0cmlidXRlcxILCgNnZW4YDCABKAUSHgoH",
             "YWRvcHRlchgNIAEoCzINLmFlbGYuQWRkcmVzcxIUCgxpc19jb25maXJtZWQY",
             "DiABKAgSEwoLaXNfcmVyb2xsZWQYDyABKAgSEgoKaXNfdXBkYXRlZBgQIAEo",
-            "CCImCgpBdHRyaWJ1dGVzEhgKBGRhdGEYASADKAsyCi5BdHRyaWJ1dGUiLgoJ",
-            "QXR0cmlidXRlEhIKCnRyYWl0X3R5cGUYASABKAkSDQoFdmFsdWUYAiABKAki",
-            "YgoMQ29uZmlybUlucHV0EhwKCGFkb3B0X2lkGAEgASgLMgouYWVsZi5IYXNo",
-            "Eg0KBWltYWdlGAIgASgJEhEKCWltYWdlX3VyaRgDIAEoCRISCglzaWduYXR1",
-            "cmUYkE4gASgMIj0KC1Jlcm9sbElucHV0Eg4KBnN5bWJvbBgBIAEoCRIOCgZh",
-            "bW91bnQYAiABKAMSDgoGZG9tYWluGAMgASgJIkAKEEFkb3B0TWF4R2VuSW5w",
-            "dXQSDAoEdGljaxgBIAEoCRIOCgZhbW91bnQYAiABKAMSDgoGZG9tYWluGAMg",
-            "ASgJIkcKEVNldEF0dHJpYnV0ZUlucHV0EgwKBHRpY2sYASABKAkSJAoNYXR0",
-            "cmlidXRlX3NldBgCIAEoCzINLkF0dHJpYnV0ZVNldCJEChhTZXRBdHRyaWJ1",
-            "dGVzUGVyR2VuSW5wdXQSDAoEdGljaxgBIAEoCRIaChJhdHRyaWJ1dGVzX3Bl",
-            "cl9nZW4YAiABKAUiGgoKU3RyaW5nTGlzdBIMCgRkYXRhGAEgAygJIjIKFVNl",
-            "dE1heEdlbmVyYXRpb25JbnB1dBIMCgR0aWNrGAEgASgJEgsKA2dlbhgCIAEo",
-            "BSJkCg1TZXRSYXRlc0lucHV0EgwKBHRpY2sYASABKAkSEQoJbG9zc19yYXRl",
-            "GAIgASgDEhcKD2NvbW1pc3Npb25fcmF0ZRgDIAEoAxIZChFtYXhfZ2VuX2xv",
-            "c3NfcmF0ZRgEIAEoAyJDChFTZXRSZWNpcGllbnRJbnB1dBIMCgR0aWNrGAEg",
-            "ASgJEiAKCXJlY2lwaWVudBgCIAEoCzINLmFlbGYuQWRkcmVzcyI3ChJTZXRJ",
-            "bWFnZUNvdW50SW5wdXQSDAoEdGljaxgBIAEoCRITCgtpbWFnZV9jb3VudBgC",
-            "IAEoBSJGChhTZXRJbnNjcmlwdGlvbkFkbWluSW5wdXQSDAoEdGljaxgBIAEo",
-            "CRIcCgVhZG1pbhgCIAEoCzINLmFlbGYuQWRkcmVzcyJVCh1TZXRDcm9zc0dl",
-            "bmVyYXRpb25Db25maWdJbnB1dBIMCgR0aWNrGAEgASgJEiYKBmNvbmZpZxgC",
-            "IAEoCzIWLkNyb3NzR2VuZXJhdGlvbkNvbmZpZyI7ChdHZXRBdHRyaWJ1dGVW",
-            "YWx1ZXNJbnB1dBIMCgR0aWNrGAEgASgJEhIKCnRyYWl0X3R5cGUYAiABKAki",
-            "PwocU2V0UG9pbnRzUHJvcG9ydGlvbkxpc3RJbnB1dBIfCgRkYXRhGAEgAygL",
-            "MhEuUG9pbnRzUHJvcG9ydGlvbiI7ChBQb2ludHNQcm9wb3J0aW9uEhMKC2Fj",
-            "dGlvbl9uYW1lGAEgASgJEhIKCnByb3BvcnRpb24YAiABKAMiTgoQQmF0Y2hT",
-            "ZXR0bGVJbnB1dBITCgthY3Rpb25fbmFtZRgBIAEoCRIlChB1c2VyX3BvaW50",
-            "c19saXN0GAIgAygLMgsuVXNlclBvaW50cyJ0CgpVc2VyUG9pbnRzEiMKDHVz",
-            "ZXJfYWRkcmVzcxgBIAEoCzINLmFlbGYuQWRkcmVzcxITCgt1c2VyX3BvaW50",
-            "cxgCIAEoAxIsChF1c2VyX3BvaW50c192YWx1ZRgDIAEoCzIRLmFlbGYuQmln",
-            "SW50VmFsdWUi0gIKD0luc2NyaXB0aW9uSW5mbxIQCghhbmNlc3RvchgBIAEo",
-            "CRIQCghkZWNpbWFscxgCIAEoBRIPCgdtYXhfZ2VuGAMgASgFEhEKCWxvc3Nf",
-            "cmF0ZRgEIAEoAxIXCg9jb21taXNzaW9uX3JhdGUYBSABKAMSIAoJcmVjaXBp",
-            "ZW50GAYgASgLMg0uYWVsZi5BZGRyZXNzEhwKBWFkbWluGAcgASgLMg0uYWVs",
-            "Zi5BZGRyZXNzEjcKF2Nyb3NzX2dlbmVyYXRpb25fY29uZmlnGAggASgLMhYu",
-            "Q3Jvc3NHZW5lcmF0aW9uQ29uZmlnEhkKEWlzX3dlaWdodF9lbmFibGVkGAkg",
-            "ASgIEhMKC2ltYWdlX2NvdW50GAogASgFEhoKEmF0dHJpYnV0ZXNfcGVyX2dl",
-            "bhgLIAEoBRIZChFtYXhfZ2VuX2xvc3NfcmF0ZRgMIAEoAyKsAQoSR2V0VG9r",
-            "ZW5JbmZvT3V0cHV0EhwKCGFkb3B0X2lkGAEgASgLMgouYWVsZi5IYXNoEg4K",
-            "BnBhcmVudBgCIAEoCRISCgpwYXJlbnRfZ2VuGAMgASgFEiYKEXBhcmVudF9h",
-            "dHRyaWJ1dGVzGAQgASgLMgsuQXR0cmlidXRlcxIfCgphdHRyaWJ1dGVzGAUg",
-            "ASgLMgsuQXR0cmlidXRlcxILCgNnZW4YBiABKAUiuAEKF1NldEF0dHJpYnV0",
-            "ZUNvbmZpZ0lucHV0EhwKFHRyYWl0X3R5cGVfbWF4X2NvdW50GAEgASgDEh0K",
-            "FXRyYWl0X3ZhbHVlX21heF9jb3VudBgCIAEoAxIcChRhdHRyaWJ1dGVfbWF4",
-            "X2xlbmd0aBgDIAEoAxIeChZtYXhfYXR0cmlidXRlc19wZXJfZ2VuGAQgASgF",
-            "EiIKGmZpeGVkX3RyYWl0X3R5cGVfbWF4X2NvdW50GAUgASgDIoUCCgZDb25m",
-            "aWcSDwoHbWF4X2dlbhgBIAEoBRIWCg5pbWFnZV9tYXhfc2l6ZRgCIAEoAxIX",
-            "Cg9pbWFnZV9tYXhfY291bnQYAyABKAMSHAoUdHJhaXRfdHlwZV9tYXhfY291",
-            "bnQYBCABKAMSHQoVdHJhaXRfdmFsdWVfbWF4X2NvdW50GAUgASgDEhwKFGF0",
-            "dHJpYnV0ZV9tYXhfbGVuZ3RoGAYgASgDEh4KFm1heF9hdHRyaWJ1dGVzX3Bl",
-            "cl9nZW4YByABKAUSIgoaZml4ZWRfdHJhaXRfdHlwZV9tYXhfY291bnQYCCAB",
-            "KAMSGgoSaW1hZ2VfdXJpX21heF9zaXplGAkgASgDIkMKEVNldFNpZ25hdG9y",
-            "eUlucHV0EgwKBHRpY2sYASABKAkSIAoJc2lnbmF0b3J5GAIgASgLMg0uYWVs",
-            "Zi5BZGRyZXNzIjYKE0FjY2VwdFJlZmVycmFsSW5wdXQSHwoIcmVmZXJyZXIY",
-            "ASABKAsyDS5hZWxmLkFkZHJlc3MiYwohVHJhbnNmZXJGcm9tUmVjZWl2aW5n",
-            "QWRkcmVzc0lucHV0EgwKBHRpY2sYASABKAkSDgoGYW1vdW50GAIgASgDEiAK",
-            "CXJlY2lwaWVudBgDIAEoCzINLmFlbGYuQWRkcmVzcyJeCgtUcmFpdFZhbHVl",
-            "cxIkChFsb3dlcl93ZWlnaHRfc3VtcxgBIAEoCzIJLkxvbmdMaXN0EikKEHRy",
-            "YWl0X3ZhbHVlX2xpc3QYAiABKAsyDy5BdHRyaWJ1dGVJbmZvcyIYCghMb25n",
-            "TGlzdBIMCgRkYXRhGAEgAygDIiwKG1NldE9mZmljaWFsRG9tYWluQWxpYXNJ",
-            "bnB1dBINCgVhbGlhcxgBIAEoCSI+ChRTZXRSZXdhcmRDb25maWdJbnB1dBIM",
-            "CgR0aWNrGAEgASgJEhgKB3Jld2FyZHMYAiADKAsyBy5SZXdhcmQiUQoGUmV3",
-            "YXJkEgwKBG5hbWUYASABKAkSGQoEdHlwZRgCIAEoDjILLlJld2FyZFR5cGUS",
-            "DgoGYW1vdW50GAMgASgDEg4KBndlaWdodBgEIAEoAyIjCgpSZXdhcmRMaXN0",
-            "EhUKBGRhdGEYASADKAsyBy5SZXdhcmQiTwoVR2V0UmV3YXJkQ29uZmlnT3V0",
-            "cHV0EhkKBGxpc3QYASABKAsyCy5SZXdhcmRMaXN0EhsKBHBvb2wYAiABKAsy",
-            "DS5hZWxmLkFkZHJlc3MiYAoJU3BpbklucHV0EgwKBHRpY2sYASABKAkSGAoE",
-            "c2VlZBgCIAEoCzIKLmFlbGYuSGFzaBIXCg9leHBpcmF0aW9uX3RpbWUYAyAB",
-            "KAMSEgoJc2lnbmF0dXJlGJBOIAEoDCKAAQoIU3BpbkluZm8SGwoHc3Bpbl9p",
-            "ZBgBIAEoCzIKLmFlbGYuSGFzaBIMCgRuYW1lGAIgASgJEhkKBHR5cGUYAyAB",
-            "KA4yCy5SZXdhcmRUeXBlEg4KBmFtb3VudBgEIAEoAxIeCgdhY2NvdW50GAUg",
-            "ASgLMg0uYWVsZi5BZGRyZXNzIiUKFUFkb3B0V2l0aFZvdWNoZXJJbnB1dBIM",
-            "CgR0aWNrGAEgASgJIpoBCgtWb3VjaGVySW5mbxIeCgp2b3VjaGVyX2lkGAEg",
-            "ASgLMgouYWVsZi5IYXNoEh4KB2FjY291bnQYAiABKAsyDS5hZWxmLkFkZHJl",
-            "c3MSHwoKYXR0cmlidXRlcxgDIAEoCzILLkF0dHJpYnV0ZXMSDAoEdGljaxgE",
-            "IAEoCRIcCghhZG9wdF9pZBgFIAEoCzIKLmFlbGYuSGFzaCJJChNDb25maXJt",
-            "Vm91Y2hlcklucHV0Eh4KCnZvdWNoZXJfaWQYASABKAsyCi5hZWxmLkhhc2gS",
-            "EgoJc2lnbmF0dXJlGJBOIAEoDCJNCh1HZXRBZG9wdGlvblZvdWNoZXJBbW91",
-            "bnRJbnB1dBIMCgR0aWNrGAEgASgJEh4KB2FjY291bnQYAiABKAsyDS5hZWxm",
-            "LkFkZHJlc3MiUAoTQWlyZHJvcFZvdWNoZXJJbnB1dBIMCgR0aWNrGAEgASgJ",
-            "EhsKBGxpc3QYAiADKAsyDS5hZWxmLkFkZHJlc3MSDgoGYW1vdW50GAMgASgD",
-            "IkIKFFNldEFpcmRyb3BBZG1pbklucHV0EgwKBHRpY2sYASABKAkSHAoFYWRt",
-            "aW4YAiABKAsyDS5hZWxmLkFkZHJlc3MiKgoLQWRkcmVzc0xpc3QSGwoEZGF0",
-            "YRgBIAMoCzINLmFlbGYuQWRkcmVzcyJBCgZKb2luZWQSDgoGZG9tYWluGAIg",
-            "ASgJEiEKCnJlZ2lzdHJhbnQYAyABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEi",
-            "6wQKCERlcGxveWVkEgwKBHRpY2sYASABKAkSEAoIYW5jZXN0b3IYAiABKAkS",
-            "FgoObWF4X2dlbmVyYXRpb24YAyABKAUSFAoMdG90YWxfc3VwcGx5GAQgASgD",
-            "EhAKCGRlY2ltYWxzGAUgASgFEigKD2F0dHJpYnV0ZV9saXN0cxgGIAEoCzIP",
-            "LkF0dHJpYnV0ZUxpc3RzEhMKC2ltYWdlX2NvdW50GAcgASgFEh0KBmlzc3Vl",
-            "chgIIAEoCzINLmFlbGYuQWRkcmVzcxIcCgVvd25lchgJIAEoCzINLmFlbGYu",
-            "QWRkcmVzcxIWCg5pc3N1ZV9jaGFpbl9pZBgKIAEoBRImCg5leHRlcm5hbF9p",
-            "bmZvcxgLIAEoCzIOLkV4dGVybmFsSW5mb3MSEgoKdG9rZW5fbmFtZRgMIAEo",
-            "CRIfCghkZXBsb3llchgNIAEoCzINLmFlbGYuQWRkcmVzcxI3Chdjcm9zc19n",
-            "ZW5lcmF0aW9uX2NvbmZpZxgOIAEoCzIWLkNyb3NzR2VuZXJhdGlvbkNvbmZp",
-            "ZxIZChFpc193ZWlnaHRfZW5hYmxlZBgPIAEoCBIcCgVhZG1pbhgQIAEoCzIN",
-            "LmFlbGYuQWRkcmVzcxIRCglsb3NzX3JhdGUYESABKAMSFwoPY29tbWlzc2lv",
-            "bl9yYXRlGBIgASgDEhoKEmF0dHJpYnV0ZXNfcGVyX2dlbhgTIAEoBRIgCglz",
-            "aWduYXRvcnkYFCABKAsyDS5hZWxmLkFkZHJlc3MSEQoJaW1hZ2VfdXJpGBUg",
-            "ASgJEhkKEW1heF9nZW5fbG9zc19yYXRlGBYgASgDOgSguxgBIt0CCgdBZG9w",
-            "dGVkEhwKCGFkb3B0X2lkGAEgASgLMgouYWVsZi5IYXNoEg4KBnBhcmVudBgC",
-            "IAEoCRISCgpwYXJlbnRfZ2VuGAMgASgFEhQKDGlucHV0X2Ftb3VudBgEIAEo",
-            "AxITCgtsb3NzX2Ftb3VudBgFIAEoAxIZChFjb21taXNzaW9uX2Ftb3VudBgG",
-            "IAEoAxIVCg1vdXRwdXRfYW1vdW50GAcgASgDEhMKC2ltYWdlX2NvdW50GAgg",
-            "ASgDEh4KB2Fkb3B0ZXIYCSABKAsyDS5hZWxmLkFkZHJlc3MSFAoMYmxvY2tf",
-            "aGVpZ2h0GAogASgDEh8KCmF0dHJpYnV0ZXMYCyABKAsyCy5BdHRyaWJ1dGVz",
-            "EgsKA2dlbhgMIAEoBRIQCghhbmNlc3RvchgNIAEoCRIOCgZzeW1ib2wYDiAB",
-            "KAkSEgoKdG9rZW5fbmFtZRgPIAEoCToEoLsYASLqAgoJQ29uZmlybWVkEhwK",
-            "CGFkb3B0X2lkGAEgASgLMgouYWVsZi5IYXNoEg4KBnBhcmVudBgCIAEoCRIO",
-            "CgZzeW1ib2wYAyABKAkSFAoMdG90YWxfc3VwcGx5GAQgASgDEhAKCGRlY2lt",
-            "YWxzGAUgASgFEgsKA2dlbhgGIAEoBRIfCgphdHRyaWJ1dGVzGAcgASgLMgsu",
-            "QXR0cmlidXRlcxIdCgZpc3N1ZXIYCCABKAsyDS5hZWxmLkFkZHJlc3MSHAoF",
-            "b3duZXIYCSABKAsyDS5hZWxmLkFkZHJlc3MSFgoOaXNzdWVfY2hhaW5faWQY",
-            "CiABKAUSJgoOZXh0ZXJuYWxfaW5mb3MYCyABKAsyDi5FeHRlcm5hbEluZm9z",
-            "EhIKCnRva2VuX25hbWUYDCABKAkSHwoIZGVwbG95ZXIYDSABKAsyDS5hZWxm",
-            "LkFkZHJlc3MSEQoJaW1hZ2VfdXJpGA4gASgJOgSguxgBImQKCFJlcm9sbGVk",
-            "Eg4KBnN5bWJvbBgBIAEoCRIQCghhbmNlc3RvchgCIAEoCRIOCgZhbW91bnQY",
-            "AyABKAMSIAoJcmVjaXBpZW50GAQgASgLMg0uYWVsZi5BZGRyZXNzOgSguxgB",
-            "InkKEUZpeGVkQXR0cmlidXRlU2V0EgwKBHRpY2sYASABKAkSKAoRcmVtb3Zl",
-            "ZF9hdHRyaWJ1dGUYAiABKAsyDS5BdHRyaWJ1dGVTZXQSJgoPYWRkZWRfYXR0",
-            "cmlidXRlGAMgASgLMg0uQXR0cmlidXRlU2V0OgSguxgBInoKElJhbmRvbUF0",
-            "dHJpYnV0ZVNldBIMCgR0aWNrGAEgASgJEigKEXJlbW92ZWRfYXR0cmlidXRl",
-            "GAIgASgLMg0uQXR0cmlidXRlU2V0EiYKD2FkZGVkX2F0dHJpYnV0ZRgDIAEo",
-            "CzINLkF0dHJpYnV0ZVNldDoEoLsYASJMChpBdHRyaWJ1dGVzUGVyR2VuZXJh",
-            "dGlvblNldBIMCgR0aWNrGAEgASgJEhoKEmF0dHJpYnV0ZXNfcGVyX2dlbhgC",
-            "IAEoBToEoLsYASI4Cg1JbWFnZUNvdW50U2V0EgwKBHRpY2sYASABKAkSEwoL",
-            "aW1hZ2VfY291bnQYAiABKAU6BKC7GAEiMwoQTWF4R2VuZXJhdGlvblNldBIM",
-            "CgR0aWNrGAEgASgJEgsKA2dlbhgCIAEoBToEoLsYASJlCghSYXRlc1NldBIM",
-            "CgR0aWNrGAEgASgJEhEKCWxvc3NfcmF0ZRgCIAEoAxIXCg9jb21taXNzaW9u",
-            "X3JhdGUYAyABKAMSGQoRbWF4X2dlbl9sb3NzX3JhdGUYBCABKAM6BKC7GAEi",
-            "RAoMUmVjaXBpZW50U2V0EgwKBHRpY2sYASABKAkSIAoJcmVjaXBpZW50GAIg",
-            "ASgLMg0uYWVsZi5BZGRyZXNzOgSguxgBIkcKE0luc2NyaXB0aW9uQWRtaW5T",
-            "ZXQSDAoEdGljaxgBIAEoCRIcCgVhZG1pbhgCIAEoCzINLmFlbGYuQWRkcmVz",
-            "czoEoLsYASJnChhDcm9zc0dlbmVyYXRpb25Db25maWdTZXQSDAoEdGljaxgB",
-            "IAEoCRI3Chdjcm9zc19nZW5lcmF0aW9uX2NvbmZpZxgCIAEoCzIWLkNyb3Nz",
-            "R2VuZXJhdGlvbkNvbmZpZzoEoLsYASIqCglDb25maWdTZXQSFwoGY29uZmln",
-            "GAEgASgLMgcuQ29uZmlnOgSguxgBIi8KFk1heEdlbmVyYXRpb25Db25maWdT",
-            "ZXQSDwoHbWF4X2dlbhgBIAEoBToEoLsYASIvCg9JbWFnZU1heFNpemVTZXQS",
-            "FgoOaW1hZ2VfbWF4X3NpemUYASABKAM6BKC7GAEiMQoQSW1hZ2VNYXhDb3Vu",
-            "dFNldBIXCg9pbWFnZV9tYXhfY291bnQYASABKAM6BKC7GAEiuQEKEkF0dHJp",
-            "YnV0ZUNvbmZpZ1NldBIcChR0cmFpdF90eXBlX21heF9jb3VudBgBIAEoAxId",
-            "ChV0cmFpdF92YWx1ZV9tYXhfY291bnQYAiABKAMSHAoUYXR0cmlidXRlX21h",
-            "eF9sZW5ndGgYAyABKAMSHgoWbWF4X2F0dHJpYnV0ZXNfcGVyX2dlbhgEIAEo",
-            "BRIiChpmaXhlZF90cmFpdF90eXBlX21heF9jb3VudBgFIAEoAzoEoLsYASIu",
-            "CghBZG1pblNldBIcCgVhZG1pbhgBIAEoCzINLmFlbGYuQWRkcmVzczoEoLsY",
-            "ASJECgxTaWduYXRvcnlTZXQSDAoEdGljaxgBIAEoCRIgCglzaWduYXRvcnkY",
-            "AiABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEiNgoSSW1hZ2VVcmlNYXhTaXpl",
-            "U2V0EhoKEmltYWdlX3VyaV9tYXhfc2l6ZRgBIAEoAzoEoLsYASJZChBSZWZl",
-            "cnJhbEFjY2VwdGVkEh8KCHJlZmVycmVyGAEgASgLMg0uYWVsZi5BZGRyZXNz",
-            "Eh4KB2ludml0ZWUYAiABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEiLQoWT2Zm",
-            "aWNpYWxEb21haW5BbGlhc1NldBINCgVhbGlhcxgBIAEoCToEoLsYASJ2ChBB",
-            "ZG9wdGlvblJlcm9sbGVkEhwKCGFkb3B0X2lkGAEgASgLMgouYWVsZi5IYXNo",
-            "Eg4KBnN5bWJvbBgCIAEoCRIOCgZhbW91bnQYAyABKAMSHgoHYWNjb3VudBgE",
-            "IAEoCzINLmFlbGYuQWRkcmVzczoEoLsYASLlAgoPQWRvcHRpb25VcGRhdGVk",
-            "EhwKCGFkb3B0X2lkGAEgASgLMgouYWVsZi5IYXNoEg4KBnBhcmVudBgCIAEo",
-            "CRISCgpwYXJlbnRfZ2VuGAMgASgFEhQKDGlucHV0X2Ftb3VudBgEIAEoAxIT",
-            "Cgtsb3NzX2Ftb3VudBgFIAEoAxIZChFjb21taXNzaW9uX2Ftb3VudBgGIAEo",
-            "AxIVCg1vdXRwdXRfYW1vdW50GAcgASgDEhMKC2ltYWdlX2NvdW50GAggASgD",
-            "Eh4KB2Fkb3B0ZXIYCSABKAsyDS5hZWxmLkFkZHJlc3MSFAoMYmxvY2tfaGVp",
-            "Z2h0GAogASgDEh8KCmF0dHJpYnV0ZXMYCyABKAsyCy5BdHRyaWJ1dGVzEgsK",
-            "A2dlbhgMIAEoBRIQCghhbmNlc3RvchgNIAEoCRIOCgZzeW1ib2wYDiABKAkS",
-            "EgoKdG9rZW5fbmFtZRgPIAEoCToEoLsYASJdCg9SZXdhcmRDb25maWdTZXQS",
-            "DAoEdGljaxgBIAEoCRIZCgRsaXN0GAIgASgLMgsuUmV3YXJkTGlzdBIbCgRw",
-            "b29sGAMgASgLMg0uYWVsZi5BZGRyZXNzOgSguxgBIlIKBFNwdW4SDAoEdGlj",
-            "axgBIAEoCRIcCglzcGluX2luZm8YAiABKAsyCS5TcGluSW5mbxIYCgRzZWVk",
-            "GAMgASgLMgouYWVsZi5IYXNoOgSguxgBIj4KEkFkb3B0ZWRXaXRoVm91Y2hl",
-            "chIiCgx2b3VjaGVyX2luZm8YASABKAsyDC5Wb3VjaGVySW5mbzoEoLsYASI8",
-            "ChBWb3VjaGVyQ29uZmlybWVkEiIKDHZvdWNoZXJfaW5mbxgBIAEoCzIMLlZv",
-            "dWNoZXJJbmZvOgSguxgBIlMKEVZvdWNoZXJBaXJkcm9wcGVkEgwKBHRpY2sY",
-            "ASABKAkSGgoEbGlzdBgCIAEoCzIMLkFkZHJlc3NMaXN0Eg4KBmFtb3VudBgD",
-            "IAEoAzoEoLsYASJDCg9BaXJkcm9wQWRtaW5TZXQSDAoEdGljaxgBIAEoCRIc",
-            "CgVhZG1pbhgCIAEoCzINLmFlbGYuQWRkcmVzczoEoLsYASpCCgpSZXdhcmRU",
-            "eXBlEgkKBU90aGVyEAASCQoFUG9pbnQQARITCg9BZG9wdGlvblZvdWNoZXIQ",
-            "AhIJCgVUb2tlbhADMt0hChNTY2hyb2RpbmdlckNvbnRyYWN0EjgKCkluaXRp",
-            "YWxpemUSEC5Jbml0aWFsaXplSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiABIwCgZEZXBsb3kSDC5EZXBsb3lJbnB1dBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIAEi4KBUFkb3B0EgsuQWRvcHRJbnB1dBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIAEjIKB0NvbmZpcm0SDS5Db25maXJtSW5wdXQaFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkiABIwCgZSZXJvbGwSDC5SZXJvbGxJbnB1dBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjoKC0Fkb3B0TWF4R2VuEhEuQWRv",
-            "cHRNYXhHZW5JbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjYKDlJl",
-            "cm9sbEFkb3B0aW9uEgouYWVsZi5IYXNoGhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5IgASNgoOVXBkYXRlQWRvcHRpb24SCi5hZWxmLkhhc2gaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiABJBChFTZXRGaXhlZEF0dHJpYnV0ZRISLlNldEF0",
-            "dHJpYnV0ZUlucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASQgoSU2V0",
-            "UmFuZG9tQXR0cmlidXRlEhIuU2V0QXR0cmlidXRlSW5wdXQaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiABJKChNTZXRBdHRyaWJ1dGVzUGVyR2VuEhkuU2V0",
-            "QXR0cmlidXRlc1BlckdlbklucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "IgASRAoQU2V0TWF4R2VuZXJhdGlvbhIWLlNldE1heEdlbmVyYXRpb25JbnB1",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjQKCFNldFJhdGVzEg4uU2V0",
-            "UmF0ZXNJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjwKDFNldFJl",
-            "Y2lwaWVudBISLlNldFJlY2lwaWVudElucHV0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5IgASPgoNU2V0SW1hZ2VDb3VudBITLlNldEltYWdlQ291bnRJbnB1",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkoKE1NldEluc2NyaXB0aW9u",
-            "QWRtaW4SGS5TZXRJbnNjcmlwdGlvbkFkbWluSW5wdXQaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiABJUChhTZXRDcm9zc0dlbmVyYXRpb25Db25maWcSHi5T",
-            "ZXRDcm9zc0dlbmVyYXRpb25Db25maWdJbnB1dBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIAEjwKDFNldFNpZ25hdG9yeRISLlNldFNpZ25hdG9yeUlucHV0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASQgoMR2V0U2lnbmF0b3J5Ehwu",
-            "Z29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlGg0uYWVsZi5BZGRyZXNzIgWI",
-            "ifcBARJLChJHZXRJbnNjcmlwdGlvbkluZm8SHC5nb29nbGUucHJvdG9idWYu",
-            "U3RyaW5nVmFsdWUaEC5JbnNjcmlwdGlvbkluZm8iBYiJ9wEBEkwKB0dldFRp",
-            "Y2sSHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUaHC5nb29nbGUucHJv",
-            "dG9idWYuU3RyaW5nVmFsdWUiBYiJ9wEBEk4KCUdldFBhcmVudBIcLmdvb2ds",
-            "ZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRocLmdvb2dsZS5wcm90b2J1Zi5TdHJp",
-            "bmdWYWx1ZSIFiIn3AQESSQoRR2V0QXR0cmlidXRlVHlwZXMSHC5nb29nbGUu",
-            "cHJvdG9idWYuU3RyaW5nVmFsdWUaDy5BdHRyaWJ1dGVJbmZvcyIFiIn3AQES",
-            "RgoSR2V0QXR0cmlidXRlVmFsdWVzEhguR2V0QXR0cmlidXRlVmFsdWVzSW5w",
-            "dXQaDy5BdHRyaWJ1dGVJbmZvcyIFiIn3AQESLQoMR2V0QWRvcHRJbmZvEgou",
-            "YWVsZi5IYXNoGgouQWRvcHRJbmZvIgWIifcBARJICgxHZXRUb2tlbkluZm8S",
-            "HC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUaEy5HZXRUb2tlbkluZm9P",
-            "dXRwdXQiBYiJ9wEBEi4KCVNldENvbmZpZxIHLkNvbmZpZxoWLmdvb2dsZS5w",
-            "cm90b2J1Zi5FbXB0eSIAEjMKCFNldEFkbWluEg0uYWVsZi5BZGRyZXNzGhYu",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IgASOAoIR2V0QWRtaW4SFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkaDS5hZWxmLkFkZHJlc3MiBYiJ9wEBEk8KFlNldE1h",
-            "eEdlbmVyYXRpb25Db25maWcSGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1",
-            "ZRoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkgKD1NldEltYWdlTWF4U2l6",
-            "ZRIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlGhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5IgASSQoQU2V0SW1hZ2VNYXhDb3VudBIbLmdvb2dsZS5wcm90",
-            "b2J1Zi5JbnQ2NFZhbHVlGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASSAoS",
-            "U2V0QXR0cmlidXRlQ29uZmlnEhguU2V0QXR0cmlidXRlQ29uZmlnSW5wdXQa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiABIzCglHZXRDb25maWcSFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkaBy5Db25maWciBYiJ9wEBEksKElNldEltYWdl",
-            "VXJpTWF4U2l6ZRIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlGhYuZ29v",
-            "Z2xlLnByb3RvYnVmLkVtcHR5IgASUAoSR2V0SW1hZ2VVcmlNYXhTaXplEhYu",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5GhsuZ29vZ2xlLnByb3RvYnVmLkludDY0",
-            "VmFsdWUiBYiJ9wEBEj8KF1NldFBvaW50c0NvbnRyYWN0REFwcElkEgouYWVs",
-            "Zi5IYXNoGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASPAoRU2V0UG9pbnRz",
-            "Q29udHJhY3QSDS5hZWxmLkFkZHJlc3MaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiABJSChdTZXRQb2ludHNQcm9wb3J0aW9uTGlzdBIdLlNldFBvaW50c1By",
-            "b3BvcnRpb25MaXN0SW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABI/",
-            "ChRTZXRQb2ludHNTZXR0bGVBZG1pbhINLmFlbGYuQWRkcmVzcxoWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eSIAEjoKC0JhdGNoU2V0dGxlEhEuQmF0Y2hTZXR0",
-            "bGVJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEiwKBEpvaW4SCi5K",
-            "b2luSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJACg5BY2NlcHRS",
-            "ZWZlcnJhbBIULkFjY2VwdFJlZmVycmFsSW5wdXQaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiABJEChdHZXRQb2ludHNDb250cmFjdERBcHBJZBIWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eRoKLmFlbGYuSGFzaCIFiIn3AQESQQoRR2V0UG9p",
-            "bnRzQ29udHJhY3QSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaDS5hZWxmLkFk",
-            "ZHJlc3MiBYiJ9wEBEkEKDUdldEpvaW5SZWNvcmQSDS5hZWxmLkFkZHJlc3Ma",
-            "Gi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlIgWIifcBARJXChNHZXRQb2lu",
-            "dHNQcm9wb3J0aW9uEhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlGhsu",
-            "Z29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWUiBYiJ9wEBEkQKFEdldFBvaW50",
-            "c1NldHRsZUFkbWluEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Gg0uYWVsZi5B",
-            "ZGRyZXNzIgWIifcBARJcChxUcmFuc2ZlckZyb21SZWNlaXZpbmdBZGRyZXNz",
-            "EiIuVHJhbnNmZXJGcm9tUmVjZWl2aW5nQWRkcmVzc0lucHV0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IgASSQoTR2V0UmVjZWl2aW5nQWRkcmVzcxIcLmdv",
-            "b2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRoNLmFlbGYuQWRkcmVzcyIFiIn3",
-            "AQESUAoWU2V0T2ZmaWNpYWxEb21haW5BbGlhcxIcLlNldE9mZmljaWFsRG9t",
-            "YWluQWxpYXNJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAElUKFkdl",
-            "dE9mZmljaWFsRG9tYWluQWxpYXMSFi5nb29nbGUucHJvdG9idWYuRW1wdHka",
-            "HC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUiBYiJ9wEBEkIKD1NldFJl",
-            "d2FyZENvbmZpZxIVLlNldFJld2FyZENvbmZpZ0lucHV0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IgASTgoPR2V0UmV3YXJkQ29uZmlnEhwuZ29vZ2xlLnBy",
-            "b3RvYnVmLlN0cmluZ1ZhbHVlGhYuR2V0UmV3YXJkQ29uZmlnT3V0cHV0IgWI",
-            "ifcBARIsCgRTcGluEgouU3BpbklucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5IgASKwoLR2V0U3BpbkluZm8SCi5hZWxmLkhhc2gaCS5TcGluSW5mbyIF",
-            "iIn3AQESRAoQQWRvcHRXaXRoVm91Y2hlchIWLkFkb3B0V2l0aFZvdWNoZXJJ",
-            "bnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjEKDkdldFZvdWNoZXJJ",
-            "bmZvEgouYWVsZi5IYXNoGgwuVm91Y2hlckluZm8iBYiJ9wEBEkAKDkNvbmZp",
-            "cm1Wb3VjaGVyEhQuQ29uZmlybVZvdWNoZXJJbnB1dBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIAEl4KGEdldEFkb3B0aW9uVm91Y2hlckFtb3VudBIeLkdl",
-            "dEFkb3B0aW9uVm91Y2hlckFtb3VudElucHV0GhsuZ29vZ2xlLnByb3RvYnVm",
-            "LkludDY0VmFsdWUiBYiJ9wEBEkAKDkFpcmRyb3BWb3VjaGVyEhQuQWlyZHJv",
-            "cFZvdWNoZXJJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkIKD1Nl",
-            "dEFpcmRyb3BBZG1pbhIVLlNldEFpcmRyb3BBZG1pbklucHV0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IgASRQoPR2V0QWlyZHJvcEFkbWluEhwuZ29vZ2xl",
-            "LnByb3RvYnVmLlN0cmluZ1ZhbHVlGg0uYWVsZi5BZGRyZXNzIgWIifcBARo5",
-            "ysr2AQthY3MxMi5wcm90b7LM9gEkU2Nocm9kaW5nZXIuU2Nocm9kaW5nZXJD",
-            "b250cmFjdFN0YXRlQg6qAgtTY2hyb2RpbmdlcmIGcHJvdG8z"));
+            "CBINCgVsZXZlbBgRIAEoAyImCgpBdHRyaWJ1dGVzEhgKBGRhdGEYASADKAsy",
+            "Ci5BdHRyaWJ1dGUiLgoJQXR0cmlidXRlEhIKCnRyYWl0X3R5cGUYASABKAkS",
+            "DQoFdmFsdWUYAiABKAkiYgoMQ29uZmlybUlucHV0EhwKCGFkb3B0X2lkGAEg",
+            "ASgLMgouYWVsZi5IYXNoEg0KBWltYWdlGAIgASgJEhEKCWltYWdlX3VyaRgD",
+            "IAEoCRISCglzaWduYXR1cmUYkE4gASgMIj0KC1Jlcm9sbElucHV0Eg4KBnN5",
+            "bWJvbBgBIAEoCRIOCgZhbW91bnQYAiABKAMSDgoGZG9tYWluGAMgASgJIkAK",
+            "EEFkb3B0TWF4R2VuSW5wdXQSDAoEdGljaxgBIAEoCRIOCgZhbW91bnQYAiAB",
+            "KAMSDgoGZG9tYWluGAMgASgJIkcKEVNldEF0dHJpYnV0ZUlucHV0EgwKBHRp",
+            "Y2sYASABKAkSJAoNYXR0cmlidXRlX3NldBgCIAEoCzINLkF0dHJpYnV0ZVNl",
+            "dCJEChhTZXRBdHRyaWJ1dGVzUGVyR2VuSW5wdXQSDAoEdGljaxgBIAEoCRIa",
+            "ChJhdHRyaWJ1dGVzX3Blcl9nZW4YAiABKAUiGgoKU3RyaW5nTGlzdBIMCgRk",
+            "YXRhGAEgAygJIjIKFVNldE1heEdlbmVyYXRpb25JbnB1dBIMCgR0aWNrGAEg",
+            "ASgJEgsKA2dlbhgCIAEoBSJkCg1TZXRSYXRlc0lucHV0EgwKBHRpY2sYASAB",
+            "KAkSEQoJbG9zc19yYXRlGAIgASgDEhcKD2NvbW1pc3Npb25fcmF0ZRgDIAEo",
+            "AxIZChFtYXhfZ2VuX2xvc3NfcmF0ZRgEIAEoAyJDChFTZXRSZWNpcGllbnRJ",
+            "bnB1dBIMCgR0aWNrGAEgASgJEiAKCXJlY2lwaWVudBgCIAEoCzINLmFlbGYu",
+            "QWRkcmVzcyI3ChJTZXRJbWFnZUNvdW50SW5wdXQSDAoEdGljaxgBIAEoCRIT",
+            "CgtpbWFnZV9jb3VudBgCIAEoBSJGChhTZXRJbnNjcmlwdGlvbkFkbWluSW5w",
+            "dXQSDAoEdGljaxgBIAEoCRIcCgVhZG1pbhgCIAEoCzINLmFlbGYuQWRkcmVz",
+            "cyJVCh1TZXRDcm9zc0dlbmVyYXRpb25Db25maWdJbnB1dBIMCgR0aWNrGAEg",
+            "ASgJEiYKBmNvbmZpZxgCIAEoCzIWLkNyb3NzR2VuZXJhdGlvbkNvbmZpZyI7",
+            "ChdHZXRBdHRyaWJ1dGVWYWx1ZXNJbnB1dBIMCgR0aWNrGAEgASgJEhIKCnRy",
+            "YWl0X3R5cGUYAiABKAkiPwocU2V0UG9pbnRzUHJvcG9ydGlvbkxpc3RJbnB1",
+            "dBIfCgRkYXRhGAEgAygLMhEuUG9pbnRzUHJvcG9ydGlvbiI7ChBQb2ludHNQ",
+            "cm9wb3J0aW9uEhMKC2FjdGlvbl9uYW1lGAEgASgJEhIKCnByb3BvcnRpb24Y",
+            "AiABKAMiTgoQQmF0Y2hTZXR0bGVJbnB1dBITCgthY3Rpb25fbmFtZRgBIAEo",
+            "CRIlChB1c2VyX3BvaW50c19saXN0GAIgAygLMgsuVXNlclBvaW50cyJ0CgpV",
+            "c2VyUG9pbnRzEiMKDHVzZXJfYWRkcmVzcxgBIAEoCzINLmFlbGYuQWRkcmVz",
+            "cxITCgt1c2VyX3BvaW50cxgCIAEoAxIsChF1c2VyX3BvaW50c192YWx1ZRgD",
+            "IAEoCzIRLmFlbGYuQmlnSW50VmFsdWUi0gIKD0luc2NyaXB0aW9uSW5mbxIQ",
+            "CghhbmNlc3RvchgBIAEoCRIQCghkZWNpbWFscxgCIAEoBRIPCgdtYXhfZ2Vu",
+            "GAMgASgFEhEKCWxvc3NfcmF0ZRgEIAEoAxIXCg9jb21taXNzaW9uX3JhdGUY",
+            "BSABKAMSIAoJcmVjaXBpZW50GAYgASgLMg0uYWVsZi5BZGRyZXNzEhwKBWFk",
+            "bWluGAcgASgLMg0uYWVsZi5BZGRyZXNzEjcKF2Nyb3NzX2dlbmVyYXRpb25f",
+            "Y29uZmlnGAggASgLMhYuQ3Jvc3NHZW5lcmF0aW9uQ29uZmlnEhkKEWlzX3dl",
+            "aWdodF9lbmFibGVkGAkgASgIEhMKC2ltYWdlX2NvdW50GAogASgFEhoKEmF0",
+            "dHJpYnV0ZXNfcGVyX2dlbhgLIAEoBRIZChFtYXhfZ2VuX2xvc3NfcmF0ZRgM",
+            "IAEoAyKsAQoSR2V0VG9rZW5JbmZvT3V0cHV0EhwKCGFkb3B0X2lkGAEgASgL",
+            "MgouYWVsZi5IYXNoEg4KBnBhcmVudBgCIAEoCRISCgpwYXJlbnRfZ2VuGAMg",
+            "ASgFEiYKEXBhcmVudF9hdHRyaWJ1dGVzGAQgASgLMgsuQXR0cmlidXRlcxIf",
+            "CgphdHRyaWJ1dGVzGAUgASgLMgsuQXR0cmlidXRlcxILCgNnZW4YBiABKAUi",
+            "uAEKF1NldEF0dHJpYnV0ZUNvbmZpZ0lucHV0EhwKFHRyYWl0X3R5cGVfbWF4",
+            "X2NvdW50GAEgASgDEh0KFXRyYWl0X3ZhbHVlX21heF9jb3VudBgCIAEoAxIc",
+            "ChRhdHRyaWJ1dGVfbWF4X2xlbmd0aBgDIAEoAxIeChZtYXhfYXR0cmlidXRl",
+            "c19wZXJfZ2VuGAQgASgFEiIKGmZpeGVkX3RyYWl0X3R5cGVfbWF4X2NvdW50",
+            "GAUgASgDIoUCCgZDb25maWcSDwoHbWF4X2dlbhgBIAEoBRIWCg5pbWFnZV9t",
+            "YXhfc2l6ZRgCIAEoAxIXCg9pbWFnZV9tYXhfY291bnQYAyABKAMSHAoUdHJh",
+            "aXRfdHlwZV9tYXhfY291bnQYBCABKAMSHQoVdHJhaXRfdmFsdWVfbWF4X2Nv",
+            "dW50GAUgASgDEhwKFGF0dHJpYnV0ZV9tYXhfbGVuZ3RoGAYgASgDEh4KFm1h",
+            "eF9hdHRyaWJ1dGVzX3Blcl9nZW4YByABKAUSIgoaZml4ZWRfdHJhaXRfdHlw",
+            "ZV9tYXhfY291bnQYCCABKAMSGgoSaW1hZ2VfdXJpX21heF9zaXplGAkgASgD",
+            "IkMKEVNldFNpZ25hdG9yeUlucHV0EgwKBHRpY2sYASABKAkSIAoJc2lnbmF0",
+            "b3J5GAIgASgLMg0uYWVsZi5BZGRyZXNzIjYKE0FjY2VwdFJlZmVycmFsSW5w",
+            "dXQSHwoIcmVmZXJyZXIYASABKAsyDS5hZWxmLkFkZHJlc3MiYwohVHJhbnNm",
+            "ZXJGcm9tUmVjZWl2aW5nQWRkcmVzc0lucHV0EgwKBHRpY2sYASABKAkSDgoG",
+            "YW1vdW50GAIgASgDEiAKCXJlY2lwaWVudBgDIAEoCzINLmFlbGYuQWRkcmVz",
+            "cyJeCgtUcmFpdFZhbHVlcxIkChFsb3dlcl93ZWlnaHRfc3VtcxgBIAEoCzIJ",
+            "LkxvbmdMaXN0EikKEHRyYWl0X3ZhbHVlX2xpc3QYAiABKAsyDy5BdHRyaWJ1",
+            "dGVJbmZvcyIYCghMb25nTGlzdBIMCgRkYXRhGAEgAygDIiwKG1NldE9mZmlj",
+            "aWFsRG9tYWluQWxpYXNJbnB1dBINCgVhbGlhcxgBIAEoCSJBCgZKb2luZWQS",
+            "DgoGZG9tYWluGAIgASgJEiEKCnJlZ2lzdHJhbnQYAyABKAsyDS5hZWxmLkFk",
+            "ZHJlc3M6BKC7GAEi6wQKCERlcGxveWVkEgwKBHRpY2sYASABKAkSEAoIYW5j",
+            "ZXN0b3IYAiABKAkSFgoObWF4X2dlbmVyYXRpb24YAyABKAUSFAoMdG90YWxf",
+            "c3VwcGx5GAQgASgDEhAKCGRlY2ltYWxzGAUgASgFEigKD2F0dHJpYnV0ZV9s",
+            "aXN0cxgGIAEoCzIPLkF0dHJpYnV0ZUxpc3RzEhMKC2ltYWdlX2NvdW50GAcg",
+            "ASgFEh0KBmlzc3VlchgIIAEoCzINLmFlbGYuQWRkcmVzcxIcCgVvd25lchgJ",
+            "IAEoCzINLmFlbGYuQWRkcmVzcxIWCg5pc3N1ZV9jaGFpbl9pZBgKIAEoBRIm",
+            "Cg5leHRlcm5hbF9pbmZvcxgLIAEoCzIOLkV4dGVybmFsSW5mb3MSEgoKdG9r",
+            "ZW5fbmFtZRgMIAEoCRIfCghkZXBsb3llchgNIAEoCzINLmFlbGYuQWRkcmVz",
+            "cxI3Chdjcm9zc19nZW5lcmF0aW9uX2NvbmZpZxgOIAEoCzIWLkNyb3NzR2Vu",
+            "ZXJhdGlvbkNvbmZpZxIZChFpc193ZWlnaHRfZW5hYmxlZBgPIAEoCBIcCgVh",
+            "ZG1pbhgQIAEoCzINLmFlbGYuQWRkcmVzcxIRCglsb3NzX3JhdGUYESABKAMS",
+            "FwoPY29tbWlzc2lvbl9yYXRlGBIgASgDEhoKEmF0dHJpYnV0ZXNfcGVyX2dl",
+            "bhgTIAEoBRIgCglzaWduYXRvcnkYFCABKAsyDS5hZWxmLkFkZHJlc3MSEQoJ",
+            "aW1hZ2VfdXJpGBUgASgJEhkKEW1heF9nZW5fbG9zc19yYXRlGBYgASgDOgSg",
+            "uxgBIt0CCgdBZG9wdGVkEhwKCGFkb3B0X2lkGAEgASgLMgouYWVsZi5IYXNo",
+            "Eg4KBnBhcmVudBgCIAEoCRISCgpwYXJlbnRfZ2VuGAMgASgFEhQKDGlucHV0",
+            "X2Ftb3VudBgEIAEoAxITCgtsb3NzX2Ftb3VudBgFIAEoAxIZChFjb21taXNz",
+            "aW9uX2Ftb3VudBgGIAEoAxIVCg1vdXRwdXRfYW1vdW50GAcgASgDEhMKC2lt",
+            "YWdlX2NvdW50GAggASgDEh4KB2Fkb3B0ZXIYCSABKAsyDS5hZWxmLkFkZHJl",
+            "c3MSFAoMYmxvY2tfaGVpZ2h0GAogASgDEh8KCmF0dHJpYnV0ZXMYCyABKAsy",
+            "Cy5BdHRyaWJ1dGVzEgsKA2dlbhgMIAEoBRIQCghhbmNlc3RvchgNIAEoCRIO",
+            "CgZzeW1ib2wYDiABKAkSEgoKdG9rZW5fbmFtZRgPIAEoCToEoLsYASLqAgoJ",
+            "Q29uZmlybWVkEhwKCGFkb3B0X2lkGAEgASgLMgouYWVsZi5IYXNoEg4KBnBh",
+            "cmVudBgCIAEoCRIOCgZzeW1ib2wYAyABKAkSFAoMdG90YWxfc3VwcGx5GAQg",
+            "ASgDEhAKCGRlY2ltYWxzGAUgASgFEgsKA2dlbhgGIAEoBRIfCgphdHRyaWJ1",
+            "dGVzGAcgASgLMgsuQXR0cmlidXRlcxIdCgZpc3N1ZXIYCCABKAsyDS5hZWxm",
+            "LkFkZHJlc3MSHAoFb3duZXIYCSABKAsyDS5hZWxmLkFkZHJlc3MSFgoOaXNz",
+            "dWVfY2hhaW5faWQYCiABKAUSJgoOZXh0ZXJuYWxfaW5mb3MYCyABKAsyDi5F",
+            "eHRlcm5hbEluZm9zEhIKCnRva2VuX25hbWUYDCABKAkSHwoIZGVwbG95ZXIY",
+            "DSABKAsyDS5hZWxmLkFkZHJlc3MSEQoJaW1hZ2VfdXJpGA4gASgJOgSguxgB",
+            "ImQKCFJlcm9sbGVkEg4KBnN5bWJvbBgBIAEoCRIQCghhbmNlc3RvchgCIAEo",
+            "CRIOCgZhbW91bnQYAyABKAMSIAoJcmVjaXBpZW50GAQgASgLMg0uYWVsZi5B",
+            "ZGRyZXNzOgSguxgBInkKEUZpeGVkQXR0cmlidXRlU2V0EgwKBHRpY2sYASAB",
+            "KAkSKAoRcmVtb3ZlZF9hdHRyaWJ1dGUYAiABKAsyDS5BdHRyaWJ1dGVTZXQS",
+            "JgoPYWRkZWRfYXR0cmlidXRlGAMgASgLMg0uQXR0cmlidXRlU2V0OgSguxgB",
+            "InoKElJhbmRvbUF0dHJpYnV0ZVNldBIMCgR0aWNrGAEgASgJEigKEXJlbW92",
+            "ZWRfYXR0cmlidXRlGAIgASgLMg0uQXR0cmlidXRlU2V0EiYKD2FkZGVkX2F0",
+            "dHJpYnV0ZRgDIAEoCzINLkF0dHJpYnV0ZVNldDoEoLsYASJMChpBdHRyaWJ1",
+            "dGVzUGVyR2VuZXJhdGlvblNldBIMCgR0aWNrGAEgASgJEhoKEmF0dHJpYnV0",
+            "ZXNfcGVyX2dlbhgCIAEoBToEoLsYASI4Cg1JbWFnZUNvdW50U2V0EgwKBHRp",
+            "Y2sYASABKAkSEwoLaW1hZ2VfY291bnQYAiABKAU6BKC7GAEiMwoQTWF4R2Vu",
+            "ZXJhdGlvblNldBIMCgR0aWNrGAEgASgJEgsKA2dlbhgCIAEoBToEoLsYASJl",
+            "CghSYXRlc1NldBIMCgR0aWNrGAEgASgJEhEKCWxvc3NfcmF0ZRgCIAEoAxIX",
+            "Cg9jb21taXNzaW9uX3JhdGUYAyABKAMSGQoRbWF4X2dlbl9sb3NzX3JhdGUY",
+            "BCABKAM6BKC7GAEiRAoMUmVjaXBpZW50U2V0EgwKBHRpY2sYASABKAkSIAoJ",
+            "cmVjaXBpZW50GAIgASgLMg0uYWVsZi5BZGRyZXNzOgSguxgBIkcKE0luc2Ny",
+            "aXB0aW9uQWRtaW5TZXQSDAoEdGljaxgBIAEoCRIcCgVhZG1pbhgCIAEoCzIN",
+            "LmFlbGYuQWRkcmVzczoEoLsYASJnChhDcm9zc0dlbmVyYXRpb25Db25maWdT",
+            "ZXQSDAoEdGljaxgBIAEoCRI3Chdjcm9zc19nZW5lcmF0aW9uX2NvbmZpZxgC",
+            "IAEoCzIWLkNyb3NzR2VuZXJhdGlvbkNvbmZpZzoEoLsYASIqCglDb25maWdT",
+            "ZXQSFwoGY29uZmlnGAEgASgLMgcuQ29uZmlnOgSguxgBIi8KFk1heEdlbmVy",
+            "YXRpb25Db25maWdTZXQSDwoHbWF4X2dlbhgBIAEoBToEoLsYASIvCg9JbWFn",
+            "ZU1heFNpemVTZXQSFgoOaW1hZ2VfbWF4X3NpemUYASABKAM6BKC7GAEiMQoQ",
+            "SW1hZ2VNYXhDb3VudFNldBIXCg9pbWFnZV9tYXhfY291bnQYASABKAM6BKC7",
+            "GAEiuQEKEkF0dHJpYnV0ZUNvbmZpZ1NldBIcChR0cmFpdF90eXBlX21heF9j",
+            "b3VudBgBIAEoAxIdChV0cmFpdF92YWx1ZV9tYXhfY291bnQYAiABKAMSHAoU",
+            "YXR0cmlidXRlX21heF9sZW5ndGgYAyABKAMSHgoWbWF4X2F0dHJpYnV0ZXNf",
+            "cGVyX2dlbhgEIAEoBRIiChpmaXhlZF90cmFpdF90eXBlX21heF9jb3VudBgF",
+            "IAEoAzoEoLsYASIuCghBZG1pblNldBIcCgVhZG1pbhgBIAEoCzINLmFlbGYu",
+            "QWRkcmVzczoEoLsYASJECgxTaWduYXRvcnlTZXQSDAoEdGljaxgBIAEoCRIg",
+            "CglzaWduYXRvcnkYAiABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEiNgoSSW1h",
+            "Z2VVcmlNYXhTaXplU2V0EhoKEmltYWdlX3VyaV9tYXhfc2l6ZRgBIAEoAzoE",
+            "oLsYASJZChBSZWZlcnJhbEFjY2VwdGVkEh8KCHJlZmVycmVyGAEgASgLMg0u",
+            "YWVsZi5BZGRyZXNzEh4KB2ludml0ZWUYAiABKAsyDS5hZWxmLkFkZHJlc3M6",
+            "BKC7GAEiLQoWT2ZmaWNpYWxEb21haW5BbGlhc1NldBINCgVhbGlhcxgBIAEo",
+            "CToEoLsYASJ2ChBBZG9wdGlvblJlcm9sbGVkEhwKCGFkb3B0X2lkGAEgASgL",
+            "MgouYWVsZi5IYXNoEg4KBnN5bWJvbBgCIAEoCRIOCgZhbW91bnQYAyABKAMS",
+            "HgoHYWNjb3VudBgEIAEoCzINLmFlbGYuQWRkcmVzczoEoLsYASLlAgoPQWRv",
+            "cHRpb25VcGRhdGVkEhwKCGFkb3B0X2lkGAEgASgLMgouYWVsZi5IYXNoEg4K",
+            "BnBhcmVudBgCIAEoCRISCgpwYXJlbnRfZ2VuGAMgASgFEhQKDGlucHV0X2Ft",
+            "b3VudBgEIAEoAxITCgtsb3NzX2Ftb3VudBgFIAEoAxIZChFjb21taXNzaW9u",
+            "X2Ftb3VudBgGIAEoAxIVCg1vdXRwdXRfYW1vdW50GAcgASgDEhMKC2ltYWdl",
+            "X2NvdW50GAggASgDEh4KB2Fkb3B0ZXIYCSABKAsyDS5hZWxmLkFkZHJlc3MS",
+            "FAoMYmxvY2tfaGVpZ2h0GAogASgDEh8KCmF0dHJpYnV0ZXMYCyABKAsyCy5B",
+            "dHRyaWJ1dGVzEgsKA2dlbhgMIAEoBRIQCghhbmNlc3RvchgNIAEoCRIOCgZz",
+            "eW1ib2wYDiABKAkSEgoKdG9rZW5fbmFtZRgPIAEoCToEoLsYATLJGwoTU2No",
+            "cm9kaW5nZXJDb250cmFjdBI4CgpJbml0aWFsaXplEhAuSW5pdGlhbGl6ZUlu",
+            "cHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASMAoGRGVwbG95EgwuRGVw",
+            "bG95SW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABIyCgdDb25maXJt",
+            "Eg0uQ29uZmlybUlucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASMAoG",
+            "UmVyb2xsEgwuUmVyb2xsSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "ABI6CgtBZG9wdE1heEdlbhIRLkFkb3B0TWF4R2VuSW5wdXQaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiABI2Cg5SZXJvbGxBZG9wdGlvbhIKLmFlbGYuSGFz",
+            "aBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkEKEVNldEZpeGVkQXR0cmli",
+            "dXRlEhIuU2V0QXR0cmlidXRlSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiABJCChJTZXRSYW5kb21BdHRyaWJ1dGUSEi5TZXRBdHRyaWJ1dGVJbnB1",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkoKE1NldEF0dHJpYnV0ZXNQ",
+            "ZXJHZW4SGS5TZXRBdHRyaWJ1dGVzUGVyR2VuSW5wdXQaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiABJEChBTZXRNYXhHZW5lcmF0aW9uEhYuU2V0TWF4R2Vu",
+            "ZXJhdGlvbklucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASNAoIU2V0",
+            "UmF0ZXMSDi5TZXRSYXRlc0lucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IgASPAoMU2V0UmVjaXBpZW50EhIuU2V0UmVjaXBpZW50SW5wdXQaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkiABI+Cg1TZXRJbWFnZUNvdW50EhMuU2V0SW1h",
+            "Z2VDb3VudElucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASSgoTU2V0",
+            "SW5zY3JpcHRpb25BZG1pbhIZLlNldEluc2NyaXB0aW9uQWRtaW5JbnB1dBoW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAElQKGFNldENyb3NzR2VuZXJhdGlv",
+            "bkNvbmZpZxIeLlNldENyb3NzR2VuZXJhdGlvbkNvbmZpZ0lucHV0GhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5IgASPAoMU2V0U2lnbmF0b3J5EhIuU2V0U2ln",
+            "bmF0b3J5SW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJCCgxHZXRT",
+            "aWduYXRvcnkSHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUaDS5hZWxm",
+            "LkFkZHJlc3MiBYiJ9wEBEksKEkdldEluc2NyaXB0aW9uSW5mbxIcLmdvb2ds",
+            "ZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRoQLkluc2NyaXB0aW9uSW5mbyIFiIn3",
+            "AQESTAoHR2V0VGljaxIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRoc",
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZSIFiIn3AQESTgoJR2V0UGFy",
+            "ZW50EhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlGhwuZ29vZ2xlLnBy",
+            "b3RvYnVmLlN0cmluZ1ZhbHVlIgWIifcBARJJChFHZXRBdHRyaWJ1dGVUeXBl",
+            "cxIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRoPLkF0dHJpYnV0ZUlu",
+            "Zm9zIgWIifcBARJGChJHZXRBdHRyaWJ1dGVWYWx1ZXMSGC5HZXRBdHRyaWJ1",
+            "dGVWYWx1ZXNJbnB1dBoPLkF0dHJpYnV0ZUluZm9zIgWIifcBARItCgxHZXRB",
+            "ZG9wdEluZm8SCi5hZWxmLkhhc2gaCi5BZG9wdEluZm8iBYiJ9wEBEkgKDEdl",
+            "dFRva2VuSW5mbxIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRoTLkdl",
+            "dFRva2VuSW5mb091dHB1dCIFiIn3AQESUgoOR2V0U3ltYm9sQ291bnQSHC5n",
+            "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUaGy5nb29nbGUucHJvdG9idWYu",
+            "SW50NjRWYWx1ZSIFiIn3AQESLgoJU2V0Q29uZmlnEgcuQ29uZmlnGhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5IgASMwoIU2V0QWRtaW4SDS5hZWxmLkFkZHJl",
+            "c3MaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABI4CghHZXRBZG1pbhIWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eRoNLmFlbGYuQWRkcmVzcyIFiIn3AQESTwoW",
+            "U2V0TWF4R2VuZXJhdGlvbkNvbmZpZxIbLmdvb2dsZS5wcm90b2J1Zi5JbnQz",
+            "MlZhbHVlGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASSAoPU2V0SW1hZ2VN",
+            "YXhTaXplEhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWUaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiABJJChBTZXRJbWFnZU1heENvdW50EhsuZ29vZ2xl",
+            "LnByb3RvYnVmLkludDY0VmFsdWUaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "ABJIChJTZXRBdHRyaWJ1dGVDb25maWcSGC5TZXRBdHRyaWJ1dGVDb25maWdJ",
+            "bnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjMKCUdldENvbmZpZxIW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoHLkNvbmZpZyIFiIn3AQESSwoSU2V0",
+            "SW1hZ2VVcmlNYXhTaXplEhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWUa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJQChJHZXRJbWFnZVVyaU1heFNp",
+            "emUSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaGy5nb29nbGUucHJvdG9idWYu",
+            "SW50NjRWYWx1ZSIFiIn3AQESPwoXU2V0UG9pbnRzQ29udHJhY3REQXBwSWQS",
+            "Ci5hZWxmLkhhc2gaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABI8ChFTZXRQ",
+            "b2ludHNDb250cmFjdBINLmFlbGYuQWRkcmVzcxoWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eSIAElIKF1NldFBvaW50c1Byb3BvcnRpb25MaXN0Eh0uU2V0UG9p",
+            "bnRzUHJvcG9ydGlvbkxpc3RJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eSIAEj8KFFNldFBvaW50c1NldHRsZUFkbWluEg0uYWVsZi5BZGRyZXNzGhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IgASOgoLQmF0Y2hTZXR0bGUSES5CYXRj",
+            "aFNldHRsZUlucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASLAoESm9p",
+            "bhIKLkpvaW5JbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkAKDkFj",
+            "Y2VwdFJlZmVycmFsEhQuQWNjZXB0UmVmZXJyYWxJbnB1dBoWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eSIAEkQKF0dldFBvaW50c0NvbnRyYWN0REFwcElkEhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5GgouYWVsZi5IYXNoIgWIifcBARJBChFH",
+            "ZXRQb2ludHNDb250cmFjdBIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoNLmFl",
+            "bGYuQWRkcmVzcyIFiIn3AQESQQoNR2V0Sm9pblJlY29yZBINLmFlbGYuQWRk",
+            "cmVzcxoaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUiBYiJ9wEBElcKE0dl",
+            "dFBvaW50c1Byb3BvcnRpb24SHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFs",
+            "dWUaGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZSIFiIn3AQESRAoUR2V0",
+            "UG9pbnRzU2V0dGxlQWRtaW4SFi5nb29nbGUucHJvdG9idWYuRW1wdHkaDS5h",
+            "ZWxmLkFkZHJlc3MiBYiJ9wEBElwKHFRyYW5zZmVyRnJvbVJlY2VpdmluZ0Fk",
+            "ZHJlc3MSIi5UcmFuc2ZlckZyb21SZWNlaXZpbmdBZGRyZXNzSW5wdXQaFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiABJJChNHZXRSZWNlaXZpbmdBZGRyZXNz",
+            "EhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlGg0uYWVsZi5BZGRyZXNz",
+            "IgWIifcBARJQChZTZXRPZmZpY2lhbERvbWFpbkFsaWFzEhwuU2V0T2ZmaWNp",
+            "YWxEb21haW5BbGlhc0lucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgAS",
+            "VQoWR2V0T2ZmaWNpYWxEb21haW5BbGlhcxIWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eRocLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZSIFiIn3AQEaEMrK",
+            "9gELYWNzMTIucHJvdG9CDqoCC1NjaHJvZGluZ2VyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::AElf.Types.CoreReflection.Descriptor, global::AElf.OptionsReflection.Descriptor, global::AElf.Standards.ACS12.Acs12Reflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Schrodinger.RewardType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.JoinInput), global::Schrodinger.JoinInput.Parser, new[]{ "Domain" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.InitializeInput), global::Schrodinger.InitializeInput.Parser, new[]{ "Admin", "PointsContract", "PointsContractDappId", "MaxGen", "ImageMaxSize", "ImageMaxCount", "TraitTypeMaxCount", "TraitValueMaxCount", "AttributeMaxLength", "MaxAttributesPerGen", "FixedTraitTypeMaxCount", "ImageUriMaxSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.DeployInput), global::Schrodinger.DeployInput.Parser, new[]{ "Tick", "MaxGeneration", "TotalSupply", "Decimals", "LossRate", "CommissionRate", "AttributeLists", "ImageCount", "Recipient", "Issuer", "Image", "CrossGenerationConfig", "IsWeightEnabled", "Admin", "AttributesPerGen", "Domain", "Signatory", "ImageUri", "MaxGenLossRate" }, null, null, null, null),
@@ -359,7 +307,7 @@ namespace Schrodinger {
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.CrossGenerationConfig), global::Schrodinger.CrossGenerationConfig.Parser, new[]{ "Gen", "CrossGenerationFixed", "CrossGenerationProbability", "Weights", "IsWeightEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.ExternalInfos), global::Schrodinger.ExternalInfos.Parser, new[]{ "Value" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AdoptInput), global::Schrodinger.AdoptInput.Parser, new[]{ "Parent", "Amount", "Domain" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AdoptInfo), global::Schrodinger.AdoptInfo.Parser, new[]{ "AdoptId", "Parent", "ParentGen", "InputAmount", "OutputAmount", "ParentAttributes", "ImageCount", "BlockHeight", "Symbol", "TokenName", "Attributes", "Gen", "Adopter", "IsConfirmed", "IsRerolled", "IsUpdated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AdoptInfo), global::Schrodinger.AdoptInfo.Parser, new[]{ "AdoptId", "Parent", "ParentGen", "InputAmount", "OutputAmount", "ParentAttributes", "ImageCount", "BlockHeight", "Symbol", "TokenName", "Attributes", "Gen", "Adopter", "IsConfirmed", "IsRerolled", "IsUpdated", "Level" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Attributes), global::Schrodinger.Attributes.Parser, new[]{ "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Attribute), global::Schrodinger.Attribute.Parser, new[]{ "TraitType", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.ConfirmInput), global::Schrodinger.ConfirmInput.Parser, new[]{ "AdoptId", "Image", "ImageUri", "Signature" }, null, null, null, null),
@@ -389,19 +337,6 @@ namespace Schrodinger {
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.TraitValues), global::Schrodinger.TraitValues.Parser, new[]{ "LowerWeightSums", "TraitValueList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.LongList), global::Schrodinger.LongList.Parser, new[]{ "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.SetOfficialDomainAliasInput), global::Schrodinger.SetOfficialDomainAliasInput.Parser, new[]{ "Alias" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.SetRewardConfigInput), global::Schrodinger.SetRewardConfigInput.Parser, new[]{ "Tick", "Rewards" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Reward), global::Schrodinger.Reward.Parser, new[]{ "Name", "Type", "Amount", "Weight" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.RewardList), global::Schrodinger.RewardList.Parser, new[]{ "Data" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.GetRewardConfigOutput), global::Schrodinger.GetRewardConfigOutput.Parser, new[]{ "List", "Pool" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.SpinInput), global::Schrodinger.SpinInput.Parser, new[]{ "Tick", "Seed", "ExpirationTime", "Signature" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.SpinInfo), global::Schrodinger.SpinInfo.Parser, new[]{ "SpinId", "Name", "Type", "Amount", "Account" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AdoptWithVoucherInput), global::Schrodinger.AdoptWithVoucherInput.Parser, new[]{ "Tick" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.VoucherInfo), global::Schrodinger.VoucherInfo.Parser, new[]{ "VoucherId", "Account", "Attributes", "Tick", "AdoptId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.ConfirmVoucherInput), global::Schrodinger.ConfirmVoucherInput.Parser, new[]{ "VoucherId", "Signature" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.GetAdoptionVoucherAmountInput), global::Schrodinger.GetAdoptionVoucherAmountInput.Parser, new[]{ "Tick", "Account" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AirdropVoucherInput), global::Schrodinger.AirdropVoucherInput.Parser, new[]{ "Tick", "List", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.SetAirdropAdminInput), global::Schrodinger.SetAirdropAdminInput.Parser, new[]{ "Tick", "Admin" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AddressList), global::Schrodinger.AddressList.Parser, new[]{ "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Joined), global::Schrodinger.Joined.Parser, new[]{ "Domain", "Registrant" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Deployed), global::Schrodinger.Deployed.Parser, new[]{ "Tick", "Ancestor", "MaxGeneration", "TotalSupply", "Decimals", "AttributeLists", "ImageCount", "Issuer", "Owner", "IssueChainId", "ExternalInfos", "TokenName", "Deployer", "CrossGenerationConfig", "IsWeightEnabled", "Admin", "LossRate", "CommissionRate", "AttributesPerGen", "Signatory", "ImageUri", "MaxGenLossRate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Adopted), global::Schrodinger.Adopted.Parser, new[]{ "AdoptId", "Parent", "ParentGen", "InputAmount", "LossAmount", "CommissionAmount", "OutputAmount", "ImageCount", "Adopter", "BlockHeight", "Attributes", "Gen", "Ancestor", "Symbol", "TokenName" }, null, null, null, null),
@@ -427,28 +362,12 @@ namespace Schrodinger {
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.ReferralAccepted), global::Schrodinger.ReferralAccepted.Parser, new[]{ "Referrer", "Invitee" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.OfficialDomainAliasSet), global::Schrodinger.OfficialDomainAliasSet.Parser, new[]{ "Alias" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AdoptionRerolled), global::Schrodinger.AdoptionRerolled.Parser, new[]{ "AdoptId", "Symbol", "Amount", "Account" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AdoptionUpdated), global::Schrodinger.AdoptionUpdated.Parser, new[]{ "AdoptId", "Parent", "ParentGen", "InputAmount", "LossAmount", "CommissionAmount", "OutputAmount", "ImageCount", "Adopter", "BlockHeight", "Attributes", "Gen", "Ancestor", "Symbol", "TokenName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.RewardConfigSet), global::Schrodinger.RewardConfigSet.Parser, new[]{ "Tick", "List", "Pool" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.Spun), global::Schrodinger.Spun.Parser, new[]{ "Tick", "SpinInfo", "Seed" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AdoptedWithVoucher), global::Schrodinger.AdoptedWithVoucher.Parser, new[]{ "VoucherInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.VoucherConfirmed), global::Schrodinger.VoucherConfirmed.Parser, new[]{ "VoucherInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.VoucherAirdropped), global::Schrodinger.VoucherAirdropped.Parser, new[]{ "Tick", "List", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AirdropAdminSet), global::Schrodinger.AirdropAdminSet.Parser, new[]{ "Tick", "Admin" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Schrodinger.AdoptionUpdated), global::Schrodinger.AdoptionUpdated.Parser, new[]{ "AdoptId", "Parent", "ParentGen", "InputAmount", "LossAmount", "CommissionAmount", "OutputAmount", "ImageCount", "Adopter", "BlockHeight", "Attributes", "Gen", "Ancestor", "Symbol", "TokenName" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
-  #region Enums
-  public enum RewardType {
-    [pbr::OriginalName("Other")] Other = 0,
-    [pbr::OriginalName("Point")] Point = 1,
-    [pbr::OriginalName("AdoptionVoucher")] AdoptionVoucher = 2,
-    [pbr::OriginalName("Token")] Token = 3,
-  }
-
-  #endregion
-
   #region Messages
   public sealed partial class JoinInput : pb::IMessage<JoinInput> {
     private static readonly pb::MessageParser<JoinInput> _parser = new pb::MessageParser<JoinInput>(() => new JoinInput());
@@ -3518,6 +3437,7 @@ namespace Schrodinger {
       isConfirmed_ = other.isConfirmed_;
       isRerolled_ = other.isRerolled_;
       isUpdated_ = other.isUpdated_;
+      level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3717,6 +3637,17 @@ namespace Schrodinger {
       }
     }
 
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 17;
+    private long level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AdoptInfo);
@@ -3746,6 +3677,7 @@ namespace Schrodinger {
       if (IsConfirmed != other.IsConfirmed) return false;
       if (IsRerolled != other.IsRerolled) return false;
       if (IsUpdated != other.IsUpdated) return false;
+      if (Level != other.Level) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3768,6 +3700,7 @@ namespace Schrodinger {
       if (IsConfirmed != false) hash ^= IsConfirmed.GetHashCode();
       if (IsRerolled != false) hash ^= IsRerolled.GetHashCode();
       if (IsUpdated != false) hash ^= IsUpdated.GetHashCode();
+      if (Level != 0L) hash ^= Level.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3845,6 +3778,10 @@ namespace Schrodinger {
         output.WriteRawTag(128, 1);
         output.WriteBool(IsUpdated);
       }
+      if (Level != 0L) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt64(Level);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3900,6 +3837,9 @@ namespace Schrodinger {
       }
       if (IsUpdated != false) {
         size += 2 + 1;
+      }
+      if (Level != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Level);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3971,6 +3911,9 @@ namespace Schrodinger {
       }
       if (other.IsUpdated != false) {
         IsUpdated = other.IsUpdated;
+      }
+      if (other.Level != 0L) {
+        Level = other.Level;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4057,6 +4000,10 @@ namespace Schrodinger {
           }
           case 128: {
             IsUpdated = input.ReadBool();
+            break;
+          }
+          case 136: {
+            Level = input.ReadInt64();
             break;
           }
         }
@@ -9430,2311 +9377,6 @@ namespace Schrodinger {
 
   }
 
-  public sealed partial class SetRewardConfigInput : pb::IMessage<SetRewardConfigInput> {
-    private static readonly pb::MessageParser<SetRewardConfigInput> _parser = new pb::MessageParser<SetRewardConfigInput>(() => new SetRewardConfigInput());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SetRewardConfigInput> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[43]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetRewardConfigInput() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetRewardConfigInput(SetRewardConfigInput other) : this() {
-      tick_ = other.tick_;
-      rewards_ = other.rewards_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetRewardConfigInput Clone() {
-      return new SetRewardConfigInput(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "rewards" field.</summary>
-    public const int RewardsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Schrodinger.Reward> _repeated_rewards_codec
-        = pb::FieldCodec.ForMessage(18, global::Schrodinger.Reward.Parser);
-    private readonly pbc::RepeatedField<global::Schrodinger.Reward> rewards_ = new pbc::RepeatedField<global::Schrodinger.Reward>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Schrodinger.Reward> Rewards {
-      get { return rewards_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as SetRewardConfigInput);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SetRewardConfigInput other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      if(!rewards_.Equals(other.rewards_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      hash ^= rewards_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      rewards_.WriteTo(output, _repeated_rewards_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      size += rewards_.CalculateSize(_repeated_rewards_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SetRewardConfigInput other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      rewards_.Add(other.rewards_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 18: {
-            rewards_.AddEntriesFrom(input, _repeated_rewards_codec);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class Reward : pb::IMessage<Reward> {
-    private static readonly pb::MessageParser<Reward> _parser = new pb::MessageParser<Reward>(() => new Reward());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Reward> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[44]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reward() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reward(Reward other) : this() {
-      name_ = other.name_;
-      type_ = other.type_;
-      amount_ = other.amount_;
-      weight_ = other.weight_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reward Clone() {
-      return new Reward(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 2;
-    private global::Schrodinger.RewardType type_ = global::Schrodinger.RewardType.Other;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Schrodinger.RewardType Type {
-      get { return type_; }
-      set {
-        type_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 3;
-    private long amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "weight" field.</summary>
-    public const int WeightFieldNumber = 4;
-    private long weight_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Weight {
-      get { return weight_; }
-      set {
-        weight_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Reward);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Reward other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (Type != other.Type) return false;
-      if (Amount != other.Amount) return false;
-      if (Weight != other.Weight) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Type != global::Schrodinger.RewardType.Other) hash ^= Type.GetHashCode();
-      if (Amount != 0L) hash ^= Amount.GetHashCode();
-      if (Weight != 0L) hash ^= Weight.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (Type != global::Schrodinger.RewardType.Other) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Type);
-      }
-      if (Amount != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(Amount);
-      }
-      if (Weight != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(Weight);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Type != global::Schrodinger.RewardType.Other) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
-      }
-      if (Amount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Amount);
-      }
-      if (Weight != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Weight);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Reward other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Type != global::Schrodinger.RewardType.Other) {
-        Type = other.Type;
-      }
-      if (other.Amount != 0L) {
-        Amount = other.Amount;
-      }
-      if (other.Weight != 0L) {
-        Weight = other.Weight;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 16: {
-            Type = (global::Schrodinger.RewardType) input.ReadEnum();
-            break;
-          }
-          case 24: {
-            Amount = input.ReadInt64();
-            break;
-          }
-          case 32: {
-            Weight = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class RewardList : pb::IMessage<RewardList> {
-    private static readonly pb::MessageParser<RewardList> _parser = new pb::MessageParser<RewardList>(() => new RewardList());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RewardList> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[45]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RewardList() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RewardList(RewardList other) : this() {
-      data_ = other.data_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RewardList Clone() {
-      return new RewardList(this);
-    }
-
-    /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Schrodinger.Reward> _repeated_data_codec
-        = pb::FieldCodec.ForMessage(10, global::Schrodinger.Reward.Parser);
-    private readonly pbc::RepeatedField<global::Schrodinger.Reward> data_ = new pbc::RepeatedField<global::Schrodinger.Reward>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Schrodinger.Reward> Data {
-      get { return data_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as RewardList);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RewardList other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!data_.Equals(other.data_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= data_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      data_.WriteTo(output, _repeated_data_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      size += data_.CalculateSize(_repeated_data_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RewardList other) {
-      if (other == null) {
-        return;
-      }
-      data_.Add(other.data_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            data_.AddEntriesFrom(input, _repeated_data_codec);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class GetRewardConfigOutput : pb::IMessage<GetRewardConfigOutput> {
-    private static readonly pb::MessageParser<GetRewardConfigOutput> _parser = new pb::MessageParser<GetRewardConfigOutput>(() => new GetRewardConfigOutput());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetRewardConfigOutput> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[46]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetRewardConfigOutput() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetRewardConfigOutput(GetRewardConfigOutput other) : this() {
-      list_ = other.list_ != null ? other.list_.Clone() : null;
-      pool_ = other.pool_ != null ? other.pool_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetRewardConfigOutput Clone() {
-      return new GetRewardConfigOutput(this);
-    }
-
-    /// <summary>Field number for the "list" field.</summary>
-    public const int ListFieldNumber = 1;
-    private global::Schrodinger.RewardList list_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Schrodinger.RewardList List {
-      get { return list_; }
-      set {
-        list_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "pool" field.</summary>
-    public const int PoolFieldNumber = 2;
-    private global::AElf.Types.Address pool_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Address Pool {
-      get { return pool_; }
-      set {
-        pool_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as GetRewardConfigOutput);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetRewardConfigOutput other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(List, other.List)) return false;
-      if (!object.Equals(Pool, other.Pool)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (list_ != null) hash ^= List.GetHashCode();
-      if (pool_ != null) hash ^= Pool.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (list_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(List);
-      }
-      if (pool_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Pool);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (list_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(List);
-      }
-      if (pool_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pool);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetRewardConfigOutput other) {
-      if (other == null) {
-        return;
-      }
-      if (other.list_ != null) {
-        if (list_ == null) {
-          List = new global::Schrodinger.RewardList();
-        }
-        List.MergeFrom(other.List);
-      }
-      if (other.pool_ != null) {
-        if (pool_ == null) {
-          Pool = new global::AElf.Types.Address();
-        }
-        Pool.MergeFrom(other.Pool);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (list_ == null) {
-              List = new global::Schrodinger.RewardList();
-            }
-            input.ReadMessage(List);
-            break;
-          }
-          case 18: {
-            if (pool_ == null) {
-              Pool = new global::AElf.Types.Address();
-            }
-            input.ReadMessage(Pool);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class SpinInput : pb::IMessage<SpinInput> {
-    private static readonly pb::MessageParser<SpinInput> _parser = new pb::MessageParser<SpinInput>(() => new SpinInput());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SpinInput> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[47]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SpinInput() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SpinInput(SpinInput other) : this() {
-      tick_ = other.tick_;
-      seed_ = other.seed_ != null ? other.seed_.Clone() : null;
-      expirationTime_ = other.expirationTime_;
-      signature_ = other.signature_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SpinInput Clone() {
-      return new SpinInput(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "seed" field.</summary>
-    public const int SeedFieldNumber = 2;
-    private global::AElf.Types.Hash seed_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Hash Seed {
-      get { return seed_; }
-      set {
-        seed_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "expiration_time" field.</summary>
-    public const int ExpirationTimeFieldNumber = 3;
-    private long expirationTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long ExpirationTime {
-      get { return expirationTime_; }
-      set {
-        expirationTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "signature" field.</summary>
-    public const int SignatureFieldNumber = 10000;
-    private pb::ByteString signature_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString Signature {
-      get { return signature_; }
-      set {
-        signature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as SpinInput);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SpinInput other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      if (!object.Equals(Seed, other.Seed)) return false;
-      if (ExpirationTime != other.ExpirationTime) return false;
-      if (Signature != other.Signature) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      if (seed_ != null) hash ^= Seed.GetHashCode();
-      if (ExpirationTime != 0L) hash ^= ExpirationTime.GetHashCode();
-      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      if (seed_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Seed);
-      }
-      if (ExpirationTime != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(ExpirationTime);
-      }
-      if (Signature.Length != 0) {
-        output.WriteRawTag(130, 241, 4);
-        output.WriteBytes(Signature);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      if (seed_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seed);
-      }
-      if (ExpirationTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ExpirationTime);
-      }
-      if (Signature.Length != 0) {
-        size += 3 + pb::CodedOutputStream.ComputeBytesSize(Signature);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SpinInput other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      if (other.seed_ != null) {
-        if (seed_ == null) {
-          Seed = new global::AElf.Types.Hash();
-        }
-        Seed.MergeFrom(other.Seed);
-      }
-      if (other.ExpirationTime != 0L) {
-        ExpirationTime = other.ExpirationTime;
-      }
-      if (other.Signature.Length != 0) {
-        Signature = other.Signature;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (seed_ == null) {
-              Seed = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(Seed);
-            break;
-          }
-          case 24: {
-            ExpirationTime = input.ReadInt64();
-            break;
-          }
-          case 80002: {
-            Signature = input.ReadBytes();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class SpinInfo : pb::IMessage<SpinInfo> {
-    private static readonly pb::MessageParser<SpinInfo> _parser = new pb::MessageParser<SpinInfo>(() => new SpinInfo());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SpinInfo> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[48]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SpinInfo() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SpinInfo(SpinInfo other) : this() {
-      spinId_ = other.spinId_ != null ? other.spinId_.Clone() : null;
-      name_ = other.name_;
-      type_ = other.type_;
-      amount_ = other.amount_;
-      account_ = other.account_ != null ? other.account_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SpinInfo Clone() {
-      return new SpinInfo(this);
-    }
-
-    /// <summary>Field number for the "spin_id" field.</summary>
-    public const int SpinIdFieldNumber = 1;
-    private global::AElf.Types.Hash spinId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Hash SpinId {
-      get { return spinId_; }
-      set {
-        spinId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 2;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 3;
-    private global::Schrodinger.RewardType type_ = global::Schrodinger.RewardType.Other;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Schrodinger.RewardType Type {
-      get { return type_; }
-      set {
-        type_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 4;
-    private long amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "account" field.</summary>
-    public const int AccountFieldNumber = 5;
-    private global::AElf.Types.Address account_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Address Account {
-      get { return account_; }
-      set {
-        account_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as SpinInfo);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SpinInfo other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(SpinId, other.SpinId)) return false;
-      if (Name != other.Name) return false;
-      if (Type != other.Type) return false;
-      if (Amount != other.Amount) return false;
-      if (!object.Equals(Account, other.Account)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (spinId_ != null) hash ^= SpinId.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Type != global::Schrodinger.RewardType.Other) hash ^= Type.GetHashCode();
-      if (Amount != 0L) hash ^= Amount.GetHashCode();
-      if (account_ != null) hash ^= Account.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (spinId_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(SpinId);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
-      if (Type != global::Schrodinger.RewardType.Other) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) Type);
-      }
-      if (Amount != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(Amount);
-      }
-      if (account_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Account);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (spinId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SpinId);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Type != global::Schrodinger.RewardType.Other) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
-      }
-      if (Amount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Amount);
-      }
-      if (account_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SpinInfo other) {
-      if (other == null) {
-        return;
-      }
-      if (other.spinId_ != null) {
-        if (spinId_ == null) {
-          SpinId = new global::AElf.Types.Hash();
-        }
-        SpinId.MergeFrom(other.SpinId);
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Type != global::Schrodinger.RewardType.Other) {
-        Type = other.Type;
-      }
-      if (other.Amount != 0L) {
-        Amount = other.Amount;
-      }
-      if (other.account_ != null) {
-        if (account_ == null) {
-          Account = new global::AElf.Types.Address();
-        }
-        Account.MergeFrom(other.Account);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (spinId_ == null) {
-              SpinId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(SpinId);
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 24: {
-            Type = (global::Schrodinger.RewardType) input.ReadEnum();
-            break;
-          }
-          case 32: {
-            Amount = input.ReadInt64();
-            break;
-          }
-          case 42: {
-            if (account_ == null) {
-              Account = new global::AElf.Types.Address();
-            }
-            input.ReadMessage(Account);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class AdoptWithVoucherInput : pb::IMessage<AdoptWithVoucherInput> {
-    private static readonly pb::MessageParser<AdoptWithVoucherInput> _parser = new pb::MessageParser<AdoptWithVoucherInput>(() => new AdoptWithVoucherInput());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AdoptWithVoucherInput> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[49]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AdoptWithVoucherInput() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AdoptWithVoucherInput(AdoptWithVoucherInput other) : this() {
-      tick_ = other.tick_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AdoptWithVoucherInput Clone() {
-      return new AdoptWithVoucherInput(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as AdoptWithVoucherInput);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AdoptWithVoucherInput other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AdoptWithVoucherInput other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class VoucherInfo : pb::IMessage<VoucherInfo> {
-    private static readonly pb::MessageParser<VoucherInfo> _parser = new pb::MessageParser<VoucherInfo>(() => new VoucherInfo());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<VoucherInfo> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[50]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VoucherInfo() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VoucherInfo(VoucherInfo other) : this() {
-      voucherId_ = other.voucherId_ != null ? other.voucherId_.Clone() : null;
-      account_ = other.account_ != null ? other.account_.Clone() : null;
-      attributes_ = other.attributes_ != null ? other.attributes_.Clone() : null;
-      tick_ = other.tick_;
-      adoptId_ = other.adoptId_ != null ? other.adoptId_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VoucherInfo Clone() {
-      return new VoucherInfo(this);
-    }
-
-    /// <summary>Field number for the "voucher_id" field.</summary>
-    public const int VoucherIdFieldNumber = 1;
-    private global::AElf.Types.Hash voucherId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Hash VoucherId {
-      get { return voucherId_; }
-      set {
-        voucherId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "account" field.</summary>
-    public const int AccountFieldNumber = 2;
-    private global::AElf.Types.Address account_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Address Account {
-      get { return account_; }
-      set {
-        account_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "attributes" field.</summary>
-    public const int AttributesFieldNumber = 3;
-    private global::Schrodinger.Attributes attributes_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Schrodinger.Attributes Attributes {
-      get { return attributes_; }
-      set {
-        attributes_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 4;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "adopt_id" field.</summary>
-    public const int AdoptIdFieldNumber = 5;
-    private global::AElf.Types.Hash adoptId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Hash AdoptId {
-      get { return adoptId_; }
-      set {
-        adoptId_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as VoucherInfo);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(VoucherInfo other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(VoucherId, other.VoucherId)) return false;
-      if (!object.Equals(Account, other.Account)) return false;
-      if (!object.Equals(Attributes, other.Attributes)) return false;
-      if (Tick != other.Tick) return false;
-      if (!object.Equals(AdoptId, other.AdoptId)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (voucherId_ != null) hash ^= VoucherId.GetHashCode();
-      if (account_ != null) hash ^= Account.GetHashCode();
-      if (attributes_ != null) hash ^= Attributes.GetHashCode();
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      if (adoptId_ != null) hash ^= AdoptId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (voucherId_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(VoucherId);
-      }
-      if (account_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Account);
-      }
-      if (attributes_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Attributes);
-      }
-      if (Tick.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Tick);
-      }
-      if (adoptId_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(AdoptId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (voucherId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VoucherId);
-      }
-      if (account_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
-      }
-      if (attributes_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Attributes);
-      }
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      if (adoptId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdoptId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(VoucherInfo other) {
-      if (other == null) {
-        return;
-      }
-      if (other.voucherId_ != null) {
-        if (voucherId_ == null) {
-          VoucherId = new global::AElf.Types.Hash();
-        }
-        VoucherId.MergeFrom(other.VoucherId);
-      }
-      if (other.account_ != null) {
-        if (account_ == null) {
-          Account = new global::AElf.Types.Address();
-        }
-        Account.MergeFrom(other.Account);
-      }
-      if (other.attributes_ != null) {
-        if (attributes_ == null) {
-          Attributes = new global::Schrodinger.Attributes();
-        }
-        Attributes.MergeFrom(other.Attributes);
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      if (other.adoptId_ != null) {
-        if (adoptId_ == null) {
-          AdoptId = new global::AElf.Types.Hash();
-        }
-        AdoptId.MergeFrom(other.AdoptId);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (voucherId_ == null) {
-              VoucherId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(VoucherId);
-            break;
-          }
-          case 18: {
-            if (account_ == null) {
-              Account = new global::AElf.Types.Address();
-            }
-            input.ReadMessage(Account);
-            break;
-          }
-          case 26: {
-            if (attributes_ == null) {
-              Attributes = new global::Schrodinger.Attributes();
-            }
-            input.ReadMessage(Attributes);
-            break;
-          }
-          case 34: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 42: {
-            if (adoptId_ == null) {
-              AdoptId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(AdoptId);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class ConfirmVoucherInput : pb::IMessage<ConfirmVoucherInput> {
-    private static readonly pb::MessageParser<ConfirmVoucherInput> _parser = new pb::MessageParser<ConfirmVoucherInput>(() => new ConfirmVoucherInput());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ConfirmVoucherInput> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[51]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ConfirmVoucherInput() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ConfirmVoucherInput(ConfirmVoucherInput other) : this() {
-      voucherId_ = other.voucherId_ != null ? other.voucherId_.Clone() : null;
-      signature_ = other.signature_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ConfirmVoucherInput Clone() {
-      return new ConfirmVoucherInput(this);
-    }
-
-    /// <summary>Field number for the "voucher_id" field.</summary>
-    public const int VoucherIdFieldNumber = 1;
-    private global::AElf.Types.Hash voucherId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Hash VoucherId {
-      get { return voucherId_; }
-      set {
-        voucherId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "signature" field.</summary>
-    public const int SignatureFieldNumber = 10000;
-    private pb::ByteString signature_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString Signature {
-      get { return signature_; }
-      set {
-        signature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as ConfirmVoucherInput);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ConfirmVoucherInput other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(VoucherId, other.VoucherId)) return false;
-      if (Signature != other.Signature) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (voucherId_ != null) hash ^= VoucherId.GetHashCode();
-      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (voucherId_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(VoucherId);
-      }
-      if (Signature.Length != 0) {
-        output.WriteRawTag(130, 241, 4);
-        output.WriteBytes(Signature);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (voucherId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VoucherId);
-      }
-      if (Signature.Length != 0) {
-        size += 3 + pb::CodedOutputStream.ComputeBytesSize(Signature);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ConfirmVoucherInput other) {
-      if (other == null) {
-        return;
-      }
-      if (other.voucherId_ != null) {
-        if (voucherId_ == null) {
-          VoucherId = new global::AElf.Types.Hash();
-        }
-        VoucherId.MergeFrom(other.VoucherId);
-      }
-      if (other.Signature.Length != 0) {
-        Signature = other.Signature;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (voucherId_ == null) {
-              VoucherId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(VoucherId);
-            break;
-          }
-          case 80002: {
-            Signature = input.ReadBytes();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class GetAdoptionVoucherAmountInput : pb::IMessage<GetAdoptionVoucherAmountInput> {
-    private static readonly pb::MessageParser<GetAdoptionVoucherAmountInput> _parser = new pb::MessageParser<GetAdoptionVoucherAmountInput>(() => new GetAdoptionVoucherAmountInput());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetAdoptionVoucherAmountInput> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[52]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetAdoptionVoucherAmountInput() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetAdoptionVoucherAmountInput(GetAdoptionVoucherAmountInput other) : this() {
-      tick_ = other.tick_;
-      account_ = other.account_ != null ? other.account_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetAdoptionVoucherAmountInput Clone() {
-      return new GetAdoptionVoucherAmountInput(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "account" field.</summary>
-    public const int AccountFieldNumber = 2;
-    private global::AElf.Types.Address account_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Address Account {
-      get { return account_; }
-      set {
-        account_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as GetAdoptionVoucherAmountInput);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetAdoptionVoucherAmountInput other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      if (!object.Equals(Account, other.Account)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      if (account_ != null) hash ^= Account.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      if (account_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Account);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      if (account_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetAdoptionVoucherAmountInput other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      if (other.account_ != null) {
-        if (account_ == null) {
-          Account = new global::AElf.Types.Address();
-        }
-        Account.MergeFrom(other.Account);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (account_ == null) {
-              Account = new global::AElf.Types.Address();
-            }
-            input.ReadMessage(Account);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class AirdropVoucherInput : pb::IMessage<AirdropVoucherInput> {
-    private static readonly pb::MessageParser<AirdropVoucherInput> _parser = new pb::MessageParser<AirdropVoucherInput>(() => new AirdropVoucherInput());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AirdropVoucherInput> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[53]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AirdropVoucherInput() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AirdropVoucherInput(AirdropVoucherInput other) : this() {
-      tick_ = other.tick_;
-      list_ = other.list_.Clone();
-      amount_ = other.amount_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AirdropVoucherInput Clone() {
-      return new AirdropVoucherInput(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "list" field.</summary>
-    public const int ListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::AElf.Types.Address> _repeated_list_codec
-        = pb::FieldCodec.ForMessage(18, global::AElf.Types.Address.Parser);
-    private readonly pbc::RepeatedField<global::AElf.Types.Address> list_ = new pbc::RepeatedField<global::AElf.Types.Address>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::AElf.Types.Address> List {
-      get { return list_; }
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 3;
-    private long amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as AirdropVoucherInput);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AirdropVoucherInput other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      if(!list_.Equals(other.list_)) return false;
-      if (Amount != other.Amount) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      hash ^= list_.GetHashCode();
-      if (Amount != 0L) hash ^= Amount.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      list_.WriteTo(output, _repeated_list_codec);
-      if (Amount != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(Amount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      size += list_.CalculateSize(_repeated_list_codec);
-      if (Amount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Amount);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AirdropVoucherInput other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      list_.Add(other.list_);
-      if (other.Amount != 0L) {
-        Amount = other.Amount;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 18: {
-            list_.AddEntriesFrom(input, _repeated_list_codec);
-            break;
-          }
-          case 24: {
-            Amount = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class SetAirdropAdminInput : pb::IMessage<SetAirdropAdminInput> {
-    private static readonly pb::MessageParser<SetAirdropAdminInput> _parser = new pb::MessageParser<SetAirdropAdminInput>(() => new SetAirdropAdminInput());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SetAirdropAdminInput> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[54]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetAirdropAdminInput() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetAirdropAdminInput(SetAirdropAdminInput other) : this() {
-      tick_ = other.tick_;
-      admin_ = other.admin_ != null ? other.admin_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetAirdropAdminInput Clone() {
-      return new SetAirdropAdminInput(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "admin" field.</summary>
-    public const int AdminFieldNumber = 2;
-    private global::AElf.Types.Address admin_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Address Admin {
-      get { return admin_; }
-      set {
-        admin_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as SetAirdropAdminInput);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SetAirdropAdminInput other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      if (!object.Equals(Admin, other.Admin)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      if (admin_ != null) hash ^= Admin.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      if (admin_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Admin);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      if (admin_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Admin);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SetAirdropAdminInput other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      if (other.admin_ != null) {
-        if (admin_ == null) {
-          Admin = new global::AElf.Types.Address();
-        }
-        Admin.MergeFrom(other.Admin);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (admin_ == null) {
-              Admin = new global::AElf.Types.Address();
-            }
-            input.ReadMessage(Admin);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class AddressList : pb::IMessage<AddressList> {
-    private static readonly pb::MessageParser<AddressList> _parser = new pb::MessageParser<AddressList>(() => new AddressList());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AddressList> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[55]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddressList() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddressList(AddressList other) : this() {
-      data_ = other.data_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddressList Clone() {
-      return new AddressList(this);
-    }
-
-    /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::AElf.Types.Address> _repeated_data_codec
-        = pb::FieldCodec.ForMessage(10, global::AElf.Types.Address.Parser);
-    private readonly pbc::RepeatedField<global::AElf.Types.Address> data_ = new pbc::RepeatedField<global::AElf.Types.Address>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::AElf.Types.Address> Data {
-      get { return data_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as AddressList);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AddressList other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!data_.Equals(other.data_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= data_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      data_.WriteTo(output, _repeated_data_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      size += data_.CalculateSize(_repeated_data_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AddressList other) {
-      if (other == null) {
-        return;
-      }
-      data_.Add(other.data_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            data_.AddEntriesFrom(input, _repeated_data_codec);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   /// <summary>
   /// log event
   /// </summary>
@@ -11746,7 +9388,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[56]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11909,7 +9551,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[57]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12674,7 +10316,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[58]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13222,7 +10864,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[59]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13751,7 +11393,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[60]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13970,7 +11612,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[61]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14167,7 +11809,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[62]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14364,7 +12006,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[63]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[50]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14521,7 +12163,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[64]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[51]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14678,7 +12320,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[65]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[52]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14835,7 +12477,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[66]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15048,7 +12690,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[67]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15211,7 +12853,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[68]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15374,7 +13016,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[69]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15537,7 +13179,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[70]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[57]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15672,7 +13314,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[71]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[58]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15801,7 +13443,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[72]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[59]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15930,7 +13572,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[73]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[60]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16059,7 +13701,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[74]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[61]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16300,7 +13942,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[75]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[62]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16435,7 +14077,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[76]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[63]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16598,7 +14240,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[77]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[64]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16727,7 +14369,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[78]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[65]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16896,7 +14538,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[79]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[66]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17025,7 +14667,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[80]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[67]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17250,7 +14892,7 @@ namespace Schrodinger {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[81]; }
+      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[68]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17782,1024 +15424,6 @@ namespace Schrodinger {
           }
           case 122: {
             TokenName = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class RewardConfigSet : pb::IMessage<RewardConfigSet> {
-    private static readonly pb::MessageParser<RewardConfigSet> _parser = new pb::MessageParser<RewardConfigSet>(() => new RewardConfigSet());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RewardConfigSet> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[82]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RewardConfigSet() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RewardConfigSet(RewardConfigSet other) : this() {
-      tick_ = other.tick_;
-      list_ = other.list_ != null ? other.list_.Clone() : null;
-      pool_ = other.pool_ != null ? other.pool_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RewardConfigSet Clone() {
-      return new RewardConfigSet(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "list" field.</summary>
-    public const int ListFieldNumber = 2;
-    private global::Schrodinger.RewardList list_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Schrodinger.RewardList List {
-      get { return list_; }
-      set {
-        list_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "pool" field.</summary>
-    public const int PoolFieldNumber = 3;
-    private global::AElf.Types.Address pool_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Address Pool {
-      get { return pool_; }
-      set {
-        pool_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as RewardConfigSet);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RewardConfigSet other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      if (!object.Equals(List, other.List)) return false;
-      if (!object.Equals(Pool, other.Pool)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      if (list_ != null) hash ^= List.GetHashCode();
-      if (pool_ != null) hash ^= Pool.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      if (list_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(List);
-      }
-      if (pool_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Pool);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      if (list_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(List);
-      }
-      if (pool_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pool);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RewardConfigSet other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      if (other.list_ != null) {
-        if (list_ == null) {
-          List = new global::Schrodinger.RewardList();
-        }
-        List.MergeFrom(other.List);
-      }
-      if (other.pool_ != null) {
-        if (pool_ == null) {
-          Pool = new global::AElf.Types.Address();
-        }
-        Pool.MergeFrom(other.Pool);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (list_ == null) {
-              List = new global::Schrodinger.RewardList();
-            }
-            input.ReadMessage(List);
-            break;
-          }
-          case 26: {
-            if (pool_ == null) {
-              Pool = new global::AElf.Types.Address();
-            }
-            input.ReadMessage(Pool);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class Spun : pb::IMessage<Spun> {
-    private static readonly pb::MessageParser<Spun> _parser = new pb::MessageParser<Spun>(() => new Spun());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Spun> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[83]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Spun() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Spun(Spun other) : this() {
-      tick_ = other.tick_;
-      spinInfo_ = other.spinInfo_ != null ? other.spinInfo_.Clone() : null;
-      seed_ = other.seed_ != null ? other.seed_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Spun Clone() {
-      return new Spun(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "spin_info" field.</summary>
-    public const int SpinInfoFieldNumber = 2;
-    private global::Schrodinger.SpinInfo spinInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Schrodinger.SpinInfo SpinInfo {
-      get { return spinInfo_; }
-      set {
-        spinInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "seed" field.</summary>
-    public const int SeedFieldNumber = 3;
-    private global::AElf.Types.Hash seed_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Hash Seed {
-      get { return seed_; }
-      set {
-        seed_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Spun);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Spun other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      if (!object.Equals(SpinInfo, other.SpinInfo)) return false;
-      if (!object.Equals(Seed, other.Seed)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      if (spinInfo_ != null) hash ^= SpinInfo.GetHashCode();
-      if (seed_ != null) hash ^= Seed.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      if (spinInfo_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(SpinInfo);
-      }
-      if (seed_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Seed);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      if (spinInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SpinInfo);
-      }
-      if (seed_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seed);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Spun other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      if (other.spinInfo_ != null) {
-        if (spinInfo_ == null) {
-          SpinInfo = new global::Schrodinger.SpinInfo();
-        }
-        SpinInfo.MergeFrom(other.SpinInfo);
-      }
-      if (other.seed_ != null) {
-        if (seed_ == null) {
-          Seed = new global::AElf.Types.Hash();
-        }
-        Seed.MergeFrom(other.Seed);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (spinInfo_ == null) {
-              SpinInfo = new global::Schrodinger.SpinInfo();
-            }
-            input.ReadMessage(SpinInfo);
-            break;
-          }
-          case 26: {
-            if (seed_ == null) {
-              Seed = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(Seed);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class AdoptedWithVoucher : pb::IMessage<AdoptedWithVoucher> {
-    private static readonly pb::MessageParser<AdoptedWithVoucher> _parser = new pb::MessageParser<AdoptedWithVoucher>(() => new AdoptedWithVoucher());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AdoptedWithVoucher> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[84]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AdoptedWithVoucher() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AdoptedWithVoucher(AdoptedWithVoucher other) : this() {
-      voucherInfo_ = other.voucherInfo_ != null ? other.voucherInfo_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AdoptedWithVoucher Clone() {
-      return new AdoptedWithVoucher(this);
-    }
-
-    /// <summary>Field number for the "voucher_info" field.</summary>
-    public const int VoucherInfoFieldNumber = 1;
-    private global::Schrodinger.VoucherInfo voucherInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Schrodinger.VoucherInfo VoucherInfo {
-      get { return voucherInfo_; }
-      set {
-        voucherInfo_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as AdoptedWithVoucher);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AdoptedWithVoucher other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(VoucherInfo, other.VoucherInfo)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (voucherInfo_ != null) hash ^= VoucherInfo.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (voucherInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(VoucherInfo);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (voucherInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VoucherInfo);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AdoptedWithVoucher other) {
-      if (other == null) {
-        return;
-      }
-      if (other.voucherInfo_ != null) {
-        if (voucherInfo_ == null) {
-          VoucherInfo = new global::Schrodinger.VoucherInfo();
-        }
-        VoucherInfo.MergeFrom(other.VoucherInfo);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (voucherInfo_ == null) {
-              VoucherInfo = new global::Schrodinger.VoucherInfo();
-            }
-            input.ReadMessage(VoucherInfo);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class VoucherConfirmed : pb::IMessage<VoucherConfirmed> {
-    private static readonly pb::MessageParser<VoucherConfirmed> _parser = new pb::MessageParser<VoucherConfirmed>(() => new VoucherConfirmed());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<VoucherConfirmed> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[85]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VoucherConfirmed() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VoucherConfirmed(VoucherConfirmed other) : this() {
-      voucherInfo_ = other.voucherInfo_ != null ? other.voucherInfo_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VoucherConfirmed Clone() {
-      return new VoucherConfirmed(this);
-    }
-
-    /// <summary>Field number for the "voucher_info" field.</summary>
-    public const int VoucherInfoFieldNumber = 1;
-    private global::Schrodinger.VoucherInfo voucherInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Schrodinger.VoucherInfo VoucherInfo {
-      get { return voucherInfo_; }
-      set {
-        voucherInfo_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as VoucherConfirmed);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(VoucherConfirmed other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(VoucherInfo, other.VoucherInfo)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (voucherInfo_ != null) hash ^= VoucherInfo.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (voucherInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(VoucherInfo);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (voucherInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VoucherInfo);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(VoucherConfirmed other) {
-      if (other == null) {
-        return;
-      }
-      if (other.voucherInfo_ != null) {
-        if (voucherInfo_ == null) {
-          VoucherInfo = new global::Schrodinger.VoucherInfo();
-        }
-        VoucherInfo.MergeFrom(other.VoucherInfo);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (voucherInfo_ == null) {
-              VoucherInfo = new global::Schrodinger.VoucherInfo();
-            }
-            input.ReadMessage(VoucherInfo);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class VoucherAirdropped : pb::IMessage<VoucherAirdropped> {
-    private static readonly pb::MessageParser<VoucherAirdropped> _parser = new pb::MessageParser<VoucherAirdropped>(() => new VoucherAirdropped());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<VoucherAirdropped> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[86]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VoucherAirdropped() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VoucherAirdropped(VoucherAirdropped other) : this() {
-      tick_ = other.tick_;
-      list_ = other.list_ != null ? other.list_.Clone() : null;
-      amount_ = other.amount_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VoucherAirdropped Clone() {
-      return new VoucherAirdropped(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "list" field.</summary>
-    public const int ListFieldNumber = 2;
-    private global::Schrodinger.AddressList list_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Schrodinger.AddressList List {
-      get { return list_; }
-      set {
-        list_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 3;
-    private long amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as VoucherAirdropped);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(VoucherAirdropped other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      if (!object.Equals(List, other.List)) return false;
-      if (Amount != other.Amount) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      if (list_ != null) hash ^= List.GetHashCode();
-      if (Amount != 0L) hash ^= Amount.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      if (list_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(List);
-      }
-      if (Amount != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(Amount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      if (list_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(List);
-      }
-      if (Amount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Amount);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(VoucherAirdropped other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      if (other.list_ != null) {
-        if (list_ == null) {
-          List = new global::Schrodinger.AddressList();
-        }
-        List.MergeFrom(other.List);
-      }
-      if (other.Amount != 0L) {
-        Amount = other.Amount;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (list_ == null) {
-              List = new global::Schrodinger.AddressList();
-            }
-            input.ReadMessage(List);
-            break;
-          }
-          case 24: {
-            Amount = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class AirdropAdminSet : pb::IMessage<AirdropAdminSet> {
-    private static readonly pb::MessageParser<AirdropAdminSet> _parser = new pb::MessageParser<AirdropAdminSet>(() => new AirdropAdminSet());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AirdropAdminSet> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Schrodinger.SchrodingerContractReflection.Descriptor.MessageTypes[87]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AirdropAdminSet() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AirdropAdminSet(AirdropAdminSet other) : this() {
-      tick_ = other.tick_;
-      admin_ = other.admin_ != null ? other.admin_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AirdropAdminSet Clone() {
-      return new AirdropAdminSet(this);
-    }
-
-    /// <summary>Field number for the "tick" field.</summary>
-    public const int TickFieldNumber = 1;
-    private string tick_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tick {
-      get { return tick_; }
-      set {
-        tick_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "admin" field.</summary>
-    public const int AdminFieldNumber = 2;
-    private global::AElf.Types.Address admin_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AElf.Types.Address Admin {
-      get { return admin_; }
-      set {
-        admin_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as AirdropAdminSet);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AirdropAdminSet other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Tick != other.Tick) return false;
-      if (!object.Equals(Admin, other.Admin)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Tick.Length != 0) hash ^= Tick.GetHashCode();
-      if (admin_ != null) hash ^= Admin.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Tick.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Tick);
-      }
-      if (admin_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Admin);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Tick.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tick);
-      }
-      if (admin_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Admin);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AirdropAdminSet other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Tick.Length != 0) {
-        Tick = other.Tick;
-      }
-      if (other.admin_ != null) {
-        if (admin_ == null) {
-          Admin = new global::AElf.Types.Address();
-        }
-        Admin.MergeFrom(other.Admin);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Tick = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (admin_ == null) {
-              Admin = new global::AElf.Types.Address();
-            }
-            input.ReadMessage(Admin);
             break;
           }
         }

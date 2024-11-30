@@ -27,7 +27,17 @@ public class Query
             var holderQueryable = await holderRepository.GetQueryableAsync();
 
             holderQueryable = holderQueryable.Where(a => a.Metadata.ChainId == input.ChainId);
-            holderQueryable = holderQueryable.Where(a => a.Amount > 0);
+            
+            var minAmount = input.MinAmount.IsNullOrEmpty() ? 0 : long.Parse(input.MinAmount);
+            if (minAmount > 0)
+            {
+                holderQueryable = holderQueryable.Where(a => a.Amount >= minAmount);
+            }
+            else
+            {
+                holderQueryable = holderQueryable.Where(a => a.Amount > 0);
+            }
+            
             holderQueryable = holderQueryable.Where(a => !a.SchrodingerInfo.TokenName.StartsWith("SSGGRRCATTT"));
 
             if (input.FilterSgr)
@@ -713,6 +723,20 @@ public class Query
                 {
                     schrodingerDto.Adopter = adopter ?? string.Empty;
                 }
+                
+                var queryable = await adoptRepository.GetQueryableAsync();
+                queryable = queryable.Where(a => a.Metadata.ChainId == input.ChainId);
+                queryable = queryable.Where(a => a.Symbol == schrodingerDto.Symbol);
+                var adoptInfo = queryable.ToList().FirstOrDefault();
+
+                if (adoptInfo != null && adoptInfo.Rank > 0)
+                {
+                    schrodingerDto.Rarity = adoptInfo?.Rarity ?? string.Empty;
+                    schrodingerDto.Level = adoptInfo?.Level ?? string.Empty;
+                    schrodingerDto.Star = adoptInfo?.Star ?? string.Empty;
+                    schrodingerDto.Grade = adoptInfo?.Grade ?? string.Empty;
+                    schrodingerDto.Rank = adoptInfo?.Rank ?? 0;
+                }
             }
 
             return response;
@@ -1211,6 +1235,22 @@ public class Query
                 continue;
             }
             
+            var minAmount = input.MinAmount.IsNullOrEmpty() ? 0 : long.Parse(input.MinAmount);
+            if (minAmount > 0 && schrodingerAdoptIndex.OutputAmount < minAmount)
+            {
+                continue;
+            }
+
+            if (schrodingerAdoptIndex.OutputAmount <= 0)
+            {
+                continue;
+            }
+            
+            if (input.Generation != null && input.Generation != 0 && schrodingerAdoptIndex.Gen != input.Generation)
+            {
+                continue;
+            }
+            
             var blindBoxDto = objectMapper.Map<SchrodingerAdoptIndex, BlindBoxDto>(schrodingerAdoptIndex);
             
             blindBoxDto.AdoptTime =  DateTimeHelper.ToUnixTimeMilliseconds(schrodingerAdoptIndex.AdoptTime);
@@ -1399,5 +1439,98 @@ public class Query
         {
             Score = count * 100
         };
+    }
+    
+    [Name("getVoucherInfoByTime")]
+    public static async Task<List<VoucherAdoptionDto>> GetVoucherInfoByTimeAsync(
+        [FromServices] IReadOnlyRepository<AdoptWithVoucherIndex> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetAdoptInfoByTimeInput input)
+    {
+        var queryable = await repository.GetQueryableAsync();
+        if (input.BeginTime > 0)
+        {
+            queryable = queryable.Where(a => a.CreatedTime >= input.BeginTime);
+        }
+        
+        if (input.EndTime > 0)
+        {
+            queryable = queryable.Where(a => a.CreatedTime < input.EndTime);
+        }
+
+        queryable = queryable.OrderBy(o => o.CreatedTime).ThenBy(o => o.Id);
+        var data = queryable.ToList();
+        var cnt = queryable.Count();
+        if (cnt > 10000)
+        {
+            var nextData = queryable.After(new object[] { data.Last().CreatedTime, data.Last().Id }).ToList();
+            data.AddRange(nextData);
+        }
+        
+        return objectMapper.Map<List<AdoptWithVoucherIndex>, List<VoucherAdoptionDto>>(data);
+    }
+    
+    [Name("getRarityData")]
+    public static async Task<GetRarityDataOutput> GetRarityDataAsync(
+        [FromServices] IReadOnlyRepository<SchrodingerAdoptIndex> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetRarityDataInput input)
+    {
+        var res = new GetRarityDataOutput();
+        
+        if (input.SymbolIds.IsNullOrEmpty())
+        {
+            return res;
+        }
+        
+        var queryable = await repository.GetQueryableAsync();
+        queryable = queryable.Where(
+            input.SymbolIds.Select(symbol =>
+                    (Expression<Func<SchrodingerAdoptIndex, bool>>)(o => o.Symbol == symbol))
+                .Aggregate((prev, next) => prev.Or(next)));
+        
+        var data = queryable.ToList();
+
+        res.RarityInfo = new List<RarityInfo>();
+
+        foreach (var item in data)
+        {
+            res.RarityInfo.Add(new RarityInfo
+            {
+                Symbol = item.Symbol,
+                Rank = item.Rank,
+                Generation = item.Gen,
+                AdoptId =  item.AdoptId,
+                OutputAmount = item.OutputAmount,
+                Adopter = item.Adopter
+            });
+        }
+        
+        return res;
+    }
+    
+    [Name("getLatestRareAdoption")]
+    public static async Task<List<AdoptInfoDto>> GetLatestRareAdoptionAsync(
+        [FromServices] IReadOnlyRepository<SchrodingerAdoptIndex> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetLatestRareAdoptionInput input)
+    {
+        var queryable = await repository.GetQueryableAsync();
+        queryable = queryable.Where(a => a.OutputAmount >= 100000000);
+        queryable = queryable.Where(a => a.Rank > 26268);
+        queryable = queryable.Where(a => a.Rank <= 54302);
+        queryable = queryable.Where(a => a.Symbol.StartsWith("SGR-"));
+
+        if (input.BeginTime > 0)
+        {
+            queryable = queryable.Where(a =>
+                a.AdoptTime > DateTime.UnixEpoch.AddSeconds(input.BeginTime));
+        }
+        
+        var data = queryable.OrderBy(o => o.Rank).ThenBy(o => o.AdoptTime)
+            .Take(input.Number).ToList();
+        
+        var resp = objectMapper.Map<List<SchrodingerAdoptIndex>, List<AdoptInfoDto>>(data);
+        return resp;
     }
 }

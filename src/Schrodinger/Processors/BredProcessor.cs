@@ -1,139 +1,157 @@
 using AeFinder.Sdk.Attachments;
 using AeFinder.Sdk.Logging;
 using AeFinder.Sdk.Processor;
-using AElf.Contracts.MultiToken;
 using Newtonsoft.Json;
 using Schrodinger.Entities;
 using Schrodinger.Processors.Provider.dto;
 using Schrodinger.Utils;
 
-
 namespace Schrodinger.Processors;
 
-
-public class ProbabilityRankMapAppAttachmentValueProvider : AppAttachmentValueProviderBase<ProbabilityRankMap>
-{
-    public override string Key => "ProbabilityRankMapNew";
-}
-
-// public class ProbabilityMapPartAAppAttachmentValueProvider : AppAttachmentValueProviderBase<ProbabilityMapPartA>
-// {
-//     public override string Key => "ProbabilityMapPartA";
-// }
-//
-// public class ProbabilityMapPartBAppAttachmentValueProvider : AppAttachmentValueProviderBase<ProbabilityMapPartB>
-// {
-//     public override string Key => "ProbabilityMapPartB";
-// }
-
-public class ProbabilityMapAppAttachmentValueProvider : AppAttachmentValueProviderBase<ProbabilityMap>
-{
-    public override string Key => "ProbabilityMapNew";
-}
-
-
-public class TokenCreatedProcessor() : TokenProcessorBase<TokenCreated>
+public class BredProcessor: SchrodingerProcessorBase<Merged>
 {
     private readonly Dictionary<string, Dictionary<string, double>> _traitValueProbability;
     private readonly Dictionary<string, Dictionary<string, int>> _traitTypeProbability;
     
     private readonly IAppAttachmentValueProvider<ProbabilityRankMap> _probabilityRankMapAppAttachmentValueProvider;
-    // private readonly IAppAttachmentValueProvider<ProbabilityMapPartA> _probabilityMapPartAAppAttachmentValueProvider;
-    // private readonly IAppAttachmentValueProvider<ProbabilityMapPartB> _probabilityMapPartBAppAttachmentValueProvider;
     private readonly IAppAttachmentValueProvider<ProbabilityMap> _probabilityMapAppAttachmentValueProvider;
     
-    public  TokenCreatedProcessor(
+    public  BredProcessor(
         IAppAttachmentValueProvider<ProbabilityRankMap> probabilityRankMapAppAttachmentValueProvider, 
-        IAppAttachmentValueProvider<ProbabilityMap> probabilityMapAppAttachmentValueProvider) : this()
+        IAppAttachmentValueProvider<ProbabilityMap> probabilityMapAppAttachmentValueProvider)
     {
         _probabilityRankMapAppAttachmentValueProvider = probabilityRankMapAppAttachmentValueProvider;
-        // _probabilityMapPartAAppAttachmentValueProvider = probabilityMapPartAAppAttachmentValueProvider;
-        // _probabilityMapPartBAppAttachmentValueProvider = probabilityMapPartBAppAttachmentValueProvider;
         _probabilityMapAppAttachmentValueProvider = probabilityMapAppAttachmentValueProvider;
         
         _traitValueProbability = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, double>>>(TraitProbabilityConstants.TraitValueProbability);
         _traitTypeProbability = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, int>>>(TraitProbabilityConstants.TraitTypeProbability);
     }
     
-    public override async Task ProcessAsync(TokenCreated eventValue, LogEventContext context)
+    public override async Task ProcessAsync(Merged bred, LogEventContext context)
     {
         var chainId = context.ChainId;
-        var symbol = eventValue.Symbol;
+
+        var adoptInfo = bred.AdoptInfo;
+        var symbol = adoptInfo.Symbol;
+        var adoptId = adoptInfo.AdoptId?.ToHex();
+        Logger.LogDebug("[Bred] start chainId:{chainId} symbol:{symbol} adoptId:{adoptId} level:{level}", chainId,
+            symbol, adoptId, adoptInfo.Level);
         try
         {
-            var tick = TokenSymbolHelper.GetTickBySymbol(symbol);
-            var schrodingerIndex = await GetEntityAsync<SchrodingerIndex>(IdGenerateHelper.GetId(chainId, tick));
-            if (schrodingerIndex == null)
+            var adopt = Mapper.Map<AdoptInfo, SchrodingerAdoptIndex>(adoptInfo);
+
+            adopt.Id = IdGenerateHelper.GetId(chainId, symbol);
+            adopt.AdoptTime = context.Block.BlockTime;
+            // adopt.ParentInfo = await getSchrodingerInfo(chainId, parent);
+            adopt.TransactionId = context.Transaction.TransactionId;
+            adopt.LossAmount = bred.LossAmount;
+            adopt.CommissionAmount = bred.CommissionAmount;
+
+            adopt.ParentInfo = new SchrodingerInfo
             {
-                return;
-            }
-            
-            var isCollection = TokenSymbolHelper.GetIsCollectionFromSymbol(symbol);
-            if (isCollection)
-            {
-                return;
-            }
-            
-            Logger.LogDebug("[TokenCreated] start chainId:{chainId} symbol:{symbol}", chainId, symbol);
-            var isGen0 = TokenSymbolHelper.GetIsGen0FromSymbol(symbol);
-            var symbolIndex = new SchrodingerSymbolIndex
-            {
-                Id = GetSymbolIndexId(chainId, symbol), Symbol = symbol,
-                SchrodingerInfo = TokenSymbolHelper.OfSchrodingerInfo(schrodingerIndex, eventValue, symbol, eventValue.TokenName)
+                Symbol = "",
+                Tick = "SGR",
+                Decimals = 8,
+                TokenName = "",
+                Gen = adoptInfo.Gen - 1,
+                InscriptionImageUri = ""
             };
-            if (!isGen0)
+            
+            if (adopt.Gen == 9)
             {
-                if (eventValue.ExternalInfo.Value.TryGetValue(SchrodingerConstants.NftAttributes, out var attributesJson))
+                var traitsGenOne = new List<List<string>>();
+                var traitsGenTwoToNine = new List<List<string>>();
+                GetTraitsInput(Mapper.Map<List<Entities.Attribute>, List<TraitInfo>>(adopt.Attributes), traitsGenOne, traitsGenTwoToNine);
+                if (adoptInfo.Level > 0)
                 {
-                    var attributeList = JsonConvert.DeserializeObject<List<Entities.Attribute>>(attributesJson?? string.Empty) ?? new List<Entities.Attribute>();
-                    symbolIndex.Traits = Mapper.Map<List<Entities.Attribute>, List<TraitInfo>>(attributeList);
-                    symbolIndex.TraitValues = string.Join(",", symbolIndex.Traits.Select(x =>
-                    {
-                        var traitType = x.TraitType.Replace(" ", "");
-                        var value = x.Value.Replace(" ", "");
-                        return traitType + value;
-                    }))+",";
-                    Logger.LogDebug("[TokenCreated] TraitValues:{TraitValues}", symbolIndex.TraitValues);
-                }
-
-                foreach (var trait in symbolIndex.Traits)
-                {
-                    await GenerateSchrodingerCountAsync(chainId, tick, trait.TraitType, trait.Value);
-                }
-            }
-
-            var isGen9 = TokenSymbolHelper.GetIsGen9FromSchrodingerSymbolIndex(symbolIndex);
-            if (isGen9)
-            {
-                var id = IdGenerateHelper.GetId(chainId, symbol);
-                var adoptIndex = await GetEntityAsync<SchrodingerAdoptIndex>(id);
-                var rank = 0;
-                if (adoptIndex != null && adoptIndex.Rank > 0)
-                {
-                    rank = adoptIndex.Rank;
+                    var rank = LevelConstant.LevelRankList[(int)(adoptInfo.Level - 1)];
+                    adopt = SetRankRarity(adopt, rank);
+                    Logger.LogDebug("[Bred] get rank:{rank}, symbol:{symbol}", rank, symbol);
                 }
                 else
                 {
-                    var traitsGenOne = new List<List<string>>();
-                    var traitsGenTwoToNine = new List<List<string>>();
-                    GetTraitsInput(symbolIndex.Traits, traitsGenOne, traitsGenTwoToNine);
-                    rank = GetRank(traitsGenOne, traitsGenTwoToNine);
+                    var rank = GetRank(traitsGenOne, traitsGenTwoToNine);
+                    adopt = SetRankRarity(adopt, rank);
+                    Logger.LogDebug("[Bred] compute rank:{rank}, symbol:{symbol}", rank, symbol);
                 }
-                
-                symbolIndex = SetRankRarity(symbolIndex, rank);
-                Logger.LogDebug("[TokenCreated] get rank:{rank}, symbol:{symbol}", rank, symbol);
             }
-
-            await SaveEntityAsync(symbolIndex);
-            Logger.LogDebug("[TokenCreated] end chainId:{chainId} symbol:{symbol}", chainId, symbol);
+            
+            // save new adopt index
+            await SaveEntityAsync(adopt);
+            
+            
+            // save bred index
+            var bredIndex = Mapper.Map<Merged, BredIndex>(bred);
+            bredIndex.Id = IdGenerateHelper.GetId(chainId, symbol);
+            bredIndex.AdoptId = adoptId;
+            bredIndex.Symbol = symbol;
+            bredIndex.Adopter = adoptInfo.Adopter.ToBase58();
+            bredIndex.AdoptTime = context.Block.BlockTime;
+            bredIndex.InputAmount = adoptInfo.InputAmount;
+            bredIndex.OutputAmount = adoptInfo.OutputAmount;
+            bredIndex.Rank = adopt.Rank;
+            bredIndex.Gen = adopt.Gen;
+            bredIndex.Level = adopt.Level.IsNullOrEmpty() ? 0 : int.Parse(adopt.Level);
+            
+            bredIndex.TransactionId = context.Transaction.TransactionId;
+            await SaveEntityAsync(bredIndex);
+            
+            
+            // modify amount in two old adopt index
+            var idA = IdGenerateHelper.GetId(chainId, bred.SymbolA);
+            var parentAIndex = await GetEntityAsync<SchrodingerAdoptIndex>(idA);
+            parentAIndex.OutputAmount = bred.AmountA;
+            await SaveEntityAsync(parentAIndex);
+            
+            var idB = IdGenerateHelper.GetId(chainId, bred.SymbolB);
+            var parentBIndex = await GetEntityAsync<SchrodingerAdoptIndex>(idB);
+            parentBIndex.OutputAmount = bred.AmountB;
+            await SaveEntityAsync(parentBIndex);
+            
+            
+            Logger.LogDebug("[Bred] end chainId:{chainId} symbol:{symbol}, adoptId:{adoptId}, transactionId:{TransactionId}", chainId, symbol,
+                adoptId, adopt.TransactionId);
         }
         catch (Exception e)
         {
-            Logger.LogError(e, "[TokenCreated] Exception chainId:{chainId} symbol:{symbol}", chainId, symbol);
+            Logger.LogError(e, "[AdoptionUpdated] Exception chainId:{chainId} symbol:{symbol}, adoptId:{adoptId}", chainId,
+                symbol,
+                adoptId);
             throw;
         }
     }
-
+    
+    private async Task<SchrodingerInfo> getSchrodingerInfo(string chainId, string symbol)
+    {
+        var symbolId = IdGenerateHelper.GetId(chainId, symbol);
+        var symbolIndex = await GetEntityAsync<SchrodingerSymbolIndex>(symbolId);
+        return symbolIndex?.SchrodingerInfo ?? new SchrodingerInfo();
+    }
+    
+    private static SchrodingerAdoptIndex SetRankRarity(SchrodingerAdoptIndex adoptIndex, int rank)
+    {
+        adoptIndex.Rank = rank;
+        adoptIndex.Level = "";
+        adoptIndex.Grade = "";
+        adoptIndex.Star = "";
+        adoptIndex.Rarity = "";
+        
+        //get level
+        var rankRes = LevelConstant.RankLevelGradeDictionary.TryGetValue(rank.ToString(), out var leaveGradeStar);
+        if (!rankRes)
+        {
+            return adoptIndex;
+        }
+        adoptIndex.Level = leaveGradeStar.Split(SchrodingerConstants.RankLevelSegment)[0];
+        adoptIndex.Grade = leaveGradeStar.Split(SchrodingerConstants.RankLevelSegment)[1];
+        adoptIndex.Star = leaveGradeStar.Split(SchrodingerConstants.RankLevelSegment)[2];
+    
+        //get rarity
+        adoptIndex.Rarity = LevelConstant.RarityDictionary.TryGetValue(adoptIndex.Level ?? "", out var rarity)
+            ? rarity 
+            : "";
+        return adoptIndex;
+    }
     
     private void GetTraitsInput(List<TraitInfo> traitInfos, List<List<string>> traitsGenOne, List<List<string>> traitsGenTwoToNine)
     {
@@ -159,33 +177,6 @@ public class TokenCreatedProcessor() : TokenProcessorBase<TokenCreated>
         traitsGenTwoToNine.Add(genTwoTraitValue);
     }
     
-    
-    private static SchrodingerSymbolIndex SetRankRarity(SchrodingerSymbolIndex symbolIndex, int rank)
-    {
-        symbolIndex.Rank = rank;
-        symbolIndex.Level = "";
-        symbolIndex.Grade = "";
-        symbolIndex.Star = "";
-        symbolIndex.Rarity = "";
-        
-        //get level
-        var rankRes = LevelConstant.RankLevelGradeDictionary.TryGetValue(rank.ToString(), out var leaveGradeStar);
-        if (!rankRes)
-        {
-            return symbolIndex;
-        }
-        symbolIndex.Level = leaveGradeStar.Split(SchrodingerConstants.RankLevelSegment)[0];
-        symbolIndex.Grade = leaveGradeStar.Split(SchrodingerConstants.RankLevelSegment)[1];
-        symbolIndex.Star = leaveGradeStar.Split(SchrodingerConstants.RankLevelSegment)[2];
-    
-        //get rarity
-        symbolIndex.Rarity = LevelConstant.RarityDictionary.TryGetValue(symbolIndex.Level ?? "", out var rarity)
-            ? rarity 
-            : "";
-        return symbolIndex;
-    }
-    
-    
     private int GetRank(List<List<string>> traitsGenOne, List<List<string>> traitsGenTwoToNine)
     {
         try
@@ -197,7 +188,7 @@ public class TokenCreatedProcessor() : TokenProcessorBase<TokenCreated>
             //     var index = traitValue.IndexOf("WUKONG Face Paint");
             //     traitsGenTwoToNine[1][index] = "Monkey King Face Paint";
             // }
-            
+
             var newTraitOneType = TraitHelper.ReplaceTraitValues(traitsGenOne[0], traitsGenOne[1]);
             var newTraitTwoToNineType = TraitHelper.ReplaceTraitValues(traitsGenTwoToNine[0], traitsGenTwoToNine[1]);
             traitsGenOne[1] = newTraitOneType;
@@ -264,7 +255,6 @@ public class TokenCreatedProcessor() : TokenProcessorBase<TokenCreated>
         var traitProbability = _traitValueProbability[type][trait];
         return _traitTypeProbability[type][traitProbability.ToString()];
     }
-    
     
     private List<string> getRankOfGenOne(List<List<string>> traits)
     {

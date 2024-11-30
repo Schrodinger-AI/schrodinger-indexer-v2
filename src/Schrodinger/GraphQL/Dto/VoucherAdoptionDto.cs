@@ -6,4 +6,6 @@ public class VoucherAdoptionDto
     public string? Rarity { get; set; }
     public int Rank { get; set; }
     public string? AdoptId { get; set; }
+    public string? Adopter { get; set; }
+    public long CreatedTime { get; set; }
 }

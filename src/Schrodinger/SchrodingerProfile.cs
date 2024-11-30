@@ -123,6 +123,7 @@ public class SchrodingerProfile : Profile
                 => opt.MapFrom(source => MapHash(source.AdoptId)))
             .ForMember(des => des.Adopter, opt
                 => opt.MapFrom(source => MapAddress(source.Adopter)))
+            .ForMember(t => t.Level, m => m.Ignore())
             ;
         CreateMap<Attributes, Attribute>();
         CreateMap<Confirmed, SchrodingerAdoptIndex>()
@@ -287,6 +288,36 @@ public class SchrodingerProfile : Profile
             .ForMember(des => des.Adopter, opt
                 => opt.MapFrom(source => MapAddress(source.VoucherInfo.Account)))
             ;
+        
+        CreateMap<AdoptInfo, SchrodingerAdoptIndex>()
+            .ForMember(des => des.Tick, opt
+                => opt.MapFrom(source => TokenSymbolHelper.GetTickBySymbol(source.Symbol)))
+            .ForMember(des => des.Attributes, opt
+                => opt.MapFrom(source => MapAttributes(source.Attributes)))
+            .ForMember(des => des.AdoptId, opt
+                => opt.MapFrom(source => MapHash(source.AdoptId)))
+            .ForMember(des => des.Adopter, opt
+                => opt.MapFrom(source => MapAddress(source.Adopter)))
+            ;
+        
+        CreateMap<Merged, BredIndex>()
+            .ForMember(des => des.Tick, opt
+                => opt.MapFrom(source => TokenSymbolHelper.GetTickBySymbol(source.AdoptInfo.Symbol)))
+            .ForMember(des => des.AdoptId, opt
+                => opt.MapFrom(source => MapHash(source.AdoptInfo.AdoptId)))
+            .ForMember(des => des.Adopter, opt
+                => opt.MapFrom(source => MapAddress(source.AdoptInfo.Adopter)))
+            .ForMember(des => des.AdoptIdA, opt
+                => opt.MapFrom(source => MapHash(source.AdoptIdA)))
+            .ForMember(des => des.AdoptIdB, opt
+                => opt.MapFrom(source => MapHash(source.AdoptIdB)))
+            ;
+        CreateMap<Redeemed, RedeemedRecordIndex>()
+            .ForMember(des => des.Address, opt
+                => opt.MapFrom(source => MapAddress(source.Account)))
+            .ForMember(des => des.AdoptId, opt
+                => opt.MapFrom(source => MapHash(source.AdoptId)))
+            ;
     }
     
     private static string MapHash(Hash hash)
@@ -354,4 +385,6 @@ public class SchrodingerProfile : Profile
     {
         return MapAttributes(eventValue.Attributes);
     }
+    
+    
 }
