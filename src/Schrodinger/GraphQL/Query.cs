@@ -919,14 +919,26 @@ public class Query
         holderQueryable = holderQueryable.Where(a => a.SchrodingerInfo.Gen == 9);
         holderQueryable = holderQueryable.Where(a => a.SchrodingerInfo.Symbol.StartsWith(pattern));
         
-        var holderList = GetAllIndex(holderQueryable);
+        holderQueryable = holderQueryable.OrderBy(o => o.Metadata.Block.BlockHeight).OrderBy(o => o.Id)
+            .Take(10000);
+
+        var list1 = holderQueryable.ToList();
+        var list2 = holderQueryable.After(new object[] { list1.Last().Metadata.Block.BlockHeight, list1.Last().Id }).ToList();
+        
+        list1.AddRange(list2);
+        var holderList = list1;
   
         var symbolQueryable = await symbolIndexRepository.GetQueryableAsync();
         symbolQueryable = symbolQueryable.Where(
             LevelConstant.RarityList.Select(rarity => (Expression<Func<SchrodingerSymbolIndex, bool>>)(o => o.Rarity == rarity))
                 .Aggregate((prev, next) => prev.Or(next)));
         
-        var symbolList = GetAllIndex(symbolQueryable);
+        symbolQueryable = symbolQueryable.OrderBy(o => o.Metadata.Block.BlockHeight).OrderBy(o => o.Id)
+            .Take(10000);
+        var list3 = symbolQueryable.ToList();
+        var list4 = symbolQueryable.After(new object[] { list3.Last().Metadata.Block.BlockHeight, list3.Last().Id }).ToList();
+        list3.AddRange(list4);
+        var symbolList = list4;
         
         var rarityDict = symbolList.GroupBy(x => x.Rarity).ToDictionary(g => g.Key, g => g.Select(x => x.Symbol).ToList());
         
@@ -1108,7 +1120,11 @@ public class Query
         var result =  queryable.ToList().FirstOrDefault();
         if (result == null)
         {
-            return new HoldingPointBySymbolDto();
+            return new HoldingPointBySymbolDto
+            {
+                Point = 0,
+                Level = ""
+            };
         }
 
         var level = result.Level;
