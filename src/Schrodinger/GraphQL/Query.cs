@@ -1127,7 +1127,7 @@ public class Query
             };
         }
 
-        var level = result.Level;
+        var level = result.Level ?? "";
         var res = new HoldingPointBySymbolDto
         {
             Level = level,
@@ -1533,7 +1533,7 @@ public class Query
     {
         var queryable = await repository.GetQueryableAsync();
         queryable = queryable.Where(a => a.OutputAmount >= 100000000);
-        queryable = queryable.Where(a => a.Rank > 26268);
+        queryable = queryable.Where(a => a.Rank > 23072);
         queryable = queryable.Where(a => a.Rank <= 54302);
         queryable = queryable.Where(a => a.Symbol.StartsWith("SGR-"));
 

@@ -52,7 +52,13 @@ public class SchrodingerAdoptProcessor : SchrodingerProcessorBase<Adopted>
                 var traitsGenTwoToNine = new List<List<string>>();
                 GetTraitsInput(Mapper.Map<List<Entities.Attribute>, List<TraitInfo>>(adopt.Attributes), traitsGenOne, traitsGenTwoToNine);
                 var rank = GetRank(traitsGenOne, traitsGenTwoToNine);
-                // var rank = _rankProvider.GetRank(Mapper.Map<List<Entities.Attribute>, List<TraitInfo>>(adopt.Attributes));
+
+                if (adopt.InputAmount == 0 && rank > 0 && rank <= 39926)
+                {
+                    // inputAmount equals 0 means voucher adoption
+                    rank = 39927; // silver V
+                }
+                
                 adopt = SetRankRarity(adopt, rank);
                 Logger.LogDebug("[Adopted] get rank:{rank}, symbol:{symbol}", rank, symbol);
             }

@@ -52,6 +52,12 @@ public class AdoptedWithVoucherProcessor : SchrodingerProcessorBase<AdoptedWithV
             var traitsGenTwoToNine = new List<List<string>>();
             GetTraitsInput(Mapper.Map<List<Entities.Attribute>, List<TraitInfo>>(voucherIndex.Attributes), traitsGenOne, traitsGenTwoToNine);
             var rank = GetRank(traitsGenOne, traitsGenTwoToNine);
+
+            if (rank > 0 && rank <= 39926)
+            {
+                rank = 39927;  // silver V
+            }
+            
             voucherIndex.Rank = rank;
             
             var rankRes = LevelConstant.RankLevelGradeDictionary.TryGetValue(rank.ToString(), out var leaveGradeStar);
